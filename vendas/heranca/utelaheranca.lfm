@@ -1,0 +1,178 @@
+object frmTelaHeranca: TfrmTelaHeranca
+  Left = 340
+  Height = 758
+  Top = 126
+  Width = 1276
+  BorderStyle = bsDialog
+  Caption = 'INFORME AQUI O TÍTULO'
+  ClientHeight = 758
+  ClientWidth = 1276
+  DesignTimePPI = 101
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '1.8.4.0'
+  object pgcPrincipal: TPageControl
+    Left = 0
+    Height = 684
+    Top = 0
+    Width = 1276
+    ActivePage = tabListagem
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    object tabListagem: TTabSheet
+      Caption = 'Listagem'
+      ClientHeight = 652
+      ClientWidth = 1272
+      object pnlListagemTopo: TPanel
+        Left = 0
+        Height = 80
+        Top = 0
+        Width = 1272
+        Align = alTop
+        ClientHeight = 80
+        ClientWidth = 1272
+        TabOrder = 0
+        object mskPesquisar: TMaskEdit
+          Left = 16
+          Height = 28
+          Top = 30
+          Width = 472
+          CharCase = ecNormal
+          MaxLength = 0
+          TabOrder = 0
+          TextHint = 'Digite sua Pesquisa'
+          SpaceChar = '_'
+        end
+        object btnPesquisar: TBitBtn
+          Left = 504
+          Height = 28
+          Top = 30
+          Width = 112
+          Caption = '&PESQUISAR'
+          TabOrder = 1
+        end
+        object lblIndice: TLabel
+          Left = 16
+          Height = 18
+          Top = 8
+          Width = 111
+          Caption = 'CampoPesquisa'
+          ParentColor = False
+        end
+      end
+      object grdListagem: TDBGrid
+        Left = 0
+        Height = 572
+        Top = 80
+        Width = 1272
+        Align = alClient
+        Color = clWindow
+        Columns = <>
+        DataSource = dtsListagem
+        TabOrder = 1
+        OnTitleClick = grdListagemTitleClick
+      end
+    end
+    object tabManutencao: TTabSheet
+      Caption = 'Manutenção'
+    end
+  end
+  object pnlRodape: TPanel
+    Left = 0
+    Height = 74
+    Top = 684
+    Width = 1276
+    Align = alBottom
+    ClientHeight = 74
+    ClientWidth = 1276
+    TabOrder = 1
+    object btnNovo: TBitBtn
+      Left = 16
+      Height = 32
+      Top = 24
+      Width = 79
+      Caption = '&NOVO'
+      OnClick = btnNovoClick
+      TabOrder = 0
+    end
+    object btnAlterar: TBitBtn
+      Left = 104
+      Height = 32
+      Top = 24
+      Width = 79
+      Caption = '&ALTERAR'
+      OnClick = btnAlterarClick
+      TabOrder = 1
+    end
+    object btnCancelar: TBitBtn
+      Left = 192
+      Height = 32
+      Top = 24
+      Width = 104
+      Caption = '&CANCELAR'
+      OnClick = btnCancelarClick
+      TabOrder = 2
+    end
+    object btnGravar: TBitBtn
+      Left = 312
+      Height = 32
+      Top = 24
+      Width = 79
+      Caption = '&GRAVAR'
+      OnClick = btnGravarClick
+      TabOrder = 3
+    end
+    object btnApagar: TBitBtn
+      Left = 416
+      Height = 32
+      Top = 24
+      Width = 79
+      Caption = 'APAGA&R'
+      OnClick = btnApagarClick
+      TabOrder = 4
+    end
+    object btnFechar: TBitBtn
+      Left = 1176
+      Height = 32
+      Top = 24
+      Width = 79
+      Anchors = [akTop, akRight]
+      Caption = '&FECHAR'
+      OnClick = btnFecharClick
+      TabOrder = 5
+    end
+    object btnNavigator: TDBNavigator
+      Left = 528
+      Height = 32
+      Top = 24
+      Width = 304
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 32
+      ClientWidth = 304
+      DataSource = dtsListagem
+      Options = []
+      TabOrder = 6
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
+    end
+  end
+  object qryListagem: TZQuery
+    Connection = dtmPrincipal.ConexaoDB
+    Params = <>
+    left = 714
+    top = 46
+  end
+  object dtsListagem: TDataSource
+    DataSet = qryListagem
+    left = 816
+    top = 46
+  end
+end

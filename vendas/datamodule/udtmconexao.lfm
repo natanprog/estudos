@@ -1,0 +1,24 @@
+object dtmPrincipal: TdtmPrincipal
+  OldCreateOrder = False
+  Height = 799
+  HorizontalOffset = 358
+  VerticalOffset = 133
+  Width = 1342
+  PPI = 101
+  object ConexaoDB: TZConnection
+    ControlsCodePage = cCP_UTF16
+    Properties.Strings = (
+      'AutoEncodeStrings=ON'
+      'controls_cp=CP_UTF16'
+    )
+    HostName = 'localhost'
+    Port = 1433
+    Database = 'vendas'
+    User = 'SA'
+    Password = 'Zero2040'
+    Protocol = 'FreeTDS_MsSQL>=2005'
+    LibraryLocation = '/usr/lib/x86_64-linux-gnu/libsybdb.so.5.1.0'
+    left = 67
+    top = 40
+  end
+end

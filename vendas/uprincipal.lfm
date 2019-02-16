@@ -1,0 +1,64 @@
+object frmPrincipal: TfrmPrincipal
+  Left = 340
+  Height = 757
+  Top = 126
+  Width = 1276
+  Caption = 'Menu Principal'
+  DesignTimePPI = 101
+  Menu = mainPrincipal
+  OnClose = FormClose
+  OnCreate = FormCreate
+  LCLVersion = '1.8.4.0'
+  WindowState = wsMaximized
+  object mainPrincipal: TMainMenu
+    left = 1192
+    top = 32
+    object menuCadastro: TMenuItem
+      Caption = 'CADASTRO'
+      object menuCliente: TMenuItem
+        Caption = 'CLIENTE'
+      end
+      object MenuItem5: TMenuItem
+        Caption = '-'
+      end
+      object menuCategoria: TMenuItem
+        Caption = 'CATEGORIA'
+        OnClick = menuCategoriaClick
+      end
+      object menuProduto: TMenuItem
+        Caption = 'PRODUTO'
+      end
+      object MenuItem8: TMenuItem
+        Caption = '-'
+      end
+      object menuFechar: TMenuItem
+        Caption = 'FECHAR'
+        OnClick = menuFecharClick
+      end
+    end
+    object menuMovimentacao: TMenuItem
+      Caption = 'MOVIMENTAÇÃO'
+      object menuVendas: TMenuItem
+        Caption = 'VENDAS'
+      end
+    end
+    object menuRelatorios: TMenuItem
+      Caption = 'RELATÓRIOS'
+      object menuRelatorioCliente: TMenuItem
+        Caption = 'CLIENTE'
+      end
+      object MenuItem12: TMenuItem
+        Caption = '-'
+      end
+      object menuRelatorioProduto: TMenuItem
+        Caption = 'PRODUTO'
+      end
+      object MenuItem14: TMenuItem
+        Caption = '-'
+      end
+      object menuRelatorioVendaPorData: TMenuItem
+        Caption = 'VENDA POR DATA'
+      end
+    end
+  end
+end
