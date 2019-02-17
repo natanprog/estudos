@@ -18,9 +18,6 @@
       <DestinationDirectory Value="/home/jean/publicar"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
-      </local>
       <FormatVersion Value="2"/>
       <Modes Count="1">
         <Mode0 Name="default">
@@ -77,12 +74,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Modelo_Cad"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="105"/>
         <CursorPos X="11" Y="122"/>
         <UsageCount Value="189"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="unitcad_clientes.pas"/>
@@ -90,12 +85,10 @@
         <ComponentName Value="Cad_Clientes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="4"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="148"/>
         <CursorPos X="21" Y="164"/>
         <UsageCount Value="182"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="unitdados.pas"/>
@@ -104,11 +97,10 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnitDados"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="118"/>
         <CursorPos X="82" Y="126"/>
         <UsageCount Value="189"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
       <Unit4>
         <Filename Value="unitprincipal.pas"/>
@@ -117,7 +109,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnitPrincipal"/>
-        <EditorIndex Value="6"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="162"/>
         <CursorPos X="33" Y="164"/>
         <UsageCount Value="189"/>
@@ -131,6 +123,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Modelo_Form_Rel"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="41"/>
         <CursorPos X="91" Y="62"/>
         <UsageCount Value="189"/>
@@ -139,18 +132,19 @@
         <Filename Value="unit_rotinas.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_rotinas"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="23"/>
         <CursorPos X="43" Y="40"/>
         <UsageCount Value="189"/>
-        <Loaded Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="unit_empresa.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form_Empresa"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Empresa"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="118"/>
         <CursorPos X="31" Y="146"/>
         <UsageCount Value="182"/>
@@ -161,19 +155,19 @@
         <ComponentName Value="Cad_Fornecedores"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="5"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="24"/>
         <CursorPos X="22" Y="41"/>
         <UsageCount Value="143"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="unit_config.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form_Config"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Config"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="71"/>
         <CursorPos X="117" Y="93"/>
         <UsageCount Value="123"/>
@@ -182,9 +176,10 @@
         <Filename Value="unit_cad_mod_simples.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form_Cad_Mod_Simples"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Mod_Simples"/>
-        <TopLine Value="14"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="32" Y="17"/>
         <UsageCount Value="111"/>
       </Unit10>
@@ -192,8 +187,10 @@
         <Filename Value="unit_cad_grupos.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Cad_Grupos"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Grupos"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="10"/>
         <CursorPos X="19" Y="33"/>
         <UsageCount Value="110"/>
@@ -202,9 +199,11 @@
         <Filename Value="unit_cad_marcas.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Cad_Marcas"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Marcas"/>
-        <TopLine Value="23"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="10"/>
         <CursorPos X="26" Y="42"/>
         <UsageCount Value="109"/>
       </Unit12>
@@ -212,9 +211,11 @@
         <Filename Value="unit_cad_modelos.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Cad_Modelos"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Modelos"/>
-        <TopLine Value="24"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="11"/>
         <CursorPos X="27" Y="43"/>
         <UsageCount Value="109"/>
       </Unit13>
@@ -222,9 +223,10 @@
         <Filename Value="unit_cad_unidades.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form_Cad_Unidades"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Unidades"/>
-        <TopLine Value="6"/>
+        <EditorIndex Value="-1"/>
         <CursorPos X="21" Y="12"/>
         <UsageCount Value="108"/>
       </Unit14>
@@ -235,136 +237,21 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Produtos"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="93"/>
         <CursorPos X="18" Y="110"/>
         <UsageCount Value="105"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit15>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="2" HistoryIndex="1">
       <Position1>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="421" Column="3" TopLine="399"/>
-      </Position1>
-      <Position2>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="422" Column="3" TopLine="400"/>
-      </Position2>
-      <Position3>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="421" Column="3" TopLine="399"/>
-      </Position3>
-      <Position4>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="163" TopLine="163"/>
-      </Position4>
-      <Position5>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="164" TopLine="164"/>
-      </Position5>
-      <Position6>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="163" TopLine="163"/>
-      </Position6>
-      <Position7>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="339" TopLine="306"/>
-      </Position7>
-      <Position8>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="340" TopLine="307"/>
-      </Position8>
-      <Position9>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="339" TopLine="306"/>
-      </Position9>
-      <Position10>
-        <Filename Value="unitdados.pas"/>
-        <Caret Line="126" Column="82" TopLine="118"/>
-      </Position10>
-      <Position11>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="421" Column="3" TopLine="399"/>
-      </Position11>
-      <Position12>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="422" Column="3" TopLine="400"/>
-      </Position12>
-      <Position13>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="421" Column="3" TopLine="399"/>
-      </Position13>
-      <Position14>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="163" TopLine="163"/>
-      </Position14>
-      <Position15>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="164" TopLine="164"/>
-      </Position15>
-      <Position16>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="163" TopLine="163"/>
-      </Position16>
-      <Position17>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="339" TopLine="306"/>
-      </Position17>
-      <Position18>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="340" TopLine="307"/>
-      </Position18>
-      <Position19>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="339" TopLine="306"/>
-      </Position19>
-      <Position20>
         <Filename Value="unitprincipal.pas"/>
         <Caret Line="210" Column="33" TopLine="210"/>
-      </Position20>
-      <Position21>
+      </Position1>
+      <Position2>
         <Filename Value="unitprincipal.pas"/>
         <Caret Line="164" Column="33" TopLine="162"/>
-      </Position21>
-      <Position22>
-        <Filename Value="unit_rotinas.pas"/>
-        <Caret Line="40" Column="43" TopLine="23"/>
-      </Position22>
-      <Position23>
-        <Filename Value="modelo_cad.pas"/>
-        <Caret Line="122" Column="11" TopLine="105"/>
-      </Position23>
-      <Position24>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="40" Column="50" TopLine="23"/>
-      </Position24>
-      <Position25>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="41" Column="46" TopLine="24"/>
-      </Position25>
-      <Position26>
-        <Filename Value="unitcad_clientes.pas"/>
-        <Caret Line="164" Column="21" TopLine="148"/>
-      </Position26>
-      <Position27>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="40" Column="35" TopLine="23"/>
-      </Position27>
-      <Position28>
-        <Filename Value="unitcad_fornecedores.pas"/>
-        <Caret Line="41" Column="22" TopLine="24"/>
-      </Position28>
-      <Position29>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="10" Column="47"/>
-      </Position29>
-      <Position30>
-        <Filename Value="unit_cad_produtos.pas"/>
-        <Caret Line="12" Column="54"/>
-      </Position30>
+      </Position2>
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>

@@ -1,24 +1,31 @@
 object Form_Cad_Mod_Simples: TForm_Cad_Mod_Simples
-  Left = 366
-  Height = 384
-  Top = 115
-  Width = 387
+  Left = 274
+  Height = 404
+  Top = 160
+  Width = 407
   ActiveControl = DBNavigator1
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Cadastro de '
-  ClientHeight = 384
-  ClientWidth = 387
-  LCLVersion = '0.9.27'
+  ClientHeight = 404
+  ClientWidth = 407
+  DesignTimePPI = 101
+  LCLVersion = '2.0.0.4'
   object DBNavigator1: TDBNavigator
     Left = 0
-    Height = 25
+    Height = 26
     Top = 0
-    Width = 387
+    Width = 407
     Align = alTop
     BevelOuter = bvNone
-    ClientHeight = 25
-    ClientWidth = 387
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 26
+    ClientWidth = 407
     Hints.Strings = (
       'Primeiro'
       'Anterior'
@@ -31,21 +38,28 @@ object Form_Cad_Mod_Simples: TForm_Cad_Mod_Simples
       'Cancelar'
       'Atualizar'
     )
+    Options = []
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
   end
   object DBGrid1: TDBGrid
     Left = 0
-    Height = 359
-    Top = 25
-    Width = 387
+    Height = 378
+    Top = 26
+    Width = 407
     Align = alClient
+    Color = clWindow
     Columns = <    
       item
+        MinSize = 11
+        MaxSize = 210
         Title.Alignment = taCenter
-        Width = 350
+        Title.Caption = 'Title'
+        Width = 368
       end>
+    ParentFont = False
     TabOrder = 1
     TitleStyle = tsNative
   end

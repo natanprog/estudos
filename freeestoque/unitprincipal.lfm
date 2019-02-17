@@ -1,7 +1,7 @@
 object FormPrincipal: TFormPrincipal
-  Left = 290
+  Left = 271
   Height = 727
-  Top = 142
+  Top = 159
   Width = 1067
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'FreeEstoque - Controle de Estoque e Vendas MultiPlataforma'

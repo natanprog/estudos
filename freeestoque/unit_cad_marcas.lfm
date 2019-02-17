@@ -1,4 +1,6 @@
 inherited Cad_Marcas: TCad_Marcas
+  Left = 273
+  Top = 158
   Caption = 'Cadastro de Marcas'
   OnClose = FormClose
   OnShow = FormShow

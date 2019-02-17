@@ -1,6 +1,6 @@
 inherited Cad_Grupos: TCad_Grupos
-  Left = 352
-  Top = 250
+  Left = 268
+  Top = 157
   Caption = 'Cadastro de Grupos'
   OnClose = FormClose
   OnShow = FormShow

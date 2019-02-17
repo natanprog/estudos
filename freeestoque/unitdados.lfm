@@ -1,8 +1,8 @@
 object dm: Tdm
   OldCreateOrder = False
   Height = 599
-  HorizontalOffset = 461
-  VerticalOffset = 155
+  HorizontalOffset = 272
+  VerticalOffset = 157
   Width = 564
   PPI = 101
   object banco: TZConnection
@@ -508,6 +508,7 @@ object dm: Tdm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      BlobType = ftMemo
       Transliterate = False
     end
     object ClientesATIVO: TStringField
@@ -809,6 +810,7 @@ object dm: Tdm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      BlobType = ftMemo
       Transliterate = False
     end
     object FornecedoresATIVO: TStringField
@@ -1309,6 +1311,7 @@ object dm: Tdm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
+      BlobType = ftMemo
       Transliterate = False
     end
     object ProdutosFOTO: TStringField

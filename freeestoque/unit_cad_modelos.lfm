@@ -1,6 +1,6 @@
 inherited Cad_Modelos: TCad_Modelos
-  Left = 479
-  Top = 247
+  Left = 276
+  Top = 159
   Caption = 'Cadastro de Modelos'
   OnClose = FormClose
   OnShow = FormShow

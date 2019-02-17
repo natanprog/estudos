@@ -1,63 +1,68 @@
 object Form_Config: TForm_Config
-  Left = 216
-  Height = 290
-  Top = 197
-  Width = 400
+  Left = 273
+  Height = 305
+  Top = 159
+  Width = 421
   ActiveControl = Edit1
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Configurações'
-  ClientHeight = 290
-  ClientWidth = 400
+  ClientHeight = 305
+  ClientWidth = 421
+  DesignTimePPI = 101
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '0.9.27'
+  LCLVersion = '2.0.0.4'
   object Label1: TLabel
     Left = 6
-    Height = 16
+    Height = 18
     Top = 8
-    Width = 139
+    Width = 163
     Caption = 'Uso deste Computador'
     ParentColor = False
+    ParentFont = False
   end
   object Label2: TLabel
-    Left = 174
-    Height = 16
+    Left = 183
+    Height = 18
     Top = 8
-    Width = 109
+    Width = 127
     Caption = 'Nome do Servidor'
     ParentColor = False
+    ParentFont = False
   end
   object Label3: TLabel
     Left = 6
-    Height = 16
-    Top = 64
-    Width = 174
+    Height = 18
+    Top = 67
+    Width = 201
     Caption = 'Caminho do Banco de Dados'
     ParentColor = False
+    ParentFont = False
   end
   object Label4: TLabel
     Left = 6
-    Height = 16
-    Top = 176
-    Width = 138
+    Height = 18
+    Top = 185
+    Width = 159
     Caption = 'Caminho dos BackUp''s'
     ParentColor = False
+    ParentFont = False
   end
   object Label5: TLabel
     Left = 6
-    Height = 16
-    Top = 120
-    Width = 169
+    Height = 18
+    Top = 126
+    Width = 196
     Caption = 'Caminho da Pasta das Fotos'
     ParentColor = False
+    ParentFont = False
   end
   object SpeedButton1: TSpeedButton
-    Left = 366
-    Height = 25
-    Top = 80
-    Width = 26
-    Color = clBtnFace
+    Left = 385
+    Height = 26
+    Top = 84
+    Width = 27
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000000000040000
@@ -94,15 +99,14 @@ object Form_Config: TForm_Config
       0000000000000000000015151538787878997E7E7E9C7E7E7E9C7D7D7D9C7F7F
       7F9D6B6B6BA01010104800000000000000000000000000000000
     }
-    NumGlyphs = 0
     OnClick = SpeedButton1Click
+    ParentFont = False
   end
   object SpeedButton2: TSpeedButton
-    Left = 366
-    Height = 25
-    Top = 136
-    Width = 26
-    Color = clBtnFace
+    Left = 385
+    Height = 26
+    Top = 143
+    Width = 27
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000000000040000
@@ -139,15 +143,14 @@ object Form_Config: TForm_Config
       0000000000000000000015151538787878997E7E7E9C7E7E7E9C7D7D7D9C7F7F
       7F9D6B6B6BA01010104800000000000000000000000000000000
     }
-    NumGlyphs = 0
     OnClick = SpeedButton2Click
+    ParentFont = False
   end
   object SpeedButton3: TSpeedButton
-    Left = 366
-    Height = 25
-    Top = 192
-    Width = 26
-    Color = clBtnFace
+    Left = 385
+    Height = 26
+    Top = 202
+    Width = 27
     Glyph.Data = {
       36040000424D3604000000000000360000002800000010000000100000000100
       2000000000000004000064000000640000000000000000000000000000040000
@@ -184,81 +187,89 @@ object Form_Config: TForm_Config
       0000000000000000000015151538787878997E7E7E9C7E7E7E9C7D7D7D9C7F7F
       7F9D6B6B6BA01010104800000000000000000000000000000000
     }
-    NumGlyphs = 0
     OnClick = SpeedButton3Click
+    ParentFont = False
   end
   object ComboBox1: TComboBox
     Left = 6
-    Height = 29
-    Top = 24
-    Width = 162
+    Height = 28
+    Top = 25
+    Width = 170
     ItemHeight = 0
     ItemIndex = 0
     Items.Strings = (
       'Servidor'
       'Cliente'
     )
+    ParentFont = False
     Style = csDropDownList
     TabOrder = 0
     Text = 'Servidor'
   end
   object Edit1: TEdit
-    Left = 174
-    Height = 25
-    Top = 24
-    Width = 162
+    Left = 183
+    Height = 28
+    Top = 25
+    Width = 170
+    ParentFont = False
     TabOrder = 1
   end
   object Edit2: TEdit
     Left = 6
-    Height = 25
-    Top = 80
-    Width = 356
+    Height = 28
+    Top = 84
+    Width = 375
+    ParentFont = False
     TabOrder = 2
   end
   object Edit3: TEdit
     Left = 6
-    Height = 25
-    Top = 136
-    Width = 356
+    Height = 28
+    Top = 143
+    Width = 375
+    ParentFont = False
     TabOrder = 3
   end
   object Edit4: TEdit
     Left = 6
-    Height = 25
-    Top = 192
-    Width = 356
+    Height = 28
+    Top = 202
+    Width = 375
+    ParentFont = False
     TabOrder = 4
   end
   object Panel1: TPanel
     Left = 6
-    Height = 50
-    Top = 232
-    Width = 386
-    ClientHeight = 50
-    ClientWidth = 386
+    Height = 53
+    Top = 244
+    Width = 406
+    ClientHeight = 53
+    ClientWidth = 406
+    ParentFont = False
     TabOrder = 5
     object BitBtn1: TBitBtn
-      Left = 299
-      Height = 30
-      Top = 11
-      Width = 75
+      Left = 315
+      Height = 32
+      Top = 12
+      Width = 79
       Caption = 'Cancelar'
       OnClick = BitBtn1Click
+      ParentFont = False
       TabOrder = 0
     end
     object BitBtn2: TBitBtn
-      Left = 218
-      Height = 30
-      Top = 11
-      Width = 75
+      Left = 229
+      Height = 32
+      Top = 12
+      Width = 79
       Caption = 'Salvar'
       OnClick = BitBtn2Click
+      ParentFont = False
       TabOrder = 1
     end
   end
   object sdd: TSelectDirectoryDialog
-    left = 360
-    top = 24
+    left = 379
+    top = 25
   end
 end

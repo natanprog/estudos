@@ -1,180 +1,200 @@
 object Form_Empresa: TForm_Empresa
-  Left = 307
-  Height = 582
-  Top = 111
-  Width = 672
+  Left = 271
+  Height = 612
+  Top = 157
+  Width = 707
   ActiveControl = DBEdit1
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
   Caption = 'Empresa'
-  ClientHeight = 582
-  ClientWidth = 672
+  ClientHeight = 612
+  ClientWidth = 707
+  DesignTimePPI = 101
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '0.9.27'
+  LCLVersion = '2.0.0.4'
   object Label1: TLabel
     Left = 8
-    Height = 16
+    Height = 18
     Top = 8
-    Width = 118
+    Width = 136
     Caption = 'Nome de Fantasia *'
     ParentColor = False
+    ParentFont = False
   end
   object Label2: TLabel
     Left = 8
-    Height = 16
-    Top = 64
-    Width = 85
+    Height = 18
+    Top = 67
+    Width = 97
     Caption = 'Razão Social *'
     ParentColor = False
+    ParentFont = False
   end
   object Label3: TLabel
     Left = 8
-    Height = 16
-    Top = 120
-    Width = 68
+    Height = 18
+    Top = 126
+    Width = 78
     Caption = 'Endereço *'
     ParentColor = False
+    ParentFont = False
   end
   object Label4: TLabel
     Left = 8
-    Height = 16
-    Top = 176
-    Width = 46
+    Height = 18
+    Top = 185
+    Width = 54
     Caption = 'Bairro *'
     ParentColor = False
+    ParentFont = False
   end
   object Label5: TLabel
-    Left = 344
-    Height = 16
-    Top = 176
-    Width = 52
+    Left = 362
+    Height = 18
+    Top = 185
+    Width = 60
     Caption = 'Cidade *'
     ParentColor = False
+    ParentFont = False
   end
   object Label6: TLabel
     Left = 8
-    Height = 16
-    Top = 232
-    Width = 52
+    Height = 18
+    Top = 244
+    Width = 59
     Caption = 'Estado *'
     ParentColor = False
+    ParentFont = False
   end
   object Label7: TLabel
-    Left = 389
-    Height = 16
-    Top = 400
-    Width = 43
+    Left = 409
+    Height = 18
+    Top = 421
+    Width = 47
     Caption = 'Fax 1 *'
     ParentColor = False
+    ParentFont = False
   end
   object Label8: TLabel
-    Left = 529
-    Height = 16
-    Top = 400
-    Width = 33
+    Left = 557
+    Height = 18
+    Top = 421
+    Width = 36
     Caption = 'Fax 2'
     ParentColor = False
+    ParentFont = False
   end
   object Label9: TLabel
     Left = 8
-    Height = 16
-    Top = 288
-    Width = 56
+    Height = 18
+    Top = 303
+    Width = 62
     Caption = 'Email 1 *'
     ParentColor = False
+    ParentFont = False
   end
   object Label10: TLabel
     Left = 8
-    Height = 16
-    Top = 344
-    Width = 46
+    Height = 18
+    Top = 362
+    Width = 51
     Caption = 'Email 2'
     ParentColor = False
+    ParentFont = False
   end
   object Label11: TLabel
     Left = 8
-    Height = 16
-    Top = 400
-    Width = 64
+    Height = 18
+    Top = 421
+    Width = 74
     Caption = 'Web Site *'
     ParentColor = False
+    ParentFont = False
   end
   object Label13: TLabel
-    Left = 108
-    Height = 16
-    Top = 232
-    Width = 34
+    Left = 114
+    Height = 18
+    Top = 244
+    Width = 39
     Caption = 'CEP *'
     ParentColor = False
+    ParentFont = False
   end
   object Label14: TLabel
-    Left = 216
-    Height = 16
-    Top = 232
-    Width = 72
+    Left = 227
+    Height = 18
+    Top = 244
+    Width = 85
     Caption = 'Caixa Postal'
     ParentColor = False
+    ParentFont = False
   end
   object Label15: TLabel
-    Left = 332
-    Height = 16
-    Top = 232
-    Width = 39
+    Left = 349
+    Height = 18
+    Top = 244
+    Width = 48
     Caption = 'CNPJ *'
     ParentColor = False
+    ParentFont = False
   end
   object Label16: TLabel
-    Left = 501
-    Height = 16
-    Top = 232
-    Width = 23
+    Left = 527
+    Height = 18
+    Top = 244
+    Width = 24
     Caption = 'IE *'
     ParentColor = False
+    ParentFont = False
   end
   object Label17: TLabel
-    Left = 389
-    Height = 16
-    Top = 288
-    Width = 52
+    Left = 409
+    Height = 18
+    Top = 303
+    Width = 59
     Caption = 'Fone 1 *'
     ParentColor = False
+    ParentFont = False
   end
   object Label18: TLabel
-    Left = 529
-    Height = 16
-    Top = 288
-    Width = 42
+    Left = 557
+    Height = 18
+    Top = 303
+    Width = 48
     Caption = 'Fone 2'
     ParentColor = False
+    ParentFont = False
   end
   object Label19: TLabel
-    Left = 389
-    Height = 16
-    Top = 344
-    Width = 64
+    Left = 409
+    Height = 18
+    Top = 362
+    Width = 74
     Caption = 'Celular 1 *'
     ParentColor = False
+    ParentFont = False
   end
   object Label20: TLabel
-    Left = 529
-    Height = 16
-    Top = 344
-    Width = 54
+    Left = 557
+    Height = 18
+    Top = 362
+    Width = 63
     Caption = 'Celular 2'
     ParentColor = False
+    ParentFont = False
   end
   object Shape1: TShape
-    Left = 18
-    Height = 85
-    Top = 476
-    Width = 220
+    Left = 19
+    Height = 89
+    Top = 501
+    Width = 231
   end
   object Label12: TLabel
-    Left = 524
-    Height = 14
+    Left = 551
+    Height = 11
     Top = 3
-    Width = 141
+    Width = 104
     Caption = '* Mostrado nos Relatórios'
     Font.Color = clBlue
     Font.Height = -9
@@ -183,59 +203,69 @@ object Form_Empresa: TForm_Empresa
   end
   object DBEdit1: TDBEdit
     Left = 8
-    Height = 25
-    Top = 24
-    Width = 657
+    Height = 28
+    Top = 25
+    Width = 691
     DataField = 'NOME'
     DataSource = Datasource1
-    MaxLength = 255
+    CharCase = ecNormal
+    MaxLength = 0
+    ParentFont = False
     TabOrder = 0
   end
   object DBEdit2: TDBEdit
     Left = 8
-    Height = 25
-    Top = 80
-    Width = 657
+    Height = 28
+    Top = 84
+    Width = 691
     DataField = 'RAZAO'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 255
+    ParentFont = False
     TabOrder = 1
   end
   object DBEdit3: TDBEdit
     Left = 8
-    Height = 25
-    Top = 136
-    Width = 657
+    Height = 28
+    Top = 143
+    Width = 691
     DataField = 'ENDERECO'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 255
+    ParentFont = False
     TabOrder = 2
   end
   object DBEdit4: TDBEdit
     Left = 8
-    Height = 25
-    Top = 192
-    Width = 331
+    Height = 28
+    Top = 202
+    Width = 348
     DataField = 'BAIRRO'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 255
+    ParentFont = False
     TabOrder = 3
   end
   object DBEdit5: TDBEdit
-    Left = 344
-    Height = 25
-    Top = 192
-    Width = 321
+    Left = 362
+    Height = 28
+    Top = 202
+    Width = 338
     DataField = 'CIDADE'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 255
+    ParentFont = False
     TabOrder = 4
   end
   object DBComboBox1: TDBComboBox
     Left = 8
-    Height = 27
-    Top = 248
-    Width = 96
+    Height = 28
+    Top = 261
+    Width = 101
     DataField = 'ESTADO'
     DataSource = Datasource1
     ItemHeight = 0
@@ -269,153 +299,181 @@ object Form_Empresa: TForm_Empresa
       'TO'
     )
     MaxLength = 0
+    ParentFont = False
     Sorted = True
     Style = csDropDownList
     TabOrder = 5
   end
   object DBEdit6: TDBEdit
-    Left = 108
-    Height = 25
-    Top = 248
-    Width = 104
+    Left = 114
+    Height = 28
+    Top = 261
+    Width = 109
     DataField = 'CEP'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 6
   end
   object DBEdit7: TDBEdit
-    Left = 216
-    Height = 25
-    Top = 248
-    Width = 112
+    Left = 227
+    Height = 28
+    Top = 261
+    Width = 118
     DataField = 'CAIXA_POSTAL'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 10
+    ParentFont = False
     TabOrder = 7
   end
   object DBEdit8: TDBEdit
-    Left = 332
-    Height = 25
-    Top = 248
-    Width = 164
+    Left = 349
+    Height = 28
+    Top = 261
+    Width = 173
     DataField = 'CNPJ'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 8
   end
   object DBEdit9: TDBEdit
-    Left = 501
-    Height = 25
-    Top = 248
-    Width = 164
+    Left = 527
+    Height = 28
+    Top = 261
+    Width = 173
     DataField = 'IE'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 9
   end
   object DBEdit10: TDBEdit
-    Left = 389
-    Height = 25
-    Top = 416
-    Width = 136
+    Left = 409
+    Height = 28
+    Top = 438
+    Width = 143
     DataField = 'FAX1'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 10
   end
   object DBEdit11: TDBEdit
-    Left = 389
-    Height = 25
-    Top = 304
-    Width = 136
+    Left = 409
+    Height = 28
+    Top = 320
+    Width = 143
     DataField = 'FONE1'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 11
   end
   object DBEdit12: TDBEdit
-    Left = 529
-    Height = 25
-    Top = 304
-    Width = 136
+    Left = 557
+    Height = 28
+    Top = 320
+    Width = 143
     DataField = 'FONE2'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 12
   end
   object DBEdit13: TDBEdit
-    Left = 529
-    Height = 25
-    Top = 416
-    Width = 136
+    Left = 557
+    Height = 28
+    Top = 438
+    Width = 143
     DataField = 'FAX2'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 13
   end
   object DBEdit14: TDBEdit
-    Left = 389
-    Height = 25
-    Top = 360
-    Width = 136
+    Left = 409
+    Height = 28
+    Top = 379
+    Width = 143
     DataField = 'CEL1'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 14
   end
   object DBEdit15: TDBEdit
-    Left = 529
-    Height = 25
-    Top = 360
-    Width = 136
+    Left = 557
+    Height = 28
+    Top = 379
+    Width = 143
     DataField = 'CEL2'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 20
+    ParentFont = False
     TabOrder = 15
   end
   object DBEdit16: TDBEdit
     Left = 8
-    Height = 25
-    Top = 304
-    Width = 377
+    Height = 28
+    Top = 320
+    Width = 397
     DataField = 'EMAIL1'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 255
+    ParentFont = False
     TabOrder = 16
   end
   object DBEdit17: TDBEdit
     Left = 8
-    Height = 25
-    Top = 360
-    Width = 377
+    Height = 28
+    Top = 379
+    Width = 397
     DataField = 'EMAIL2'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 255
+    ParentFont = False
     TabOrder = 17
   end
   object DBEdit18: TDBEdit
     Left = 8
-    Height = 25
-    Top = 416
-    Width = 377
+    Height = 28
+    Top = 438
+    Width = 397
     DataField = 'SITE'
     DataSource = Datasource1
+    CharCase = ecNormal
     MaxLength = 255
+    ParentFont = False
     TabOrder = 18
   end
   object GroupBox1: TGroupBox
-    Left = 464
-    Height = 115
-    Top = 456
-    Width = 201
-    ClientHeight = 111
-    ClientWidth = 197
+    Left = 488
+    Height = 121
+    Top = 480
+    Width = 211
+    ClientHeight = 117
+    ClientWidth = 207
+    ParentFont = False
     TabOrder = 19
     object BitBtn3: TBitBtn
-      Left = 14
-      Height = 38
+      Left = 15
+      Height = 40
       Top = 5
-      Width = 168
+      Width = 177
       Caption = 'Salvar'
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
@@ -494,13 +552,14 @@ object Form_Empresa: TForm_Empresa
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = BitBtn3Click
+      ParentFont = False
       TabOrder = 0
     end
     object BitBtn4: TBitBtn
-      Left = 14
-      Height = 38
-      Top = 52
-      Width = 168
+      Left = 15
+      Height = 40
+      Top = 55
+      Width = 177
       Caption = 'Cancelar'
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
@@ -579,32 +638,34 @@ object Form_Empresa: TForm_Empresa
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = BitBtn4Click
+      ParentFont = False
       TabOrder = 1
     end
   end
   object GroupBox2: TGroupBox
     Left = 8
-    Height = 115
-    Top = 456
-    Width = 437
+    Height = 121
+    Top = 480
+    Width = 460
     Caption = 'Logotipo (Tam.: 85x220) *'
-    ClientHeight = 98
-    ClientWidth = 433
+    ClientHeight = 101
+    ClientWidth = 456
+    ParentFont = False
     TabOrder = 20
     object DBImage1: TDBImage
       Left = 8
-      Height = 85
+      Height = 89
       Top = 5
-      Width = 220
+      Width = 231
       DataField = 'LOGOTIPO'
       DataSource = Datasource1
       Stretch = True
     end
     object BitBtn1: TBitBtn
-      Left = 270
-      Height = 38
+      Left = 284
+      Height = 40
       Top = 5
-      Width = 119
+      Width = 125
       Caption = 'Carregar'
       Glyph.Data = {
         C6070000424DC607000000000000360000002800000016000000160000000100
@@ -672,13 +733,14 @@ object Form_Empresa: TForm_Empresa
         00000000000000000000
       }
       OnClick = BitBtn1Click
+      ParentFont = False
       TabOrder = 0
     end
     object BitBtn2: TBitBtn
-      Left = 270
-      Height = 38
-      Top = 52
-      Width = 119
+      Left = 284
+      Height = 40
+      Top = 55
+      Width = 125
       Caption = 'Limpar'
       Glyph.Data = {
         C6070000424DC607000000000000360000002800000016000000160000000100
@@ -746,16 +808,17 @@ object Form_Empresa: TForm_Empresa
         FF00FFFFFF00FFFFFF00
       }
       OnClick = BitBtn2Click
+      ParentFont = False
       TabOrder = 1
     end
   end
-  object Datasource1: TDatasource
+  object Datasource1: TDataSource
     DataSet = dm.Empresa
-    left = 600
-    top = 48
+    left = 631
+    top = 51
   end
   object OpenLogo: TOpenPictureDialog
-    left = 482
-    top = 58
+    left = 507
+    top = 61
   end
 end
