@@ -1,0 +1,17 @@
+inherited Form_Cad_Unidades: TForm_Cad_Unidades
+  Caption = 'Cadastro de Unidades'
+  inherited DBNavigator1: TDBNavigator
+    DataSource = dm.dsUnidades
+  end
+  inherited DBGrid1: TDBGrid
+    Columns = <    
+      item
+        PickList.Strings = (        )
+        Title.Alignment = taCenter
+        Title.Caption = 'Unidade'
+        Width = 350
+        FieldName = 'UNIDADE'
+      end>
+    DataSource = dm.dsUnidades
+  end
+end

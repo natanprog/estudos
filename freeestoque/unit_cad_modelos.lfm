@@ -1,0 +1,21 @@
+inherited Cad_Modelos: TCad_Modelos
+  Left = 479
+  Top = 247
+  Caption = 'Cadastro de Modelos'
+  OnClose = FormClose
+  OnShow = FormShow
+  inherited DBNavigator1: TDBNavigator
+    DataSource = dm.dsModelos
+  end
+  inherited DBGrid1: TDBGrid
+    Columns = <    
+      item
+        PickList.Strings = (        )
+        Title.Alignment = taCenter
+        Title.Caption = 'Modelo'
+        Width = 350
+        FieldName = 'MODELO'
+      end>
+    DataSource = dm.dsModelos
+  end
+end

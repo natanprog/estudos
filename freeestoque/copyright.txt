@@ -1,0 +1,3 @@
+Projeto: FreeEstoque - Sistema multiplataforma para controle de estoque, controle de vendas e financeiro.     
+Copyright (c) 2009 Jean Patrick F. dos Santos.
+Todos os direitos reservados.

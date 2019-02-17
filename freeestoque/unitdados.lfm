@@ -1,0 +1,1570 @@
+object dm: Tdm
+  OldCreateOrder = False
+  Height = 569
+  HorizontalOffset = 438
+  VerticalOffset = 147
+  Width = 536
+  object banco: TZConnection
+    Protocol = 'firebird-2.1'
+    HostName = 'localhost'
+    Port = 3050
+    Database = '/home/jean/freeestoque/banco/freeestoque.fdb'
+    User = 'SYSDBA'
+    Password = 'masterkey'
+    TransactIsolationLevel = tiReadCommitted
+    left = 25
+    top = 19
+  end
+  object sClientes: TZSequence
+    Connection = banco
+    SequenceName = 'GEN_CLIENTES_ID'
+    left = 285
+    top = 19
+  end
+  object uClientes: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM CLIENTES'
+      'WHERE'
+      '  (CLIENTES.ID = :OLD_ID)'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO CLIENTES'
+      '  (ID, DATA_CAD, NOME, RAZAO, TIPO, CPF, RG, CNPJ, IE, ENDERECO, BAIRRO, '
+      '   CIDADE, ESTADO, CEP, CAIXA_POSTAL, FONE1, FONE2, CEL1, CEL2, FAX1, FAX2, '
+      '   CONTATO, ATIVO, EMAIL1, EMAIL2, SITE, OBS, FOTO)'
+      'VALUES'
+      '  (:ID, :DATA_CAD, :NOME, :RAZAO, :TIPO, :CPF, :RG, :CNPJ, :IE, :ENDERECO, :BAIRRO, '
+      ':CIDADE, :ESTADO, :CEP, :CAIXA_POSTAL, :FONE1, :FONE2, :CEL1, :CEL2, :FAX1, :FAX2, '
+      '   :CONTATO, :ATIVO, :EMAIL1, :EMAIL2, :SITE, :OBS, :FOTO)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE CLIENTES SET'
+      '  ID = :ID,'
+      '  DATA_CAD = :DATA_CAD,'
+      '  NOME = :NOME,'
+      '  RAZAO = :RAZAO,'
+      '  TIPO = :TIPO,'
+      '  CPF = :CPF,'
+      '  RG = :RG,'
+      '  CNPJ = :CNPJ,'
+      '  IE = :IE,'
+      '  ENDERECO = :ENDERECO,'
+      '  BAIRRO = :BAIRRO,'
+      '  CIDADE = :CIDADE,'
+      '  ESTADO = :ESTADO,'
+      '  CEP = :CEP,'
+      '  CAIXA_POSTAL = :CAIXA_POSTAL,'
+      '  FONE1 = :FONE1,'
+      '  FONE2 = :FONE2,'
+      '  CEL1 = :CEL1,'
+      '  CEL2 = :CEL2,'
+      '  FAX1 = :FAX1,'
+      '  FAX2 = :FAX2,'
+      '  CONTATO = :CONTATO,'
+      '  ATIVO = :ATIVO,'
+      '  EMAIL1 = :EMAIL1,'
+      '  EMAIL2 = :EMAIL2,'
+      '  SITE = :SITE,'
+      '  OBS = :OBS,'
+      '  FOTO = :FOTO'
+      'WHERE'
+      '  (CLIENTES.ID = :OLD_ID)'
+    )
+    UseSequenceFieldForRefreshSQL = True
+    left = 191
+    top = 19
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATA_CAD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOME'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'RAZAO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'TIPO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CPF'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'RG'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CNPJ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'IE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ENDERECO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'BAIRRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CIDADE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ESTADO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CAIXA_POSTAL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FONE1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FONE2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEL1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEL2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FAX1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FAX2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CONTATO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ATIVO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'EMAIL1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'EMAIL2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SITE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OBS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FOTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end>
+  end
+  object Clientes: TZQuery
+    Connection = banco
+    AutoCalcFields = False
+    Filtered = True
+    UpdateObject = uClientes
+    SQL.Strings = (
+      'SELECT * FROM CLIENTES'
+    )
+    Params = <>
+    Sequence = sClientes
+    SequenceField = 'ID'
+    left = 100
+    top = 19
+    object ClientesID: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '00000'
+    end
+    object ClientesDATA_CAD: TDateField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'DATA_CAD'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'dd/mm/yyyy'
+    end
+    object ClientesNOME: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesRAZAO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'RAZAO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesTIPO: TStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'TIPO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object ClientesCPF: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CPF'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesRG: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'RG'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesCNPJ: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CNPJ'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesIE: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'IE'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesENDERECO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'ENDERECO'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesBAIRRO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesCIDADE: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'CIDADE'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesESTADO: TStringField
+      DisplayWidth = 2
+      FieldKind = fkData
+      FieldName = 'ESTADO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object ClientesCEP: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesCAIXA_POSTAL: TStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CAIXA_POSTAL'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object ClientesFONE1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FONE1'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesFONE2: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FONE2'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesCEL1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CEL1'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesCEL2: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CEL2'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesFAX1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FAX1'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesFAX2: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FAX2'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ClientesCONTATO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'CONTATO'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesEMAIL1: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'EMAIL1'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesEMAIL2: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'EMAIL2'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesSITE: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'SITE'
+      Index = 24
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ClientesOBS: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'OBS'
+      Index = 25
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object ClientesATIVO: TStringField
+      DisplayLabel = 'Ativo'
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'ATIVO'
+      Index = 26
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+    object ClientesFOTO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'FOTO'
+      Index = 27
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+  end
+  object dsClientes: TDatasource
+    AutoEdit = False
+    DataSet = Clientes
+    left = 383
+    top = 19
+  end
+  object SQL: TZQuery
+    Connection = banco
+    AutoCalcFields = False
+    Filtered = True
+    Params = <>
+    left = 25
+    top = 80
+  end
+  object Empresa: TZTable
+    Connection = banco
+    AutoCalcFields = False
+    TableName = 'EMPRESA'
+    left = 25
+    top = 136
+  end
+  object Fornecedores: TZQuery
+    Connection = banco
+    AutoCalcFields = False
+    Filtered = True
+    UpdateObject = uFornecedores
+    SQL.Strings = (
+      'SELECT * FROM FORNECEDORES'
+    )
+    Params = <>
+    Sequence = sFornecedores
+    SequenceField = 'ID'
+    left = 100
+    top = 80
+    object FornecedoresID: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '00000'
+    end
+    object FornecedoresDATA_CAD: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATA_CAD'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresNOME: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresRAZAO: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'RAZAO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresCNPJ: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CNPJ'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresIE: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'IE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresENDERECO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'ENDERECO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresBAIRRO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresCIDADE: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'CIDADE'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresESTADO: TStringField
+      DisplayWidth = 2
+      FieldKind = fkData
+      FieldName = 'ESTADO'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 2
+    end
+    object FornecedoresCEP: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresCAIXA_POSTAL: TStringField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'CAIXA_POSTAL'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 10
+    end
+    object FornecedoresFONE1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FONE1'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresFONE2: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FONE2'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresCEL1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CEL1'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresCEL2: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'CEL2'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresFAX1: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FAX1'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresFAX2: TStringField
+      DisplayWidth = 20
+      FieldKind = fkData
+      FieldName = 'FAX2'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object FornecedoresCONTATO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'CONTATO'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresEMAIL1: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'EMAIL1'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresEMAIL2: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'EMAIL2'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresSITE: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'SITE'
+      Index = 21
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object FornecedoresOBS: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'OBS'
+      Index = 22
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object FornecedoresATIVO: TStringField
+      DisplayWidth = 4
+      FieldKind = fkData
+      FieldName = 'ATIVO'
+      Index = 23
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 4
+    end
+  end
+  object uFornecedores: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM FORNECEDORES'
+      'WHERE'
+      '  (FORNECEDORES.ID = :OLD_ID)'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO FORNECEDORES'
+      '  (ID, DATA_CAD, NOME, RAZAO, CNPJ, IE, ENDERECO, BAIRRO, CIDADE, ESTADO, '
+      '   CEP, CAIXA_POSTAL, FONE1, FONE2, CEL1, CEL2, FAX1, FAX2, CONTATO, ATIVO, '
+      '   EMAIL1, EMAIL2, SITE, OBS)'
+      'VALUES'
+      '  (:ID, :DATA_CAD, :NOME, :RAZAO, :CNPJ, :IE, :ENDERECO, :BAIRRO, :CIDADE, '
+      '   :ESTADO, :CEP, :CAIXA_POSTAL, :FONE1, :FONE2, :CEL1, :CEL2, :FAX1, :FAX2, '
+      '   :CONTATO, :ATIVO, :EMAIL1, :EMAIL2, :SITE, :OBS)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE FORNECEDORES SET'
+      '  ID = :ID,'
+      '  DATA_CAD = :DATA_CAD,'
+      '  NOME = :NOME,'
+      '  RAZAO = :RAZAO,'
+      '  CNPJ = :CNPJ,'
+      '  IE = :IE,'
+      '  ENDERECO = :ENDERECO,'
+      '  BAIRRO = :BAIRRO,'
+      '  CIDADE = :CIDADE,'
+      '  ESTADO = :ESTADO,'
+      '  CEP = :CEP,'
+      '  CAIXA_POSTAL = :CAIXA_POSTAL,'
+      '  FONE1 = :FONE1,'
+      '  FONE2 = :FONE2,'
+      '  CEL1 = :CEL1,'
+      '  CEL2 = :CEL2,'
+      '  FAX1 = :FAX1,'
+      '  FAX2 = :FAX2,'
+      '  CONTATO = :CONTATO,'
+      '  ATIVO = :ATIVO,'
+      '  EMAIL1 = :EMAIL1,'
+      '  EMAIL2 = :EMAIL2,'
+      '  SITE = :SITE,'
+      '  OBS = :OBS'
+      'WHERE'
+      '  (FORNECEDORES.ID = :OLD_ID)'
+    )
+    UseSequenceFieldForRefreshSQL = True
+    left = 191
+    top = 80
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATA_CAD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOME'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'RAZAO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CNPJ'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'IE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ENDERECO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'BAIRRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CIDADE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ESTADO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CAIXA_POSTAL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FONE1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FONE2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEL1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEL2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FAX1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FAX2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CONTATO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ATIVO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'EMAIL1'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'EMAIL2'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'SITE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OBS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end>
+  end
+  object sFornecedores: TZSequence
+    Connection = banco
+    SequenceName = 'GEN_FORNECEDORES_ID'
+    left = 285
+    top = 80
+  end
+  object dsFornecedores: TDatasource
+    AutoEdit = False
+    DataSet = Fornecedores
+    left = 383
+    top = 80
+  end
+  object Marcas: TZTable
+    Connection = banco
+    SortedFields = 'MARCA'
+    AutoCalcFields = False
+    TableName = 'MARCAS'
+    IndexFieldNames = 'MARCA Asc'
+    Sequence = sMarcas
+    SequenceField = 'ID'
+    left = 25
+    top = 264
+    object MarcasID: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object MarcasMARCA: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'MARCA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+  end
+  object dsGrupos: TDatasource
+    DataSet = Grupos
+    left = 191
+    top = 200
+  end
+  object dsMarcas: TDatasource
+    DataSet = Marcas
+    left = 191
+    top = 264
+  end
+  object sGrupos: TZSequence
+    Connection = banco
+    SequenceName = 'GEN_GRUPOS_ID'
+    left = 100
+    top = 200
+  end
+  object sMarcas: TZSequence
+    Connection = banco
+    SequenceName = 'GEN_MARCAS_ID'
+    left = 100
+    top = 264
+  end
+  object Modelos: TZTable
+    Connection = banco
+    SortedFields = 'MODELO'
+    AutoCalcFields = False
+    TableName = 'MODELOS'
+    IndexFieldNames = 'MODELO Asc'
+    Sequence = sModelos
+    SequenceField = 'ID'
+    left = 25
+    top = 325
+    object ModelosID: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ModelosMODELO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'MODELO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+  end
+  object dsModelos: TDatasource
+    DataSet = Modelos
+    left = 191
+    top = 325
+  end
+  object Unidades: TZTable
+    Connection = banco
+    SortedFields = 'UNIDADE'
+    AutoCalcFields = False
+    TableName = 'UNIDADES'
+    IndexFieldNames = 'UNIDADE Asc'
+    Sequence = sUnidades
+    SequenceField = 'ID'
+    left = 25
+    top = 382
+    object UnidadesID: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object UnidadesUNIDADE: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'UNIDADE'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+  end
+  object dsUnidades: TDatasource
+    DataSet = Unidades
+    left = 191
+    top = 382
+  end
+  object sModelos: TZSequence
+    Connection = banco
+    SequenceName = 'GEN_MODELOS_ID'
+    left = 100
+    top = 325
+  end
+  object sUnidades: TZSequence
+    Connection = banco
+    SequenceName = 'GEN_UNIDADES_ID'
+    left = 100
+    top = 382
+  end
+  object Produtos: TZQuery
+    Connection = banco
+    AutoCalcFields = False
+    Filtered = True
+    UpdateObject = uProdutos
+    SQL.Strings = (
+      'SELECT P.*, G.GRUPO, MA.MARCA, '
+      'MO.MODELO, U.UNIDADE, F.NOME'
+      ' FROM PRODUTOS AS P '
+      'LEFT OUTER JOIN GRUPOS AS G ON '
+      'P.GRUPO=G.ID'
+      'LEFT OUTER JOIN MARCAS AS MA ON'
+      'P.MARCA=MA.ID '
+      'LEFT OUTER JOIN MODELOS AS MO ON'
+      'P.MODELO=MO.ID '
+      'LEFT OUTER JOIN UNIDADES AS U ON'
+      'P.UNIDADE=U.ID '
+      'LEFT OUTER JOIN FORNECEDORES AS F ON'
+      'P.FORNECEDOR=F.ID'
+    )
+    Params = <>
+    Sequence = sProdutos
+    SequenceField = 'ID'
+    left = 25
+    top = 448
+    object ProdutosID: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ID'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '00000'
+    end
+    object ProdutosCOD_BARRA: TStringField
+      DisplayWidth = 100
+      FieldKind = fkData
+      FieldName = 'COD_BARRA'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 100
+    end
+    object ProdutosDATA_CAD: TDateField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'DATA_CAD'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = 'dd/mm/yy'
+    end
+    object ProdutosDESCRICAO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'DESCRICAO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ProdutosGRUPO: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'GRUPO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ProdutosMARCA: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'MARCA'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ProdutosMODELO: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'MODELO'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ProdutosFORNECEDOR: TLargeintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'FORNECEDOR'
+      Index = 7
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ProdutosESTOQUE_MIN: TFloatField
+      Alignment = taLeftJustify
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ESTOQUE_MIN'
+      Index = 8
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '######0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 0
+    end
+    object ProdutosESTOQUE_ATUAL: TFloatField
+      Alignment = taLeftJustify
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'ESTOQUE_ATUAL'
+      Index = 9
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '######0.00'
+      MaxValue = 0
+      MinValue = 0
+      Precision = 0
+    end
+    object ProdutosREFERENCIA: TStringField
+      DisplayWidth = 30
+      FieldKind = fkData
+      FieldName = 'REFERENCIA'
+      Index = 10
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object ProdutosOBS: TMemoField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'OBS'
+      Index = 11
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      BlobType = ftBlob
+      Transliterate = False
+    end
+    object ProdutosFOTO: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'FOTO'
+      Index = 12
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ProdutosUNIDADE: TLongintField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'UNIDADE'
+      Index = 13
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object ProdutosGRUPO_1: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'GRUPO_1'
+      Index = 14
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ProdutosMARCA_1: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'MARCA_1'
+      Index = 15
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ProdutosMODELO_1: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'MODELO_1'
+      Index = 16
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ProdutosUNIDADE_1: TStringField
+      DisplayWidth = 50
+      FieldKind = fkData
+      FieldName = 'UNIDADE_1'
+      Index = 17
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 50
+    end
+    object ProdutosNOME: TStringField
+      DisplayWidth = 255
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 18
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 255
+    end
+    object ProdutosPRECO_COMP: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PRECO_COMP'
+      Index = 19
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = 0
+    end
+    object ProdutosPRECO_VEND: TFloatField
+      DisplayWidth = 10
+      FieldKind = fkData
+      FieldName = 'PRECO_VEND'
+      Index = 20
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+      Precision = 0
+    end
+  end
+  object uProdutos: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM PRODUTOS'
+      'WHERE'
+      '  (PRODUTOS.ID = :OLD_ID)'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO PRODUTOS'
+      '  (ID, COD_BARRA, DATA_CAD, DESCRICAO, GRUPO, MARCA, MODELO, FORNECEDOR, '
+      '   PRECO_COMP, PRECO_VEND, ESTOQUE_MIN, ESTOQUE_ATUAL, REFERENCIA, OBS, '
+      '   FOTO, UNIDADE)'
+      'VALUES'
+      '  (:ID, :COD_BARRA, :DATA_CAD, :DESCRICAO, :GRUPO, :MARCA, :MODELO, :FORNECEDOR, '
+      '   :PRECO_COMP, :PRECO_VEND, :ESTOQUE_MIN, :ESTOQUE_ATUAL, :REFERENCIA, '
+      '   :OBS, :FOTO, :UNIDADE)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE PRODUTOS SET'
+      '  ID = :ID,'
+      '  COD_BARRA = :COD_BARRA,'
+      '  DATA_CAD = :DATA_CAD,'
+      '  DESCRICAO = :DESCRICAO,'
+      '  GRUPO = :GRUPO,'
+      '  MARCA = :MARCA,'
+      '  MODELO = :MODELO,'
+      '  FORNECEDOR = :FORNECEDOR,'
+      '  PRECO_COMP = :PRECO_COMP,'
+      '  PRECO_VEND = :PRECO_VEND,'
+      '  ESTOQUE_MIN = :ESTOQUE_MIN,'
+      '  ESTOQUE_ATUAL = :ESTOQUE_ATUAL,'
+      '  REFERENCIA = :REFERENCIA,'
+      '  OBS = :OBS,'
+      '  FOTO = :FOTO,'
+      '  UNIDADE = :UNIDADE'
+      'WHERE'
+      '  (PRODUTOS.ID = :OLD_ID)'
+    )
+    UseSequenceFieldForRefreshSQL = True
+    left = 100
+    top = 448
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'ID'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'COD_BARRA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATA_CAD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DESCRICAO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'GRUPO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'MARCA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'MODELO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FORNECEDOR'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PRECO_COMP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PRECO_VEND'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ESTOQUE_MIN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ESTOQUE_ATUAL'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'REFERENCIA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OBS'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FOTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'UNIDADE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ID'
+        ParamType = ptUnknown
+      end>
+  end
+  object sProdutos: TZSequence
+    Connection = banco
+    SequenceName = 'GEN_PRODUTOS_ID'
+    left = 191
+    top = 448
+  end
+  object dsProdutos: TDatasource
+    AutoEdit = False
+    DataSet = Produtos
+    left = 285
+    top = 448
+  end
+  object Grupos: TZTable
+    Connection = banco
+    SortedFields = 'GRUPO'
+    AutoCalcFields = False
+    TableName = 'GRUPOS'
+    IndexFieldNames = 'GRUPO Asc'
+    Sequence = sGrupos
+    SequenceField = 'ID'
+    left = 25
+    top = 200
+  end
+end

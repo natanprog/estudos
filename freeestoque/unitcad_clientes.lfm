@@ -1,0 +1,1378 @@
+inherited Cad_Clientes: TCad_Clientes
+  Caption = 'Cadastro de Clientes'
+  OnClose = FormClose
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  inherited Notebook1: TNotebook
+    Left = 6
+    Height = 554
+    Top = 71
+    Width = 1000
+    inherited Page1: TPage
+      ClientWidth = 992
+      ClientHeight = 526
+      inherited lbMensagem1: TLabel
+        Font.Color = clBlue
+      end
+      object Label1: TLabel[2]
+        Left = 9
+        Height = 16
+        Top = 40
+        Width = 40
+        Caption = 'Código'
+        ParentColor = False
+      end
+      object Label2: TLabel[3]
+        Left = 200
+        Height = 16
+        Top = 40
+        Width = 82
+        Caption = 'Nome/Fantasia'
+        ParentColor = False
+      end
+      object Label3: TLabel[4]
+        Left = 9
+        Height = 16
+        Top = 88
+        Width = 66
+        Caption = 'Razão Social'
+        ParentColor = False
+      end
+      object Label4: TLabel[5]
+        Left = 86
+        Height = 16
+        Top = 40
+        Width = 52
+        Caption = 'Data Cad.'
+        ParentColor = False
+      end
+      object Label5: TLabel[6]
+        Left = 9
+        Height = 16
+        Top = 136
+        Width = 50
+        Caption = 'Endereço'
+        ParentColor = False
+      end
+      object Label6: TLabel[7]
+        Left = 867
+        Height = 16
+        Top = 88
+        Width = 25
+        Anchors = [akTop, akRight]
+        Caption = 'Tipo'
+        ParentColor = False
+      end
+      object Label7: TLabel[8]
+        Left = 643
+        Height = 16
+        Top = 136
+        Width = 32
+        Anchors = [akTop, akRight]
+        Caption = 'Bairro'
+        ParentColor = False
+      end
+      object Label8: TLabel[9]
+        Left = 9
+        Height = 16
+        Top = 231
+        Width = 29
+        Caption = 'CNPJ'
+        ParentColor = False
+      end
+      object Label11: TLabel[10]
+        Left = 9
+        Height = 16
+        Top = 183
+        Width = 38
+        Caption = 'Cidade'
+        ParentColor = False
+      end
+      object Label12: TLabel[11]
+        Left = 678
+        Height = 16
+        Top = 183
+        Width = 36
+        Anchors = [akTop, akRight]
+        Caption = 'Estado'
+        ParentColor = False
+      end
+      object Label13: TLabel[12]
+        Left = 779
+        Height = 16
+        Top = 183
+        Width = 22
+        Anchors = [akTop, akRight]
+        Caption = 'CEP'
+        ParentColor = False
+      end
+      object Label14: TLabel[13]
+        Left = 893
+        Height = 16
+        Top = 183
+        Width = 64
+        Anchors = [akTop, akRight]
+        Caption = 'Caixa Postal'
+        ParentColor = False
+      end
+      object Label9: TLabel[14]
+        Left = 163
+        Height = 16
+        Top = 231
+        Width = 10
+        Caption = 'IE'
+        ParentColor = False
+      end
+      object Label15: TLabel[15]
+        Left = 317
+        Height = 16
+        Top = 231
+        Width = 22
+        Caption = 'CPF'
+        ParentColor = False
+      end
+      object Label16: TLabel[16]
+        Left = 471
+        Height = 16
+        Top = 231
+        Width = 16
+        Caption = 'RG'
+        ParentColor = False
+      end
+      object Label17: TLabel[17]
+        Left = 9
+        Height = 16
+        Top = 280
+        Width = 36
+        Caption = 'Fone 1'
+        ParentColor = False
+      end
+      object Label18: TLabel[18]
+        Left = 128
+        Height = 16
+        Top = 280
+        Width = 36
+        Caption = 'Fone 2'
+        ParentColor = False
+      end
+      object Label19: TLabel[19]
+        Left = 248
+        Height = 16
+        Top = 280
+        Width = 47
+        Caption = 'Celular 1'
+        ParentColor = False
+      end
+      object Label20: TLabel[20]
+        Left = 368
+        Height = 16
+        Top = 280
+        Width = 47
+        Caption = 'Celular 2'
+        ParentColor = False
+      end
+      object Label21: TLabel[21]
+        Left = 488
+        Height = 16
+        Top = 280
+        Width = 27
+        Caption = 'Fax 1'
+        ParentColor = False
+      end
+      object Label22: TLabel[22]
+        Left = 608
+        Height = 16
+        Top = 280
+        Width = 27
+        Caption = 'Fax 2'
+        ParentColor = False
+      end
+      object Label23: TLabel[23]
+        Left = 9
+        Height = 16
+        Top = 328
+        Width = 39
+        Caption = 'Email 1'
+        ParentColor = False
+      end
+      object Label24: TLabel[24]
+        Left = 368
+        Height = 16
+        Top = 328
+        Width = 44
+        Caption = 'Contato'
+        ParentColor = False
+      end
+      object Label25: TLabel[25]
+        Left = 9
+        Height = 16
+        Top = 376
+        Width = 39
+        Caption = 'Email 2'
+        ParentColor = False
+      end
+      object Label26: TLabel[26]
+        Left = 368
+        Height = 16
+        Top = 376
+        Width = 47
+        Caption = 'Web Site'
+        ParentColor = False
+      end
+      object Label27: TLabel[27]
+        Left = 9
+        Height = 16
+        Top = 423
+        Width = 22
+        Caption = 'Obs'
+        ParentColor = False
+      end
+      inherited DBNavigator1: TDBNavigator[28]
+        Left = 856
+        DataSource = dm.dsClientes
+        Hints.Strings = (
+          'Primeiro'
+          'Anterior'
+          'Próximo'
+          'Último'
+          'Inserir'
+          'Excluir'
+          'Editar'
+          'Salvar'
+          'Cancelar'
+          'Atualizar'
+        )
+      end
+      object DBEdit1: TDBEdit[29]
+        Left = 200
+        Height = 25
+        Top = 56
+        Width = 785
+        DataField = 'NOME'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 255
+        TabOrder = 3
+      end
+      object DBEdit2: TDBEdit[30]
+        Left = 86
+        Height = 25
+        Top = 56
+        Width = 111
+        DataField = 'DATA_CAD'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Color = clForm
+        TabOrder = 2
+        TabStop = False
+      end
+      object DBEdit3: TDBEdit[31]
+        Left = 9
+        Height = 25
+        Top = 200
+        Width = 657
+        DataField = 'CIDADE'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 255
+        TabOrder = 8
+      end
+      object DBEdit4: TDBEdit[32]
+        Left = 9
+        Height = 25
+        Top = 56
+        Width = 74
+        DataField = 'ID'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Color = clForm
+        TabOrder = 1
+        TabStop = False
+      end
+      object DBEdit5: TDBEdit[33]
+        Left = 9
+        Height = 25
+        Top = 104
+        Width = 854
+        DataField = 'RAZAO'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 255
+        TabOrder = 4
+      end
+      object DBEdit6: TDBEdit[34]
+        Left = 639
+        Height = 25
+        Top = 152
+        Width = 346
+        DataField = 'BAIRRO'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akRight]
+        MaxLength = 255
+        TabOrder = 7
+      end
+      object DBEdit7: TDBEdit[35]
+        Left = 9
+        Height = 25
+        Top = 152
+        Width = 626
+        DataField = 'ENDERECO'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 255
+        TabOrder = 6
+      end
+      object DBComboBox1: TDBComboBox[36]
+        Left = 866
+        Height = 23
+        Top = 104
+        Width = 119
+        Anchors = [akTop, akRight]
+        DataField = 'TIPO'
+        DataSource = dm.dsClientes
+        ItemHeight = 15
+        Items.Strings = (
+          'Física'
+          'Jurídica'
+        )
+        MaxLength = 0
+        Style = csDropDownList
+        TabOrder = 5
+      end
+      object DBComboBox2: TDBComboBox[37]
+        Left = 672
+        Height = 23
+        Top = 200
+        Width = 100
+        Anchors = [akTop, akRight]
+        DataField = 'ESTADO'
+        DataSource = dm.dsClientes
+        ItemHeight = 15
+        Items.Strings = (
+          'AC'
+          'AL'
+          'AM'
+          'AP'
+          'BA'
+          'CE'
+          'DF'
+          'ES'
+          'GO'
+          'MA'
+          'MG'
+          'MS'
+          'MT'
+          'PA'
+          'PB'
+          'PE'
+          'PI'
+          'PR'
+          'RJ'
+          'RN'
+          'RO'
+          'RR'
+          'RS'
+          'SC'
+          'SE'
+          'SP'
+          'TO'
+        )
+        MaxLength = 0
+        Sorted = True
+        Style = csDropDownList
+        TabOrder = 9
+      end
+      object DBEdit8: TDBEdit[38]
+        Left = 777
+        Height = 25
+        Top = 200
+        Width = 105
+        DataField = 'CEP'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akRight]
+        MaxLength = 20
+        TabOrder = 10
+        OnKeyPress = DBEdit8KeyPress
+        OnKeyUp = DBEdit8KeyUp
+      end
+      object DBEdit9: TDBEdit[39]
+        Left = 885
+        Height = 25
+        Top = 200
+        Width = 100
+        DataField = 'CAIXA_POSTAL'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akRight]
+        MaxLength = 10
+        TabOrder = 11
+        OnKeyPress = DBEdit9KeyPress
+      end
+      object GroupBox1: TGroupBox[40]
+        Left = 829
+        Height = 187
+        Top = 232
+        Width = 156
+        Anchors = [akTop, akRight]
+        Caption = 'Foto'
+        ClientHeight = 169
+        ClientWidth = 152
+        TabOrder = 12
+        object imgPadrao: TImage
+          Left = 10
+          Height = 156
+          Top = 5
+          Width = 130
+          Anchors = [akTop, akRight]
+          Picture.Data = {
+            0A544A706567496D616765A1170000FFD8FFE000104A46494600010101004800
+            480000FFE100164578696600004D4D002A00000008000000000000FFDB004300
+            0503040404030504040405050506070C08070707070F0B0B090C110F1212110F
+            111113161C1713141A1511111821181A1D1D1F1F1F13172224221E241C1E1F1E
+            FFDB0043010505050706070E08080E1E1411141E1E1E1E1E1E1E1E1E1E1E1E1E
+            1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E1E
+            1E1E1E1E1EFFC0001108009C008203012200021101031101FFC4001D00000104
+            0301010000000000000000000000050607080304090102FFC400431000010303
+            0204030604010A04070000000102030400051106210712315108134114226171
+            8191091532A123173342435262728292D1243538F0A2B1B2B3C1C2C3FFC4001C
+            0101000203010101000000000000000000000506010304070208FFC400331100
+            0103030302030604070000000000000100020304051112213106411351611422
+            3291B1D1152381A142526271C1E1F0FFDA000C03010002110311003F00B97451
+            451114514511141D8668A8F7C41F111BE1970BAE9A9B903B30011A036AE8B90B
+            C8467B84EEB23B208A22D2E34F1BF4370B580CDEE6BB26ECB485B56C8602DF29
+            3D14AC90109F8A88CFA03559AFFE36B563B315F90E8DB2438B93CA99AEBAFB84
+            77252503E98FAD55EBE5DAE57ABBCABC5DA63D367CC74BD21F795CCA7167A935
+            A07AD115B9D31E36EF6DBE94EA6D116E94C92029CB74A5B0A48CF5095F3857CB
+            23E7563783FC74E1F7133923D96E8B8D7520936D9A80D3E70324A464A57DFDD2
+            481D40AE62D95943F748ED38014A9601CD3F35B596D7657A2CED3D705479CD04
+            BB969C2952163705246E08EE3B511753D2A0A1915ED57DF071C677F891A5DFB0
+            DF9FE7D4D67424BCEA86F3193B25DFF10384ABE241FE96D60A888A28A2888A28
+            A2888A28A2888A28A2888A28A2888AA69F8955E1F0346E9F43A430AF6A98EB7E
+            8A50F2D083F405C1F53572EA94FE2156A9377E27683B7464A8BB3E3AE2B5819C
+            AD4F247FF6144550DB8B21C4A948694A08195606703BD62C6F8ABA71B80BC3CB
+            9C27B45D8EF9688FADEDE9E670A25294F25C09C94AB6E557F79233807702AA03
+            9699EAD50AB23AC06A719BEC8A6FA04BBCFC98FF0055112730B5B4E85B6AE550
+            E87B5679ECCE6FCB7A58730F2799B59390B1F03D2AEBC1E1A70AF8476FB441D6
+            5748E2EF74494B6C376F5CB79E03F52884A49091F2C76CE2A1FF00167C358BA3
+            FF002FD4BA604473495ED598EA88BE6652EF2E4147F6429209C0DB6A2262786A
+            D54F68FE36E97BAA1E2D47767370E5FBD80587886D79EE005737CD23B57546B8
+            D919C2D3EDB892414282811D4106BB1B05EF6884C3FD3CC6D2BFB8CD1166A28A
+            2888A28A2888A28A2888A28A2888A28A2888AAA5E37243169E2BF07EF92884C6
+            8F745ADE51E81287A32893F426AD6D550FC42AD6DDCFF93C69F7D2CB2E5CA4C7
+            5AD471CA161ADF7FF0D7CB9C1AD24F65903270A3566C5AEF4878A5B93ABB6CC7
+            609D43F9D07C1F75D616E2D4148574515B6B53640F8823622B6EEFC17BBAAF73
+            355A751B69B8499C6E3E4356BF352DBC5C2E000F3736028F5FDAA51D1915CF64
+            65F7A4C894B43286DB75F70B8B2809013EF1EBB629F7696427F88A1B0FDEBCA6
+            EBD6B57ED3A29B0D68FEDBFCF2AC6CB5451C7F99B92AADF8B8B46B4BAF12ADFA
+            BE35B27BCCFE5919A42E3A0B8233ADF37320606402ACA8640FD7DF34BDC7D66E
+            BA77C1DE89D3BAB9651A8E55D9C9AB8EE603884A94FB8411E84079191E8558AB
+            097DBA5BA1B3998A492BD90D24654BF801FF0062AB7F8B64DAA6E87817255B13
+            1A7B33434C292EE795A5024823A6FCA0EDDAA6BA7FAC25AF99904F16E4E323ED
+            F65C7536C0C61918760AAE83835D81D24FA64E97B4C949E60F4165608F505093
+            5C7D20F5C5754BC36EA46755703F48DD9A3EFA6DADC578767591E52FEEA413F2
+            357E50EA45A28A2888A28A2888A28A2888A28A2888A28A2888AA8BF890DCE20B
+            1E8FB2858F6D5CD7A4848EA96D2809C9ED92AFAF29ED56775DEA9B368CD2B3B5
+            2DF65A635BE137CEEABAA947A04A47AA9448007722A87E8E8778F13FE22BF35B
+            C21E6ACF1C25E96D024A22C442BDC8E93DD64E09F52A5AB1B6298CA295AD36FB
+            AE94D3B6A996B94FC9B7391195C942D01CF2D4503996075C1CE76E9F5CD294CD
+            61256CFB97E6508236F2584A0FEE55537EAED3896E332F5AE284B6D2437E4348
+            C25090303940E8076A6640D2CD4C9DCCC5923F9C4EEE18E918F8E7154FB9F49C
+            357378B1E1B9E7652F4F7431B7120CA6369DB64BB8AC48479BCAEF590FE56E39
+            F2CEE7EBB7CE90FC54F0BA4C8E143F7B896F92B7ED4B4CA2B5384A837D1CCA7A
+            6C0F3741FA4FC8D98D3FA5E3C0297DF3E63C37E9B0A5F9B163CB84F4492C36FB
+            0F20B6EB4E27992B49182923D4107152F6DB1D350FBCD197799E7F45CB555F24
+            FB703C972D749DF34BCDD1132C7AA9084BD112A36F7C379700567294903A856F
+            83B1CD4E3F87C712D16EBDCDE1B5C5D5791715AA5DB0A95B25E4A7F88DFF0099
+            090A1F141EF504F886D02BE1B715EEDA651CCA829509101677E78EE6E8DFD48D
+            D27E2934CBB15D26D96F50AEF6E7D51E6427D0FC7753D50B410A4A87C8806A65
+            712EC5039A2989C0AE225BB89DC3A83A9A1A996E4ABF833E336ACFB348481CE8
+            DF7C6E0A7BA549A7DD11145145111451451114514511158A53ECC761D7E43ADB
+            2CB482B71C7141294240C9249D8002B2D403E3AF57CAD31C137A040743526FD2
+            936F52B385063954B771F309093F059F851155DF16BC6D7389DA9D368B2AD68D
+            2B6B74FB2839065BA320BEA1DB72123A8049D8A88165BC09D8AD761E11A25361
+            29B8DD9DF6B94A56CA29DC369FF084EFF351EF54574CE95B95F7565A34E406FC
+            EB8DC9E6D0DB290728E6C10547D3DD393D875AE90699B1E95E16E90B723505D5
+            A8FE430DC642DD2799C28481809192A3B6700561CE0D1971C05F71C6F95C1918
+            249EC372A5075D6D08E65AD213DC9AC31644658286969D8F414D3B6712345DD6
+            526041B93AEBAB076301F4A5200DCA94A400903B920569B3C52E1DC6FE0337E4
+            3A504A4AD888F3A927E0B4A083F435AFC78BF987CD758B5D69716885D91FD27E
+            C9FEA75B40CA96948EE4E2B5A45CA0B4825725AF905034D5BCF1174343618FCC
+            EF086FDA9AF35B6151DD2F727A28B613CE91F1205364EB7E145D2434D44BF14B
+            D25E4B2D14C57C254E28E0272518CE4D0CF10382E1F3596DAAB9EDD6D85C479E
+            938FA280FF00112B4C49CEE96D5D0C732B95EB74858F500871A1F3F79DFBD540
+            35D43D75A16DD75B04DD3DA858F6CB2DC11E5B8B481CEC2B0795D4EDEEAD2770
+            71F0DC1C1E766B8D36FE87D6375D17A82221D720CA28125A4E16A4100A1C49F5
+            4A9252AC1EFD41ADAB812EF878E2DDDF84DAC53728C1C956794A4B7738015B3C
+            D8FE9246701C4E4F293DC8E84D74CB476A4B4EADD390750D8A52655BA7341D65
+            C1D707A850F4503B107A1AE45DCA2AA2C8E44A838D2D216D2D2365A4FAFF00E7
+            F2356CBF0EDD7EA8F7ABC70EE74A4F932DBFCC2DA95A80C3A9D9D427BE53CAAC
+            7A7228FA9A22BB5457893919AF6888A28A2888A28A288BC271542FC74EAD6752
+            7192269C4BA245B34BC2E796DA5584F9EE616B4F37720328F812475CD5C6E306
+            B8B6F0F387B75D5771520888D1F6765448F3DF50C36D8F9AB1F2193E95CB9BDD
+            CAE1794DC6FB7179722E17AB92DC90E000732FF5AB61DD4E0381D3945115A8FC
+            3F387E67DC2EFC52BBC70A5A56A876C2A4F45900BCE27B6010807B2962A70E3B
+            69FD4773D51A16F161B2BB76459672E4CA6DB7508380B61400E7501BF22BED4E
+            9E0A6988FA33855A734EB2DF218B01B2F7F79E58E7715F55A954ADAADAD4CF46
+            68698976C8AF7312EB93595BA3971B0484A93BE7D49F4E9BE46A9E31230B4FEC
+            A42D756EA4AA6CADC6771BE71B820E71BF0545BC53E26DC20E9A9964BF689B95
+            A5CBCC194C4671D94CB8090D10A38428F4E64F6EB47870BE5F91C3DB05A63E91
+            98EDBC38F25574325A4B4017D649E5279CE324631B91F5ACDAE7871AAF594980
+            BD59A96D87D95B90DC544182A6FDF7518CACA967605293B763DEB7F45E8CE24E
+            92D33134FDAB5269C30E295F965EB738A5FBEB52CE487067751AE16B67F1F5BB
+            3A71B71E8ACD34B6BFC2853C45A242E05D92FD391AC023BEC08F4DD374FF00D4
+            86BD3DB4AAFF00F6E3534A001FC84F0D303AEABFFF0077AA5BB4F0EAE8DEB6BE
+            EACBA5EE3C89B75B3FE5C50CC52DB69252D82BC1513FD58C0DFA9F956A47E12B
+            CD683D29A60DE507F23BA8B8BAF791FCEFBEB59424676DD78C9ED5ADD4B2B89D
+            B9D5FB907E8BBA0BDD0C4236993E1F0BB1FE18DED3DBCC852A2DB43CDA9A7501
+            4856CA49E86A97F8FCD396CB1EB2D27AC13115C92A3390A4048D945A2148CFC7
+            95C50F92476ABA69355AFF001128497F8236E95CA39E2DF58567D7954CBC923E
+            E53F6A975E76A8F4B92CDDE3CE4B4CF95E47FC4309EC3202D3F5C857D0F7ACFC
+            2DD52FE89E2258B55B0952CDB6621E71B49C171BCE1C403E9CC82A4FD692EC0B
+            F29D98F9FD2886E83FE74940FDD4293864118EB445D9082FB32A1B3263AC2D97
+            901C4287AA48C8359AA33F0B37E7751F87ED1F717C92EA20088B24E492C294CE
+            49EE4360FD6A4CA2228A28A2228AF827E35E737BDD4D6328A957E2457C9C2FBA
+            534DA5E7041446766A9BCE12B714AE44A8F7290938EDCC7BD572D391A05C6DB6
+            6848797E79BD32875053B04B9EE950F87BA91F5ABCFC77D2BA435C6BEB61BB5B
+            BDB9FB3B0B6D6A52D410AE72950428743CB827FCD8F944BC4FE0C414474EA1E1
+            FC36ADB7883870C440C332D2083CBCBD02B6DB1D703D7045725EAAA08AB7D91E
+            77E33D81522CB64EE87C51C2B9935C312DCF3CD81965A5280F4D85443C2E1ACF
+            5E6908FA9E5F10275B5C94EBA04589098F2DB09714900732493FA7BD7CF0538D
+            965E27E929B06404DB353C58EB4CCB738AC15109395B79EA9DB71D53EBE84EA7
+            874E1F6959DC3DB36A1BAD890F5D0BAE3A975E2BDF95D5721E52718C04FA6F53
+            12EA74CD68E307BE3B8F25216D30C36E9E57603C39801D2D71DC3B230EE06C32
+            56FDEA46AB91C54B670FE36AD971A3C7B499CE4FF6669721F70B853BE53CA001
+            8C003D37CD63B5BBAC51C62B8686735C4F798FC97DA9B94E44639DB5F98DEE00
+            4E0EC5437EF58754DFACDA77C4EB370BEDCA3C08A74EA5BF35E5613CC5D5607E
+            C7ED59B45DCE16A5F12371D41627FDBED48B0FB3AA63493E5799CED9E5E623AE
+            01FB1ED5CBAB2EC6A39D58E4F0A7FC32CA7D7E18D3E06ACE86E3593E78E7D33E
+            9858B46A75A5E7899A9B4D4AE205D510EC858C2DB8B1C38F7983241251818C76
+            ADCD1D23586BABFEAA50D652ECF16D37776DF1E3C488CA8722090092B49249C5
+            6CF0BDA7071CF890F796B0D15C4485E362790E467BEE29BFC22D6FA4F4C5FF00
+            5E44BFDFA15BDF7B52CA5B6879782A1CE467EF5969D25BA890097773EB85F13B
+            4C8D98C11B4B9B1C44618D3BB83751C6373CE76DBD13BF8037CBDDEADDA8DABE
+            5D1CB93B6FBD3B0D979C6D283E5A129C6C90075C9FAD31BF1005B69F0FEA4AD4
+            0297778C947C4E1671F60696381B705DAF476AED4023BAA8B2B503CFC4529250
+            1F42F90254323F49246F8EF51CF8DBB8CCBF70AA24875F8EC45B7CF44831920A
+            BDA1C5254DA7738C72F3ACFC6B54777A685F1D34AEF7DDC7273BA82BFD21F6F9
+            9D134068C71803819D952E61A719B53CE84ACAA490D2004E729042947EE118FA
+            F6A4FC10482371E9599E9729D7BCD5C8754BF45151C8FF006A72E9942AF6955A
+            1E8ADCE9D39D43108848F390E13FAB986F8EF9C8A997383464A80009D82E8078
+            2042D3E1AF4D95745392CA7E5ED2EFFB1A9AE98DC0CB1C6D2BC25D3BA6D85A54
+            BB74243720A7A17CFBCE91F02B5288F81A7C24D6B8A664CD0F8CE41E0A105A70
+            57B451456D584CAE29DFAE367B4C66AD8B0CC898F797E6E012DA4024900ED9E9
+            D738A8F15275038803F3FB9007AE24287FF34F3E37A40B25B648FEAE704F4EE8
+            57FB534E31CB293DC5793F59DC2AE0AED11BC86E3B1568B3C113E9F5119395AF
+            021223655952D6A39529449249F524F535B6AE95ED06A80F7B9EED4E3BA9C000
+            18558FC4D69099A5352C4E2369575F805C7417DC8CA28532F8DC2C11D3988DCF
+            7F9D4CBE1A7C4EDBB5518BA575EBCD5BEFCA21B8F3F010C4C3E815E8870FFA49
+            E983B538F5458E06A3D3F36C7726839165B650A07A83E8A07D08354275EE97B8
+            E90D592EC73D0A0EC75E50BE81C41FD2B1F3FD8E7B57B17465EBDB69BD9E53EF
+            B3F71FEB8553BB5218A4D6DE0FD575BFCA69D3952124A4EDB6715903691D063E
+            54C0F0E526FF002F825A55FD508908BB2A08F384804385214A0DA959DF25B083
+            BEFBD485575511938C2F80800E46D5E2996C8DD093F4AC95E1E944C951EF136E
+            EB10E55B5084258496F9C91B93CC0D41BC6CB12B5669176D017E5F310B6D7D42
+            543A1A7EF1E755DA2D7AA22E9A4C84BB75B994B8194281534DA41517143D0129
+            091DF3D81AD4663265C24F38C9C5797759543A96E714ECE5A07D4AB35A231253
+            B9AEE093FE152B73849AD132CB29B7B4A4838F303E9E5C77EFFB54E3E1F384E7
+            4B5C4EA0BB29B917109286024650C03D4827AA88DB3E82A5C459101792DF4A58
+            88CA5968212318A8ABA758D556C0601800F38F25D54F6A8217EB1BA7A70CA4FF
+            00166C671639B950B09CEE7A827E9B7DE9F883938A85E33F221CB6E5C473CB7D
+            B3B2B1918F5047A83FF7E9525699D4B0EE810D2C86259041689CF3103AA4FA8E
+            BF1AB4F475F609299B46F387B78F51FF00151176A27B2432B77053868AF39877
+            1455F542A8C78E3310A8B6AB436429E76497CA475094A4A727FD5FB1A6E46494
+            B494F618A53E2DD8750BDA95BBDDB2DEF4F8E98C9414B382B410493EEE72739C
+            ED9A63AB542233C23CD8EFC57BA143CD942BECAC1AF1EEB0A7AB9EB9CFD0748D
+            82B6DA5F1B69C00774EA1F3A290E3EA382E100BA01F9D28C7B8457C7F0DD493F
+            0354B74323790A5C15B4A1B522CB9963D3DA9E1EACBADAA1CC4B03C992E39190
+            E3AD379C87104824149DF6DC8C81B914B1CE9C75DA993C48B8C66E03AD120952
+            7152165A8969AB19245C82B9EAA16CB196B9597B2CF837580D5C6D9318990E42
+            02D9798703885A4F42143635BD5CA77B586AFD0FA9660D27A9EEB6969D739CA6
+            24A5A1B513DD19E53BF714A6FF00883E33BC9085F102EA0631EE79683F70915F
+            A0A27EB60779AA2BDBA5C42E9F4E971A0C65CA992198D1DB49538EBAB084200E
+            A493B0155878F1E2D2C1638926C9C392D5EEECA0506E4539871CF7467F9E576C
+            7B9D0E55B8AA53A9356EA9D4CEF99A8B51DDAECA1B8F6D9AE3C07C8289C7D291
+            7A9DABED7CA95384174BA6A1E2ABD7FBD4E7E7DC2412B7A43CAE652D4A3D73F2
+            F4E800C0AB936A03D9938ED54CBC3E96DAD40E3AB1EF6404FD8FFBD5C3B04D69
+            D848C2874EF5E45D7797560F4015B6CA310256A2B03D25A693CCA5607C4D27C2
+            9F36F17416EB2C554A927721270940FED28F448E9B9F862A974F4B2D43C3236E
+            4952AF91AC19714A8E3886C12B5048F89A52D0B124DE2F8C4A69B71106239E62
+            9F23016A4F44A4FAEFD7B0A5ED3DC3C8CD624DF9F1719071FC100A586FE00755
+            7CCEC7B0A7D46650CA12DB684A1B48C252918007C857A4587A2DF048D9EA9D82
+            37C0FBAAED75DDAF698E21CF75E029EDFB5159F03B515E8F877A2AF60F9AF9E4
+            18C64D6ADC6D76EB946545B8418F2D85FEA69F682D27E8462B728A16870C10B2
+            0E370A37D45C19D1572415458F2ED4F1FEB2148207CB917CC8C7C80A616A0E0B
+            EAAB5A7CFD2F7F66E40758D2D3E4B9B7F65609493F02123E356115E95F26A3AA
+            2CF475030E60FD365D7156CF1FC2E54CB50EA1D59A58B91B5159EE16D520F295
+            3ED10DABFC2E0F7543E2091495A76CDABF89B78621D9E23C986E13E6DC1C6D42
+            3B29F5255D09EC90727EE45E32335EA7F48A8C83A5A920935B5753EEF33DBA4A
+            867407871E19D8214845D6CCC6A798FBDE6AE5DD194AD40600084A40C25231F1
+            3B9C9E987DB7C32E1C36CA594680D2896D1FA522CF1F03FF00053B28AB2B4003
+            0145939394D41C34E1C8E9A034A0DB1FF278FD3FD1581EE14F0C1E490E70EB48
+            9C9CE7F258E0FF00E8A7951595855C38DDC09B6C0891F5070C34BC5893A2A94B
+            9B0A2652653640DD09CE399247E9006428F5200315C4D686D2AF639E5DB7C940
+            F7D89292DAD3F30AC115788F5AD592D34EB88F3596DC2839495A01C1F867A541
+            DCEC50DC5DA9DB15DF4B717D28D20642AA3A4E26ADD7D39B8F6588FA612B05DB
+            8BCD911DA4E7721471CE7B253BFC864D597D13A52D5A5AD08B75BD04ABF53CFA
+            F771E5FAA947EFB7419DA97D35F75B2DB65A7B78FCB1BF9AD7555B254FC5C792
+            F0240AF40A28A985C88A28A288BFFFD9
+          }
+          Stretch = True
+        end
+        object imgFoto: TImage
+          Left = 10
+          Height = 156
+          Top = 5
+          Width = 130
+          Anchors = [akTop, akRight]
+          Stretch = True
+        end
+        object btMostrar: TButton
+          Left = 10
+          Height = 156
+          Top = 5
+          Width = 130
+          Caption = 'Mostrar a Foto'
+          OnClick = btMostrarClick
+          TabOrder = 0
+        end
+      end
+      object ftLimpar: TButton[41]
+        Left = 910
+        Height = 28
+        Top = 424
+        Width = 75
+        Anchors = [akTop, akRight]
+        Caption = 'Limpar'
+        Enabled = False
+        OnClick = ftLimparClick
+        TabOrder = 13
+        TabStop = False
+      end
+      object ftCarregar: TButton[42]
+        Left = 829
+        Height = 28
+        Top = 424
+        Width = 75
+        Anchors = [akTop, akRight]
+        Caption = 'Carregar'
+        Enabled = False
+        OnClick = ftCarregarClick
+        TabOrder = 14
+        TabStop = False
+      end
+      object DBEdit10: TDBEdit[43]
+        Left = 9
+        Height = 25
+        Top = 248
+        Width = 150
+        DataField = 'CNPJ'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 15
+        OnKeyPress = DBEdit10KeyPress
+        OnKeyUp = DBEdit10KeyUp
+      end
+      object DBEdit11: TDBEdit[44]
+        Left = 163
+        Height = 25
+        Top = 248
+        Width = 150
+        DataField = 'IE'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 16
+        OnKeyPress = DBEdit11KeyPress
+      end
+      object DBEdit12: TDBEdit[45]
+        Left = 317
+        Height = 25
+        Top = 248
+        Width = 150
+        DataField = 'CPF'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 17
+        OnKeyPress = DBEdit12KeyPress
+        OnKeyUp = DBEdit12KeyUp
+      end
+      object DBEdit13: TDBEdit[46]
+        Left = 471
+        Height = 25
+        Top = 248
+        Width = 150
+        DataField = 'RG'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 18
+        OnKeyPress = DBEdit13KeyPress
+      end
+      object DBEdit14: TDBEdit[47]
+        Left = 9
+        Height = 25
+        Top = 296
+        Width = 115
+        DataField = 'FONE1'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 19
+        OnKeyPress = DBEdit14KeyPress
+        OnKeyUp = DBEdit14KeyUp
+      end
+      object DBEdit15: TDBEdit[48]
+        Left = 128
+        Height = 25
+        Top = 296
+        Width = 115
+        DataField = 'FONE2'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 20
+        OnKeyPress = DBEdit14KeyPress
+        OnKeyUp = DBEdit14KeyUp
+      end
+      object DBEdit16: TDBEdit[49]
+        Left = 248
+        Height = 25
+        Top = 296
+        Width = 115
+        DataField = 'CEL1'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 21
+        OnKeyPress = DBEdit14KeyPress
+        OnKeyUp = DBEdit14KeyUp
+      end
+      object DBEdit17: TDBEdit[50]
+        Left = 368
+        Height = 25
+        Top = 296
+        Width = 115
+        DataField = 'CEL2'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 22
+        OnKeyPress = DBEdit14KeyPress
+        OnKeyUp = DBEdit14KeyUp
+      end
+      object DBEdit18: TDBEdit[51]
+        Left = 488
+        Height = 25
+        Top = 296
+        Width = 115
+        DataField = 'FAX1'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 23
+        OnKeyPress = DBEdit14KeyPress
+        OnKeyUp = DBEdit14KeyUp
+      end
+      object DBEdit19: TDBEdit[52]
+        Left = 608
+        Height = 25
+        Top = 296
+        Width = 115
+        DataField = 'FAX2'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 20
+        TabOrder = 24
+        OnKeyPress = DBEdit14KeyPress
+        OnKeyUp = DBEdit14KeyUp
+      end
+      object DBEdit20: TDBEdit[53]
+        Left = 9
+        Height = 25
+        Top = 344
+        Width = 354
+        DataField = 'EMAIL1'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 255
+        TabOrder = 25
+      end
+      object DBEdit21: TDBEdit[54]
+        Left = 368
+        Height = 25
+        Top = 344
+        Width = 455
+        DataField = 'CONTATO'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 255
+        TabOrder = 27
+      end
+      object DBEdit22: TDBEdit[55]
+        Left = 9
+        Height = 25
+        Top = 392
+        Width = 354
+        DataField = 'EMAIL2'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        MaxLength = 255
+        TabOrder = 26
+      end
+      object DBEdit23: TDBEdit[56]
+        Left = 368
+        Height = 25
+        Top = 392
+        Width = 455
+        DataField = 'SITE'
+        DataSource = dm.dsClientes
+        ReadOnly = True
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 255
+        TabOrder = 28
+      end
+      object DBMemo1: TDBMemo[57]
+        Left = 9
+        Height = 76
+        Top = 440
+        Width = 814
+        Anchors = [akTop, akLeft, akRight]
+        DataField = 'OBS'
+        DataSource = dm.dsClientes
+        Lines.Strings = (
+          'DBMemo1'
+        )
+        OnChange = DBMemo1Change
+        OnEnter = DBMemo1Enter
+        OnExit = DBMemo1Exit
+        TabOrder = 29
+      end
+      object DBRadioGroup1: TDBRadioGroup[58]
+        Left = 829
+        Height = 53
+        Top = 463
+        Width = 156
+        Anchors = [akTop, akRight]
+        Caption = 'Cliente Ativo'
+        Columns = 2
+        DataField = 'ATIVO'
+        DataSource = dm.dsClientes
+        Items.Strings = (
+          'Sim'
+          'Não'
+        )
+        TabOrder = 30
+      end
+    end
+    inherited Page2: TPage
+      ClientWidth = 992
+      ClientHeight = 526
+      inherited GridDados: TDBGrid
+        Height = 526
+        Width = 992
+        Columns = <        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Código'
+            FieldName = 'ID'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Data Cad.'
+            Width = 80
+            FieldName = 'DATA_CAD'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Nome/Fantasia'
+            Width = 350
+            FieldName = 'NOME'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Razão Social'
+            Width = 350
+            FieldName = 'RAZAO'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Tipo'
+            Width = 80
+            FieldName = 'TIPO'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Width = 120
+            FieldName = 'CNPJ'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Width = 120
+            FieldName = 'IE'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Width = 100
+            FieldName = 'RG'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Width = 120
+            FieldName = 'CPF'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Endereço'
+            Width = 350
+            FieldName = 'ENDERECO'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Bairro'
+            Width = 200
+            FieldName = 'BAIRRO'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Cidade'
+            Width = 200
+            FieldName = 'CIDADE'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Estado'
+            Width = 60
+            FieldName = 'ESTADO'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Width = 100
+            FieldName = 'CEP'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Caixa Postal'
+            Width = 100
+            FieldName = 'CAIXA_POSTAL'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Fone 1'
+            Width = 120
+            FieldName = 'FONE1'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Fone 2'
+            Width = 120
+            FieldName = 'FONE2'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Celular 1'
+            Width = 120
+            FieldName = 'CEL1'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Celular 2'
+            Width = 120
+            FieldName = 'CEL2'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Fax 1'
+            Width = 120
+            FieldName = 'FAX1'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Fax 2'
+            Width = 120
+            FieldName = 'FAX2'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Email 1'
+            Width = 200
+            FieldName = 'EMAIL1'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Email 2'
+            Width = 200
+            FieldName = 'EMAIL2'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Site'
+            Width = 300
+            FieldName = 'SITE'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Contato'
+            Width = 350
+            FieldName = 'CONTATO'
+          end        
+          item
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Obs'
+            Width = 500
+            Visible = False
+            FieldName = 'OBS'
+          end        
+          item
+            Alignment = taCenter
+            PickList.Strings = (            )
+            Title.Alignment = taCenter
+            Title.Caption = 'Ativo'
+            Width = 50
+            FieldName = 'ATIVO'
+          end>
+        DataSource = dm.dsClientes
+        TabStop = False
+        OnTitleClick = GridDadosTitleClick
+      end
+    end
+  end
+  inherited Panel1: TPanel
+    Left = 6
+    Width = 1000
+    Alignment = taLeftJustify
+    ClientWidth = 1000
+    object Label10: TLabel[0]
+      Left = 47
+      Height = 16
+      Top = 120
+      Width = 41
+      Caption = 'Label10'
+      ParentColor = False
+    end
+    object Bevel1: TBevel[1]
+      Left = 233
+      Height = 50
+      Top = 5
+      Width = 5
+      Shape = bsLeftLine
+    end
+    object Bevel2: TBevel[2]
+      Left = 611
+      Height = 50
+      Top = 5
+      Width = 5
+      Shape = bsLeftLine
+    end
+    object Bevel3: TBevel[3]
+      Left = 790
+      Height = 50
+      Top = 5
+      Width = 5
+      Shape = bsLeftLine
+    end
+    object Label28: TLabel[4]
+      Left = 807
+      Height = 16
+      Top = 8
+      Width = 47
+      Caption = 'Localizar'
+      ParentColor = False
+    end
+    object chk1: TCheckBox[5]
+      Left = 10
+      Height = 19
+      Hint = 'Marque para usar este filtro'
+      Top = 5
+      Width = 94
+      Caption = 'Filtrar Período'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 0
+      TabStop = False
+    end
+    object ComboBox1: TComboBox[6]
+      Left = 244
+      Height = 23
+      Hint = 'Escolha o Campo'
+      Top = 26
+      Width = 112
+      ItemHeight = 15
+      Items.Strings = (
+        'Ativo'
+        'Bairro'
+        'CEP'
+        'Cidade'
+        'Estado'
+        'Tipo'
+      )
+      OnChange = ComboBox1Change
+      OnEnter = dt1Enter
+      OnExit = dt1Exit
+      ParentShowHint = False
+      ShowHint = True
+      Sorted = True
+      Style = csDropDownList
+      TabOrder = 1
+      TabStop = False
+    end
+    object ComboBox2: TComboBox[7]
+      Left = 360
+      Height = 23
+      Hint = 'Escolha a Descrição'
+      Top = 26
+      Width = 240
+      ItemHeight = 15
+      OnEnter = dt1Enter
+      OnExit = dt1Exit
+      ParentShowHint = False
+      ShowHint = True
+      Sorted = True
+      Style = csDropDownList
+      TabOrder = 2
+      TabStop = False
+    end
+    object dt1: TRxDateEdit[8]
+      Left = 10
+      Height = 25
+      Hint = 'Data Inicial'
+      Top = 26
+      Width = 80
+      ButtonWidth = 23
+      DialogTitle = 'Select a Date'
+      Glyph.Data = {
+        36010000424D360100000000000076000000280000001C0000000C0000000100
+        040000000000C000000000000000000000000000000000000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDD777777777
+        77DDFFFFFFFFFFFF0000DD004044040047D777777777777F0000DDFFFFFFFFFF
+        47D7FDFFFDFFFD7F0000DDF000F0008F47D7F777D777DF7F0000DDFF0FF8F80F
+        47D7FD7FDDDD7F7F0000DDFF0FFFFF0F47D7FD7FDDFF7D7F0000DDFF0FF0008F
+        47D7FD7FD777DD7F0000DDF00FF0FFFF47D7F77FD7FFFF7F0000DDFF0FF0000F
+        47D7FD7DD7777D7F0000DDFFFFFFFFFF47D7FDDDDDDDDD7F0000DDF88888888F
+        47D7FFFFFFFFFF7F0000DD0000000000DDD777777777777D0000
+      }
+      NumGlyphs = 2
+      ParentShowHint = False
+      PopupColor = clWindow
+      ShowHint = True
+      TabOrder = 3
+      TabStop = False
+      YearDigits = dyTwo
+      OnEnter = dt1Enter
+      OnExit = dt1Exit
+      OnKeyDown = dt1KeyDown
+      OnKeyPress = RxDateEdit1KeyPress
+      OnKeyUp = RxDateEdit1KeyUp
+    end
+    object dt2: TRxDateEdit[9]
+      Left = 119
+      Height = 25
+      Hint = 'Data Final'
+      Top = 26
+      Width = 80
+      ButtonWidth = 23
+      DialogTitle = 'Select a Date'
+      Glyph.Data = {
+        36010000424D360100000000000076000000280000001C0000000C0000000100
+        040000000000C000000000000000000000000000000000000000000000000000
+        8000008000000080800080000000800080008080000080808000C0C0C0000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00DDD777777777
+        77DDFFFFFFFFFFFF0000DD004044040047D777777777777F0000DDFFFFFFFFFF
+        47D7FDFFFDFFFD7F0000DDF000F0008F47D7F777D777DF7F0000DDFF0FF8F80F
+        47D7FD7FDDDD7F7F0000DDFF0FFFFF0F47D7FD7FDDFF7D7F0000DDFF0FF0008F
+        47D7FD7FD777DD7F0000DDF00FF0FFFF47D7F77FD7FFFF7F0000DDFF0FF0000F
+        47D7FD7DD7777D7F0000DDFFFFFFFFFF47D7FDDDDDDDDD7F0000DDF88888888F
+        47D7FFFFFFFFFF7F0000DD0000000000DDD777777777777D0000
+      }
+      NumGlyphs = 2
+      ParentShowHint = False
+      PopupColor = clWindow
+      ShowHint = True
+      TabOrder = 4
+      TabStop = False
+      YearDigits = dyTwo
+      OnEnter = dt1Enter
+      OnExit = dt1Exit
+      OnKeyPress = RxDateEdit1KeyPress
+      OnKeyUp = RxDateEdit1KeyUp
+    end
+    object chk2: TCheckBox[10]
+      Left = 244
+      Height = 19
+      Hint = 'Marque para usar este filtro'
+      Top = 5
+      Width = 173
+      Caption = 'Filtrar Campo com Descrição'
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 5
+      TabStop = False
+    end
+    object btFiltrar: TButton[11]
+      Left = 624
+      Height = 28
+      Hint = 'Filtra usando o(s) filtro(s) marcado(s)'
+      Top = 16
+      Width = 75
+      Caption = 'Filtrar'
+      OnClick = btFiltrarClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 6
+      TabStop = False
+    end
+    object btLimpar: TButton[12]
+      Left = 702
+      Height = 28
+      Hint = 'Limpa todos os filtros'
+      Top = 16
+      Width = 75
+      Caption = 'Limpar'
+      OnClick = btLimparClick
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 7
+      TabStop = False
+    end
+    object ComboBox3: TComboBox[13]
+      Left = 807
+      Height = 23
+      Hint = 'Escolha um campo para descrever '#10'o que você quer localizar.'
+      Top = 24
+      Width = 170
+      ItemHeight = 15
+      Items.Strings = (
+        'Caixa Postal'
+        'Celular 1'
+        'Celular 2'
+        'CEP'
+        'CNPJ'
+        'Contato'
+        'CPF'
+        'Email 1'
+        'Email 2'
+        'Fax 1'
+        'Fax 2'
+        'Fone 1'
+        'Fone 2'
+        'IE'
+        'Nome'
+        'Obs'
+        'Razão Social'
+        'RG'
+        'Web Site'
+      )
+      OnChange = ComboBox3Change
+      OnEnter = dt1Enter
+      OnExit = dt1Exit
+      ParentShowHint = False
+      ShowHint = True
+      Sorted = True
+      Style = csDropDownList
+      TabOrder = 8
+      TabStop = False
+    end
+  end
+  inherited Panel2: TPanel
+    Left = 6
+    Width = 1000
+    ClientWidth = 1000
+    inherited btSalvar: TBitBtn
+      Left = 592
+      OnClick = btSalvarClick
+    end
+    inherited btCancelar: TBitBtn
+      Left = 726
+      OnClick = btCancelarClick
+    end
+    inherited btExcluir: TBitBtn
+      Left = 860
+      OnClick = btExcluirClick
+    end
+    inherited btNovo: TBitBtn
+      Left = 324
+      OnClick = btNovoClick
+    end
+    inherited btImprimir: TBitBtn
+      OnClick = btImprimirClick
+    end
+    inherited btEditar: TBitBtn
+      Left = 458
+      OnClick = btEditarClick
+    end
+  end
+  inherited frReport1: TfrReport
+    Dataset = frDBDataSet1
+    OnEnterRect = frReport1EnterRect
+    ReportForm = {
+      18000000
+    }
+  end
+  inherited frDBDataSet1: TfrDBDataSet
+    DataSet = dm.Clientes
+  end
+  object ftDialogo: TOpenPictureDialog[7]
+    left = 664
+    top = 48
+  end
+  object ACBrValidador1: TACBrValidador[8]
+    IgnorarChar = './-'
+    left = 573
+    top = 72
+  end
+end

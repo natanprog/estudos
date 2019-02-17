@@ -1,0 +1,20 @@
+inherited Cad_Marcas: TCad_Marcas
+  Caption = 'Cadastro de Marcas'
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poDesktopCenter
+  inherited DBNavigator1: TDBNavigator
+    DataSource = dm.dsMarcas
+  end
+  inherited DBGrid1: TDBGrid
+    Columns = <    
+      item
+        PickList.Strings = (        )
+        Title.Alignment = taCenter
+        Title.Caption = 'Marca'
+        Width = 350
+        FieldName = 'MARCA'
+      end>
+    DataSource = dm.dsMarcas
+  end
+end

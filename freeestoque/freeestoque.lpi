@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<CONFIG>
+  <ProjectOptions>
+    <Version Value="7"/>
+    <General>
+      <MainUnit Value="0"/>
+      <TargetFileExt Value=""/>
+      <UseXPManifest Value="True"/>
+      <ActiveEditorIndexAtStart Value="1"/>
+    </General>
+    <VersionInfo>
+      <ProjectVersion Value=""/>
+      <Language Value=""/>
+      <CharSet Value=""/>
+    </VersionInfo>
+    <PublishOptions>
+      <Version Value="2"/>
+      <DestinationDirectory Value="/home/jean/publicar"/>
+      <IgnoreBinaries Value="False"/>
+      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
+      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
+    </PublishOptions>
+    <RunParams>
+      <local>
+        <FormatVersion Value="1"/>
+        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+      </local>
+    </RunParams>
+    <RequiredPackages Count="9">
+      <Item1>
+        <PackageName Value="SQLDBLaz"/>
+        <MinVersion Major="1" Release="1" Valid="True"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+        <MinVersion Major="1" Valid="True"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="ACBr_LCL"/>
+        <MinVersion Minor="8" Release="8" Valid="True"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="rxnew"/>
+        <MinVersion Major="2" Release="1" Build="103" Valid="True"/>
+      </Item4>
+      <Item5>
+        <PackageName Value="lazreportpdfexport"/>
+      </Item5>
+      <Item6>
+        <PackageName Value="dcl_rx_ctrl"/>
+      </Item6>
+      <Item7>
+        <PackageName Value="lazreport"/>
+      </Item7>
+      <Item8>
+        <PackageName Value="zcomponent"/>
+      </Item8>
+      <Item9>
+        <PackageName Value="LCL"/>
+      </Item9>
+    </RequiredPackages>
+    <Units Count="16">
+      <Unit0>
+        <Filename Value="freeestoque.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="freeestoque"/>
+        <CursorPos X="71" Y="32"/>
+        <TopLine Value="20"/>
+        <UsageCount Value="189"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="modelo_cad.pas"/>
+        <ComponentName Value="Modelo_Cadastro"/>
+        <HasResources Value="True"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Modelo_Cad"/>
+        <CursorPos X="1" Y="80"/>
+        <TopLine Value="62"/>
+        <EditorIndex Value="3"/>
+        <UsageCount Value="189"/>
+        <Loaded Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="unitcad_clientes.pas"/>
+        <ComponentName Value="Cad_Clientes"/>
+        <HasResources Value="True"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitcad_clientes"/>
+        <CursorPos X="1" Y="163"/>
+        <TopLine Value="171"/>
+        <EditorIndex Value="4"/>
+        <UsageCount Value="182"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="unitdados.pas"/>
+        <ComponentName Value="dm"/>
+        <HasResources Value="True"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="UnitDados"/>
+        <CursorPos X="82" Y="126"/>
+        <TopLine Value="118"/>
+        <EditorIndex Value="0"/>
+        <UsageCount Value="189"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="unitprincipal.pas"/>
+        <ComponentName Value="FormPrincipal"/>
+        <HasResources Value="True"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="UnitPrincipal"/>
+        <CursorPos X="33" Y="210"/>
+        <TopLine Value="210"/>
+        <EditorIndex Value="6"/>
+        <UsageCount Value="189"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="unit_modelo_form_rel.pas"/>
+        <ComponentName Value="Modelo_Form_Rel"/>
+        <HasResources Value="True"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Modelo_Form_Rel"/>
+        <CursorPos X="91" Y="62"/>
+        <TopLine Value="41"/>
+        <UsageCount Value="189"/>
+      </Unit5>
+      <Unit6>
+        <Filename Value="unit_rotinas.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit_rotinas"/>
+        <CursorPos X="1" Y="308"/>
+        <TopLine Value="275"/>
+        <EditorIndex Value="2"/>
+        <UsageCount Value="189"/>
+        <Loaded Value="True"/>
+      </Unit6>
+      <Unit7>
+        <Filename Value="unit_empresa.pas"/>
+        <ComponentName Value="Form_Empresa"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Empresa"/>
+        <CursorPos X="31" Y="146"/>
+        <TopLine Value="118"/>
+        <UsageCount Value="182"/>
+      </Unit7>
+      <Unit8>
+        <Filename Value="unitcad_fornecedores.pas"/>
+        <ComponentName Value="Cad_Fornecedores"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="unitcad_fornecedores"/>
+        <CursorPos X="3" Y="421"/>
+        <TopLine Value="399"/>
+        <EditorIndex Value="5"/>
+        <UsageCount Value="143"/>
+        <Loaded Value="True"/>
+      </Unit8>
+      <Unit9>
+        <Filename Value="unit_config.pas"/>
+        <ComponentName Value="Form_Config"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Config"/>
+        <CursorPos X="117" Y="93"/>
+        <TopLine Value="71"/>
+        <UsageCount Value="123"/>
+      </Unit9>
+      <Unit10>
+        <Filename Value="unit_cad_mod_simples.pas"/>
+        <ComponentName Value="Form_Cad_Mod_Simples"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Cad_Mod_Simples"/>
+        <CursorPos X="32" Y="17"/>
+        <TopLine Value="14"/>
+        <UsageCount Value="111"/>
+      </Unit10>
+      <Unit11>
+        <Filename Value="unit_cad_grupos.pas"/>
+        <ComponentName Value="Cad_Grupos"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Cad_Grupos"/>
+        <CursorPos X="19" Y="33"/>
+        <TopLine Value="10"/>
+        <UsageCount Value="110"/>
+      </Unit11>
+      <Unit12>
+        <Filename Value="unit_cad_marcas.pas"/>
+        <ComponentName Value="Cad_Marcas"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Cad_Marcas"/>
+        <CursorPos X="26" Y="42"/>
+        <TopLine Value="23"/>
+        <UsageCount Value="109"/>
+      </Unit12>
+      <Unit13>
+        <Filename Value="unit_cad_modelos.pas"/>
+        <ComponentName Value="Cad_Modelos"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Cad_Modelos"/>
+        <CursorPos X="27" Y="43"/>
+        <TopLine Value="24"/>
+        <UsageCount Value="109"/>
+      </Unit13>
+      <Unit14>
+        <Filename Value="unit_cad_unidades.pas"/>
+        <ComponentName Value="Form_Cad_Unidades"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Cad_Unidades"/>
+        <CursorPos X="21" Y="12"/>
+        <TopLine Value="6"/>
+        <UsageCount Value="108"/>
+      </Unit14>
+      <Unit15>
+        <Filename Value="unit_cad_produtos.pas"/>
+        <ComponentName Value="Cad_Produtos"/>
+        <IsPartOfProject Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit_Cad_Produtos"/>
+        <CursorPos X="1" Y="339"/>
+        <TopLine Value="306"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="105"/>
+        <Loaded Value="True"/>
+      </Unit15>
+    </Units>
+  </ProjectOptions>
+  <CompilerOptions>
+    <Version Value="8"/>
+    <SearchPaths>
+      <IncludeFiles Value="$(ProjOutDir)/"/>
+    </SearchPaths>
+    <Linking>
+      <Debugging>
+        <UseLineInfoUnit Value="False"/>
+      </Debugging>
+      <Options>
+        <Win32>
+          <GraphicApplication Value="True"/>
+        </Win32>
+      </Options>
+    </Linking>
+    <Other>
+      <CompilerPath Value="$(CompPath)"/>
+    </Other>
+  </CompilerOptions>
+</CONFIG>

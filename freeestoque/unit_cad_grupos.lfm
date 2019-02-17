@@ -1,0 +1,22 @@
+inherited Cad_Grupos: TCad_Grupos
+  Left = 352
+  Top = 250
+  Caption = 'Cadastro de Grupos'
+  OnClose = FormClose
+  OnShow = FormShow
+  Position = poDesktopCenter
+  inherited DBNavigator1: TDBNavigator
+    DataSource = dm.dsGrupos
+  end
+  inherited DBGrid1: TDBGrid
+    Columns = <    
+      item
+        PickList.Strings = (        )
+        Title.Alignment = taCenter
+        Title.Caption = 'Grupo'
+        Width = 350
+        FieldName = 'GRUPO'
+      end>
+    DataSource = dm.dsGrupos
+  end
+end

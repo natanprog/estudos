@@ -1,0 +1,52 @@
+object Form_Cad_Mod_Simples: TForm_Cad_Mod_Simples
+  Left = 366
+  Height = 384
+  Top = 115
+  Width = 387
+  ActiveControl = DBNavigator1
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsDialog
+  Caption = 'Cadastro de '
+  ClientHeight = 384
+  ClientWidth = 387
+  LCLVersion = '0.9.27'
+  object DBNavigator1: TDBNavigator
+    Left = 0
+    Height = 25
+    Top = 0
+    Width = 387
+    Align = alTop
+    BevelOuter = bvNone
+    ClientHeight = 25
+    ClientWidth = 387
+    Hints.Strings = (
+      'Primeiro'
+      'Anterior'
+      'Próximo'
+      'Último'
+      'Inserir'
+      'Excluir'
+      'Editar'
+      'Salvar'
+      'Cancelar'
+      'Atualizar'
+    )
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 0
+    Height = 359
+    Top = 25
+    Width = 387
+    Align = alClient
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Width = 350
+      end>
+    TabOrder = 1
+    TitleStyle = tsNative
+  end
+end
