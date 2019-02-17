@@ -38,7 +38,7 @@ uses
   {$ENDIF}{$ENDIF}
   zcomponent, Interfaces, // this includes the LCL widgetset
   Forms, lazreport, SQLDBLaz, lazreportpdfexport, Unit_rotinas,
-  Unit_Modelo_Form_Rel, UnitPrincipal, UnitDados, Modelo_Cad, rxnew, ACBr_LCL,
+  Unit_Modelo_Form_Rel, UnitPrincipal, UnitDados, Modelo_Cad, rxnew,
   Unit_Empresa, unitcad_fornecedores, Unit_Config, unitcad_clientes,
   Unit_Cad_Mod_Simples, Unit_Cad_Grupos, Unit_Cad_Marcas, Unit_Cad_Modelos,
   Unit_Cad_Unidades, Unit_Cad_Produtos;

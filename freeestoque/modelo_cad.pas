@@ -119,7 +119,7 @@ begin
   btSalvar.Enabled:=not modo;
   btCancelar.Enabled:=not modo;
   btExcluir.Enabled:=modo;
-  Page2.TabVisible:=modo;
+  //Page2.TabVisible:=modo;
   Panel1.Enabled:=modo;
   Repaint;
 end;

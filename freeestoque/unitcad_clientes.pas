@@ -37,9 +37,9 @@ interface
 uses
   Classes, SysUtils, db, FileUtil, LResources, Forms, Controls, Graphics,
   Dialogs, ExtCtrls, DbCtrls, DBGrids, Buttons, StdCtrls, EditBtn, ExtDlgs,
-  Modelo_Cad, UnitDados, Unit_rotinas, tooledit, Unit_Modelo_Form_Rel,
-  ACBrValidador, LCLType, Grids, LR_Class, LR_DBSet, LR_E_HTM, LR_E_CSV,
-  LR_RRect, LR_Shape, lr_e_pdf, IniFiles;
+  Modelo_Cad, UnitDados, Unit_rotinas, rxtooledit, Unit_Modelo_Form_Rel,
+  ACBrValidador, LCLType, Grids, DBExtCtrls, LR_Class, LR_DBSet,
+  LR_E_HTM, LR_E_CSV, LR_RRect, LR_Shape, lr_e_pdf, IniFiles;
 
 type
 
@@ -160,10 +160,10 @@ type
     procedure RxDateEdit1KeyUp(Sender: TObject; var Key: Word;
       Shift: TShiftState);
   private
-    procedure SoLeitura(modo: boolean);
-    procedure dsDataChange(Sender: TObject; Field: TField);
     FlagFoto: byte;
     caminho: string;
+    procedure SoLeitura(modo: boolean);
+    procedure dsDataChange(Sender: TObject; Field: TField);
     { private declarations }
   public
     { public declarations }

@@ -37,7 +37,7 @@ interface
 uses
   Classes, SysUtils, Forms, LMessages, IniFiles, ExtCtrls, StdCtrls, db,
   ComCtrls, DBCtrls, Graphics, Controls, ZDataset, Dialogs, variants, LCLIntf,
-  LCLType, types, dbdateedit, tooledit;
+  LCLType, types, rxdbdateedit, rxtooledit;
 
   procedure mensagem(const strmensagem: string);
   function confirma(const strtexto: string): integer;

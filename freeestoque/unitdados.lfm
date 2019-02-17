@@ -1,25 +1,27 @@
 object dm: Tdm
   OldCreateOrder = False
-  Height = 569
-  HorizontalOffset = 438
-  VerticalOffset = 147
-  Width = 536
+  Height = 599
+  HorizontalOffset = 461
+  VerticalOffset = 155
+  Width = 564
+  PPI = 101
   object banco: TZConnection
-    Protocol = 'firebird-2.1'
+    ControlsCodePage = cCP_UTF8
+    TransactIsolationLevel = tiReadCommitted
     HostName = 'localhost'
     Port = 3050
-    Database = '/home/jean/freeestoque/banco/freeestoque.fdb'
+    Database = '/home/natanprog/estudos/freeestoque/banco/freeestoque.fdb'
     User = 'SYSDBA'
-    Password = 'masterkey'
-    TransactIsolationLevel = tiReadCommitted
-    left = 25
-    top = 19
+    Password = 'Zero2040'
+    Protocol = 'firebird-3.0'
+    left = 26
+    top = 20
   end
   object sClientes: TZSequence
     Connection = banco
     SequenceName = 'GEN_CLIENTES_ID'
-    left = 285
-    top = 19
+    left = 300
+    top = 20
   end
   object uClientes: TZUpdateSQL
     DeleteSQL.Strings = (
@@ -71,8 +73,8 @@ object dm: Tdm
       '  (CLIENTES.ID = :OLD_ID)'
     )
     UseSequenceFieldForRefreshSQL = True
-    left = 191
-    top = 19
+    left = 201
+    top = 20
     ParamData = <    
       item
         DataType = ftUnknown
@@ -231,8 +233,8 @@ object dm: Tdm
     Params = <>
     Sequence = sClientes
     SequenceField = 'ID'
-    left = 100
-    top = 19
+    left = 105
+    top = 20
     object ClientesID: TLargeintField
       DisplayWidth = 10
       FieldKind = fkData
@@ -506,7 +508,6 @@ object dm: Tdm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      BlobType = ftBlob
       Transliterate = False
     end
     object ClientesATIVO: TStringField
@@ -533,26 +534,26 @@ object dm: Tdm
       Size = 255
     end
   end
-  object dsClientes: TDatasource
+  object dsClientes: TDataSource
     AutoEdit = False
     DataSet = Clientes
-    left = 383
-    top = 19
+    left = 403
+    top = 20
   end
   object SQL: TZQuery
     Connection = banco
     AutoCalcFields = False
     Filtered = True
     Params = <>
-    left = 25
-    top = 80
+    left = 26
+    top = 84
   end
   object Empresa: TZTable
     Connection = banco
     AutoCalcFields = False
     TableName = 'EMPRESA'
-    left = 25
-    top = 136
+    left = 26
+    top = 143
   end
   object Fornecedores: TZQuery
     Connection = banco
@@ -565,8 +566,8 @@ object dm: Tdm
     Params = <>
     Sequence = sFornecedores
     SequenceField = 'ID'
-    left = 100
-    top = 80
+    left = 105
+    top = 84
     object FornecedoresID: TLargeintField
       DisplayWidth = 10
       FieldKind = fkData
@@ -808,7 +809,6 @@ object dm: Tdm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      BlobType = ftBlob
       Transliterate = False
     end
     object FornecedoresATIVO: TStringField
@@ -869,8 +869,8 @@ object dm: Tdm
       '  (FORNECEDORES.ID = :OLD_ID)'
     )
     UseSequenceFieldForRefreshSQL = True
-    left = 191
-    top = 80
+    left = 201
+    top = 84
     ParamData = <    
       item
         DataType = ftUnknown
@@ -1001,14 +1001,14 @@ object dm: Tdm
   object sFornecedores: TZSequence
     Connection = banco
     SequenceName = 'GEN_FORNECEDORES_ID'
-    left = 285
-    top = 80
+    left = 300
+    top = 84
   end
-  object dsFornecedores: TDatasource
+  object dsFornecedores: TDataSource
     AutoEdit = False
     DataSet = Fornecedores
-    left = 383
-    top = 80
+    left = 403
+    top = 84
   end
   object Marcas: TZTable
     Connection = banco
@@ -1018,8 +1018,8 @@ object dm: Tdm
     IndexFieldNames = 'MARCA Asc'
     Sequence = sMarcas
     SequenceField = 'ID'
-    left = 25
-    top = 264
+    left = 26
+    top = 278
     object MarcasID: TLargeintField
       DisplayWidth = 10
       FieldKind = fkData
@@ -1042,27 +1042,27 @@ object dm: Tdm
       Size = 255
     end
   end
-  object dsGrupos: TDatasource
+  object dsGrupos: TDataSource
     DataSet = Grupos
-    left = 191
-    top = 200
+    left = 201
+    top = 210
   end
-  object dsMarcas: TDatasource
+  object dsMarcas: TDataSource
     DataSet = Marcas
-    left = 191
-    top = 264
+    left = 201
+    top = 278
   end
   object sGrupos: TZSequence
     Connection = banco
     SequenceName = 'GEN_GRUPOS_ID'
-    left = 100
-    top = 200
+    left = 105
+    top = 210
   end
   object sMarcas: TZSequence
     Connection = banco
     SequenceName = 'GEN_MARCAS_ID'
-    left = 100
-    top = 264
+    left = 105
+    top = 278
   end
   object Modelos: TZTable
     Connection = banco
@@ -1072,8 +1072,8 @@ object dm: Tdm
     IndexFieldNames = 'MODELO Asc'
     Sequence = sModelos
     SequenceField = 'ID'
-    left = 25
-    top = 325
+    left = 26
+    top = 342
     object ModelosID: TLargeintField
       DisplayWidth = 10
       FieldKind = fkData
@@ -1096,10 +1096,10 @@ object dm: Tdm
       Size = 255
     end
   end
-  object dsModelos: TDatasource
+  object dsModelos: TDataSource
     DataSet = Modelos
-    left = 191
-    top = 325
+    left = 201
+    top = 342
   end
   object Unidades: TZTable
     Connection = banco
@@ -1109,8 +1109,8 @@ object dm: Tdm
     IndexFieldNames = 'UNIDADE Asc'
     Sequence = sUnidades
     SequenceField = 'ID'
-    left = 25
-    top = 382
+    left = 26
+    top = 402
     object UnidadesID: TLongintField
       DisplayWidth = 10
       FieldKind = fkData
@@ -1133,22 +1133,22 @@ object dm: Tdm
       Size = 50
     end
   end
-  object dsUnidades: TDatasource
+  object dsUnidades: TDataSource
     DataSet = Unidades
-    left = 191
-    top = 382
+    left = 201
+    top = 402
   end
   object sModelos: TZSequence
     Connection = banco
     SequenceName = 'GEN_MODELOS_ID'
-    left = 100
-    top = 325
+    left = 105
+    top = 342
   end
   object sUnidades: TZSequence
     Connection = banco
     SequenceName = 'GEN_UNIDADES_ID'
-    left = 100
-    top = 382
+    left = 105
+    top = 402
   end
   object Produtos: TZQuery
     Connection = banco
@@ -1173,8 +1173,8 @@ object dm: Tdm
     Params = <>
     Sequence = sProdutos
     SequenceField = 'ID'
-    left = 25
-    top = 448
+    left = 26
+    top = 471
     object ProdutosID: TLargeintField
       DisplayWidth = 10
       FieldKind = fkData
@@ -1272,7 +1272,7 @@ object dm: Tdm
       DisplayFormat = '######0.00'
       MaxValue = 0
       MinValue = 0
-      Precision = 0
+      Precision = 2
     end
     object ProdutosESTOQUE_ATUAL: TFloatField
       Alignment = taLeftJustify
@@ -1287,7 +1287,7 @@ object dm: Tdm
       DisplayFormat = '######0.00'
       MaxValue = 0
       MinValue = 0
-      Precision = 0
+      Precision = 2
     end
     object ProdutosREFERENCIA: TStringField
       DisplayWidth = 30
@@ -1309,7 +1309,6 @@ object dm: Tdm
       ProviderFlags = [pfInUpdate, pfInWhere]
       ReadOnly = False
       Required = False
-      BlobType = ftBlob
       Transliterate = False
     end
     object ProdutosFOTO: TStringField
@@ -1400,7 +1399,7 @@ object dm: Tdm
       Currency = True
       MaxValue = 0
       MinValue = 0
-      Precision = 0
+      Precision = 2
     end
     object ProdutosPRECO_VEND: TFloatField
       DisplayWidth = 10
@@ -1414,7 +1413,7 @@ object dm: Tdm
       Currency = True
       MaxValue = 0
       MinValue = 0
-      Precision = 0
+      Precision = 2
     end
   end
   object uProdutos: TZUpdateSQL
@@ -1455,8 +1454,8 @@ object dm: Tdm
       '  (PRODUTOS.ID = :OLD_ID)'
     )
     UseSequenceFieldForRefreshSQL = True
-    left = 100
-    top = 448
+    left = 105
+    top = 471
     ParamData = <    
       item
         DataType = ftUnknown
@@ -1547,14 +1546,14 @@ object dm: Tdm
   object sProdutos: TZSequence
     Connection = banco
     SequenceName = 'GEN_PRODUTOS_ID'
-    left = 191
-    top = 448
+    left = 201
+    top = 471
   end
-  object dsProdutos: TDatasource
+  object dsProdutos: TDataSource
     AutoEdit = False
     DataSet = Produtos
-    left = 285
-    top = 448
+    left = 300
+    top = 471
   end
   object Grupos: TZTable
     Connection = banco
@@ -1564,7 +1563,7 @@ object dm: Tdm
     IndexFieldNames = 'GRUPO Asc'
     Sequence = sGrupos
     SequenceField = 'ID'
-    left = 25
-    top = 200
+    left = 26
+    top = 210
   end
 end

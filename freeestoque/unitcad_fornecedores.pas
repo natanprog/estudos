@@ -37,8 +37,8 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, DbCtrls, DBGrids, Buttons, LR_Class, LR_DBSet, LR_RRect,
-  LR_Shape, Modelo_Cad, tooledit, UnitDados, Unit_rotinas, ACBrValidador, db,
-  LCLType;
+  LR_Shape, Modelo_Cad, rxtooledit, UnitDados, Unit_rotinas, ACBrValidador, db,
+  LCLType, DBExtCtrls;
 
 type
 

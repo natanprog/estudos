@@ -1,22 +1,23 @@
 object FormPrincipal: TFormPrincipal
-  Left = 0
-  Height = 691
-  Top = 25
-  Width = 1014
+  Left = 290
+  Height = 727
+  Top = 142
+  Width = 1067
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'FreeEstoque - Controle de Estoque e Vendas MultiPlataforma'
-  ClientHeight = 668
-  ClientWidth = 1014
+  ClientHeight = 703
+  ClientWidth = 1067
+  DesignTimePPI = 101
   Menu = MainMenu1
   OnShow = FormShow
   Position = poDesktopCenter
-  LCLVersion = '0.9.27'
+  LCLVersion = '2.0.0.4'
   WindowState = wsMaximized
   object Image1: TImage
     Left = 0
-    Height = 573
-    Top = 76
-    Width = 1014
+    Height = 601
+    Top = 80
+    Width = 1067
     Align = alClient
     Picture.Data = {
       0A544A706567496D6167651A8C0100FFD8FFE000104A46494600010101004800
@@ -3194,33 +3195,35 @@ object FormPrincipal: TFormPrincipal
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Height = 19
-    Top = 649
-    Width = 1014
+    Height = 22
+    Top = 681
+    Width = 1067
     Panels = <    
       item
         Text = 'JPSoft - Desenvolvimento de Sistemas'
-        Width = 300
+        Width = 316
       end    
       item
         Text = 'Email: jpsoft-sac-pa@hotmail.com'
-        Width = 50
+        Width = 53
       end>
+    ParentFont = False
     SimplePanel = False
   end
   object ToolBar1: TToolBar
     Left = 0
-    Height = 76
+    Height = 80
     Top = 0
-    Width = 1014
+    Width = 1067
     AutoSize = True
-    ButtonHeight = 72
-    ButtonWidth = 90
+    ButtonHeight = 76
+    ButtonWidth = 95
     Caption = 'ToolBar1'
     Color = clSkyBlue
     EdgeBorders = [ebTop, ebBottom]
     Images = ImageList1
     ParentColor = False
+    ParentFont = False
     ShowCaptions = True
     TabOrder = 1
     object ToolButton1: TToolButton
@@ -3231,47 +3234,47 @@ object FormPrincipal: TFormPrincipal
       OnClick = ToolButton1Click
     end
     object ToolButton2: TToolButton
-      Left = 91
+      Left = 96
       Top = 2
       Caption = 'Produtos'
       ImageIndex = 1
       OnClick = ToolButton2Click
     end
     object ToolButton3: TToolButton
-      Left = 181
+      Left = 191
       Top = 2
       Caption = 'Fornecedores'
       ImageIndex = 2
       OnClick = ToolButton3Click
     end
     object ToolButton4: TToolButton
-      Left = 271
+      Left = 296
       Top = 2
       Caption = 'Movimento'
       ImageIndex = 3
     end
     object ToolButton5: TToolButton
-      Left = 361
+      Left = 391
       Top = 2
       Caption = 'Vendas'
       ImageIndex = 4
     end
     object ToolButton6: TToolButton
-      Left = 451
+      Left = 486
       Top = 2
       Caption = 'à Pagar'
       ImageIndex = 6
     end
     object ToolButton7: TToolButton
-      Left = 541
+      Left = 581
       Top = 2
       Caption = 'à Receber'
       ImageIndex = 7
     end
   end
   object MainMenu1: TMainMenu
-    left = 184
-    top = 186
+    left = 194
+    top = 196
     object MenuItem1: TMenuItem
       Caption = 'Cadastros'
       object MenuItem9: TMenuItem
@@ -3346,8 +3349,8 @@ object FormPrincipal: TFormPrincipal
   object ImageList1: TImageList
     Height = 32
     Width = 32
-    left = 792
-    top = 296
+    left = 833
+    top = 311
     Bitmap = {
       4C69110000002000000020000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -5532,24 +5535,25 @@ object FormPrincipal: TFormPrincipal
     Connected = False
     LoginPrompt = False
     KeepConnection = False
-    Password = 'masterkey'
+    Password = 'Zero2040'
     Transaction = SQLTransaction1
     UserName = 'SYSDBA'
-    CharSet = 'NONE'
-    Role = '4096'
-    left = 526
-    top = 563
+    CharSet = 'UTF8'
+    CheckTransactionParams = False
+    left = 553
+    top = 592
   end
   object SQLTransaction1: TSQLTransaction
     Active = False
     Action = caCommit
     Database = IBConnection1
-    left = 630
-    top = 564
+    left = 663
+    top = 593
   end
   object SQLScript1: TSQLScript
     DataBase = IBConnection1
     Transaction = SQLTransaction1
+    UseDollarString = False
     Directives.Strings = (
       'SET TERM'
       'COMMIT'
@@ -5566,7 +5570,7 @@ object FormPrincipal: TFormPrincipal
     UseSetTerm = True
     UseCommit = True
     UseDefines = True
-    left = 740
-    top = 563
+    left = 779
+    top = 592
   end
 end

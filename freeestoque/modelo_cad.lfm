@@ -1,37 +1,34 @@
 object Modelo_Cadastro: TModelo_Cadastro
-  Left = 0
-  Height = 691
-  Top = 25
-  Width = 1014
+  Left = 274
+  Height = 727
+  Top = 160
+  Width = 1067
   ActiveControl = Panel1
   BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'Modelo_Cadastro'
-  ClientHeight = 691
-  ClientWidth = 1014
+  ClientHeight = 727
+  ClientWidth = 1067
+  DesignTimePPI = 101
   KeyPreview = True
   OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnShow = FormShow
-  LCLVersion = '0.9.27'
+  LCLVersion = '2.0.0.4'
   WindowState = wsMaximized
   object Notebook1: TNotebook
-    Left = 10
-    Height = 552
-    Top = 70
-    Width = 994
-    TabStop = False
-    Anchors = [akTop, akLeft, akRight, akBottom]
+    Left = 11
+    Height = 580
+    Top = 74
+    Width = 1045
     PageIndex = 0
+    Anchors = [akTop, akLeft, akRight, akBottom]
     TabOrder = 0
     object Page1: TPage
-      Caption = 'Cadastro'
-      ClientWidth = 986
-      ClientHeight = 524
       object lbMensagem: TLabel
         Left = 9
-        Height = 25
+        Height = 26
         Top = 8
-        Width = 300
+        Width = 316
         Alignment = taCenter
         AutoSize = False
         Caption = 'MODO DE NAVEGAÇÃO'
@@ -44,10 +41,10 @@ object Modelo_Cadastro: TModelo_Cadastro
         Transparent = False
       end
       object lbMensagem1: TLabel
-        Left = 316
-        Height = 25
+        Left = 332
+        Height = 26
         Top = 8
-        Width = 300
+        Width = 316
         Alignment = taCenter
         AutoSize = False
         Color = clInfoBk
@@ -59,14 +56,20 @@ object Modelo_Cadastro: TModelo_Cadastro
         Transparent = False
       end
       object DBNavigator1: TDBNavigator
-        Left = 850
-        Height = 25
+        Left = 894
+        Height = 26
         Top = 8
-        Width = 129
+        Width = 136
         Anchors = [akTop, akRight]
         BevelOuter = bvNone
-        ClientHeight = 25
-        ClientWidth = 129
+        ChildSizing.EnlargeHorizontal = crsScaleChilds
+        ChildSizing.EnlargeVertical = crsScaleChilds
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 100
+        ClientHeight = 26
+        ClientWidth = 136
         Hints.Strings = (
           'Primeiro'
           'Anterior'
@@ -79,6 +82,8 @@ object Modelo_Cadastro: TModelo_Cadastro
           'Cancelar'
           'Atualizar'
         )
+        Options = []
+        ParentFont = False
         ParentShowHint = False
         ShowHint = True
         TabOrder = 0
@@ -86,16 +91,16 @@ object Modelo_Cadastro: TModelo_Cadastro
       end
     end
     object Page2: TPage
-      Caption = 'Listagem'
-      ClientWidth = 986
-      ClientHeight = 524
       object GridDados: TDBGrid
         Left = 0
         Height = 524
         Top = 0
         Width = 986
         Align = alClient
+        Color = clWindow
+        Columns = <>
         Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 0
         TitleStyle = tsNative
         OnTitleClick = GridDadosTitleClick
@@ -103,27 +108,29 @@ object Modelo_Cadastro: TModelo_Cadastro
     end
   end
   object Panel1: TPanel
-    Left = 10
-    Height = 60
+    Left = 11
+    Height = 63
     Top = 5
-    Width = 994
+    Width = 1045
     Anchors = [akTop, akLeft, akRight]
+    ParentFont = False
     TabOrder = 1
   end
   object Panel2: TPanel
-    Left = 10
-    Height = 60
-    Top = 626
-    Width = 994
+    Left = 11
+    Height = 63
+    Top = 659
+    Width = 1045
     Anchors = [akLeft, akRight, akBottom]
-    ClientHeight = 60
-    ClientWidth = 994
+    ClientHeight = 63
+    ClientWidth = 1045
+    ParentFont = False
     TabOrder = 2
     object btSalvar: TBitBtn
-      Left = 587
-      Height = 38
-      Top = 11
-      Width = 130
+      Left = 617
+      Height = 40
+      Top = 12
+      Width = 137
       Anchors = [akTop, akRight]
       Caption = 'Salvar (F6)'
       Enabled = False
@@ -204,14 +211,15 @@ object Modelo_Cadastro: TModelo_Cadastro
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = btSalvarClick
+      ParentFont = False
       TabOrder = 0
       TabStop = False
     end
     object btCancelar: TBitBtn
-      Left = 721
-      Height = 38
-      Top = 11
-      Width = 130
+      Left = 758
+      Height = 40
+      Top = 12
+      Width = 137
       Anchors = [akTop, akRight]
       Caption = 'Cancelar (F7)'
       Enabled = False
@@ -292,14 +300,15 @@ object Modelo_Cadastro: TModelo_Cadastro
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = btCancelarClick
+      ParentFont = False
       TabOrder = 1
       TabStop = False
     end
     object btExcluir: TBitBtn
-      Left = 855
-      Height = 38
-      Top = 11
-      Width = 130
+      Left = 899
+      Height = 40
+      Top = 12
+      Width = 137
       Anchors = [akTop, akRight]
       Caption = 'Excluir (F8)'
       Glyph.Data = {
@@ -379,14 +388,15 @@ object Modelo_Cadastro: TModelo_Cadastro
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = btExcluirClick
+      ParentFont = False
       TabOrder = 2
       TabStop = False
     end
     object btNovo: TBitBtn
-      Left = 319
-      Height = 38
-      Top = 11
-      Width = 130
+      Left = 335
+      Height = 40
+      Top = 12
+      Width = 137
       Anchors = [akTop, akRight]
       Caption = 'Novo (F4)'
       Glyph.Data = {
@@ -466,14 +476,15 @@ object Modelo_Cadastro: TModelo_Cadastro
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = btNovoClick
+      ParentFont = False
       TabOrder = 3
       TabStop = False
     end
     object btImprimir: TBitBtn
-      Left = 10
-      Height = 38
-      Top = 11
-      Width = 130
+      Left = 11
+      Height = 40
+      Top = 12
+      Width = 137
       Caption = 'Relatório (F3)'
       Glyph.Data = {
         36090000424D3609000000000000360000002800000018000000180000000100
@@ -551,14 +562,15 @@ object Modelo_Cadastro: TModelo_Cadastro
         BEE7BFC0BFEFB0B0B0FC6F6F6FBF070707250000000000000000000000000000
         0000000000000000000000000000000000000000000000000000
       }
+      ParentFont = False
       TabOrder = 4
       TabStop = False
     end
     object btEditar: TBitBtn
-      Left = 453
-      Height = 38
-      Top = 11
-      Width = 130
+      Left = 476
+      Height = 40
+      Top = 12
+      Width = 137
       Anchors = [akTop, akRight]
       Caption = 'Editar (F5)'
       Glyph.Data = {
@@ -638,30 +650,29 @@ object Modelo_Cadastro: TModelo_Cadastro
         0000000000000000000000000000000000000000000000000000
       }
       OnClick = btEditarClick
+      ParentFont = False
       TabOrder = 5
       TabStop = False
     end
   end
   object frReport1: TfrReport
     InitialZoom = pzDefault
+    Options = []
     PreviewButtons = [pbZoom, pbLoad, pbSave, pbPrint, pbFind, pbHelp, pbExit]
     DataType = dtDataSet
-    left = 168
-    top = 48
-    ReportForm = {
-      18000000
-    }
+    left = 177
+    top = 51
   end
   object frDBDataSet1: TfrDBDataSet
-    left = 248
-    top = 48
+    left = 261
+    top = 51
   end
   object frRoundRectObject1: TfrRoundRectObject
-    left = 352
-    top = 48
+    left = 370
+    top = 51
   end
   object frShapeObject1: TfrShapeObject
-    left = 464
-    top = 48
+    left = 488
+    top = 51
   end
 end

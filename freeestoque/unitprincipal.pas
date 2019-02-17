@@ -160,9 +160,9 @@ begin
     dm.banco.Disconnect;
     dm.banco.Properties.Add('CreateNewDatabase=CREATE DATABASE ' +
              QuotedStr (ini.ReadString('configs','banco','')+'freeestoque.fdb')+
-             ' USER '+QuotedStr('sysdba')+' PASSWORD '+
-             QuotedStr('masterkey')+
-             ' PAGE_SIZE 4096 DEFAULT CHARACTER SET NONE');
+             ' USER '+QuotedStr('SYSDBA')+' PASSWORD '+
+             QuotedStr('Zero2040')+
+             ' PAGE_SIZE 16384 DEFAULT CHARACTER SET UTF8');
     dm.banco.Connect;
     dm.banco.Disconnect;
     IBConnection1.HostName:=ini.ReadString('configs','servidor','');

@@ -7,9 +7,9 @@ interface
 uses
   Classes, SysUtils, FileUtil, LResources, Forms, Controls, Graphics, Dialogs,
   ExtCtrls, StdCtrls, DbCtrls, DBGrids, Buttons, ExtDlgs, LR_Class, LR_DBSet,
-  LR_RRect, LR_Shape, Modelo_Cad, dbdateedit, rxlookup, rxdbcomb, db, IniFiles,
+  LR_RRect, LR_Shape, Modelo_Cad, rxdbdateedit, rxlookup, rxdbcomb, db, IniFiles,
   UnitDados, Unit_rotinas, Unit_Cad_Grupos, Unit_Cad_Marcas, Unit_Cad_Modelos,
-  Unit_Cad_Unidades, unitcad_fornecedores, tooledit, LCLType;
+  Unit_Cad_Unidades, unitcad_fornecedores, rxtooledit, LCLType, DBExtCtrls;
 
 type
 
@@ -105,11 +105,11 @@ type
     procedure SpeedButton5Click(Sender: TObject);
     procedure SpeedButton6Click(Sender: TObject);
   private
-    procedure SoLeitura(modo: boolean);
-    procedure dsDataChange(Sender: TObject; Field: TField);
     FlagFoto: byte;
     caminho: string;
     sCom: string;
+    procedure SoLeitura(modo: boolean);
+    procedure dsDataChange(Sender: TObject; Field: TField);
     { private declarations }
   public
     { public declarations }

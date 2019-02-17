@@ -1,301 +1,313 @@
 inherited Cad_Fornecedores: TCad_Fornecedores
+  Left = 277
+  Top = 156
   Caption = 'Cadastro de Fornecedores'
   OnClose = FormClose
   OnKeyDown = FormKeyDown
   OnShow = FormShow
   inherited Notebook1: TNotebook
     inherited Page1: TPage
-      object Label1: TLabel[2]
+      inherited DBNavigator1: TDBNavigator
+        Width = 128
+        ClientWidth = 128
+        DataSource = dm.dsFornecedores
+      end
+      object Label1: TLabel[3]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 48
-        Width = 42
+        Width = 50
         Caption = 'Código'
         ParentColor = False
       end
-      object Label4: TLabel[3]
+      object Label4: TLabel[4]
         Left = 86
-        Height = 16
+        Height = 18
         Top = 48
-        Width = 60
+        Width = 68
         Caption = 'Data Cad.'
         ParentColor = False
       end
-      object Label2: TLabel[4]
+      object Label2: TLabel[5]
         Left = 200
-        Height = 16
+        Height = 18
         Top = 48
-        Width = 89
+        Width = 105
         Caption = 'Nome/Fantasia'
         ParentColor = False
       end
-      object Label3: TLabel[5]
+      object Label3: TLabel[6]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 104
-        Width = 75
+        Width = 86
         Caption = 'Razão Social'
         ParentColor = False
       end
-      object Label5: TLabel[6]
+      object Label5: TLabel[7]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 160
-        Width = 58
+        Width = 67
         Caption = 'Endereço'
         ParentColor = False
       end
-      object Label7: TLabel[7]
+      object Label7: TLabel[8]
         Left = 637
-        Height = 16
+        Height = 18
         Top = 160
-        Width = 36
+        Width = 43
         Caption = 'Bairro'
         ParentColor = False
       end
-      object Label11: TLabel[8]
+      object Label11: TLabel[9]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 216
-        Width = 42
+        Width = 49
         Caption = 'Cidade'
         ParentColor = False
       end
-      object Label12: TLabel[9]
-        Left = 679
-        Height = 16
+      object Label12: TLabel[10]
+        Left = 673
+        Height = 18
         Top = 216
-        Width = 42
+        Width = 48
         Anchors = [akTop, akRight]
         Caption = 'Estado'
         ParentColor = False
       end
-      object Label13: TLabel[10]
-        Left = 788
-        Height = 16
+      object Label13: TLabel[11]
+        Left = 784
+        Height = 18
         Top = 216
-        Width = 24
+        Width = 28
         Anchors = [akTop, akRight]
         Caption = 'CEP'
         ParentColor = False
       end
-      object Label14: TLabel[11]
-        Left = 891
-        Height = 16
+      object Label14: TLabel[12]
+        Left = 878
+        Height = 18
         Top = 216
-        Width = 72
+        Width = 85
         Anchors = [akTop, akRight]
         Caption = 'Caixa Postal'
         ParentColor = False
       end
-      object Label8: TLabel[12]
+      object Label8: TLabel[13]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 271
-        Width = 29
+        Width = 37
         Caption = 'CNPJ'
         ParentColor = False
       end
-      object Label9: TLabel[13]
+      object Label9: TLabel[14]
         Left = 151
-        Height = 16
+        Height = 18
         Top = 271
         Width = 13
         Anchors = [akTop, akRight]
         Caption = 'IE'
         ParentColor = False
       end
-      object Label17: TLabel[14]
-        Left = 283
-        Height = 16
+      object Label17: TLabel[15]
+        Left = 277
+        Height = 18
         Top = 271
-        Width = 42
+        Width = 48
         Anchors = [akTop, akRight]
         Caption = 'Fone 1'
         ParentColor = False
       end
-      object Label18: TLabel[15]
-        Left = 401
-        Height = 16
+      object Label18: TLabel[16]
+        Left = 395
+        Height = 18
         Top = 271
-        Width = 42
+        Width = 48
         Anchors = [akTop, akRight]
         Caption = 'Fone 2'
         ParentColor = False
       end
-      object Label19: TLabel[16]
-        Left = 519
-        Height = 16
+      object Label19: TLabel[17]
+        Left = 510
+        Height = 18
         Top = 271
-        Width = 54
+        Width = 63
         Anchors = [akTop, akRight]
         Caption = 'Celular 1'
         ParentColor = False
       end
-      object Label20: TLabel[17]
-        Left = 637
-        Height = 16
+      object Label20: TLabel[18]
+        Left = 628
+        Height = 18
         Top = 271
-        Width = 54
+        Width = 63
         Anchors = [akTop, akRight]
         Caption = 'Celular 2'
         ParentColor = False
       end
-      object Label21: TLabel[18]
-        Left = 755
-        Height = 16
+      object Label21: TLabel[19]
+        Left = 752
+        Height = 18
         Top = 271
-        Width = 33
+        Width = 36
         Anchors = [akTop, akRight]
         Caption = 'Fax 1'
         ParentColor = False
       end
-      object Label22: TLabel[19]
-        Left = 873
-        Height = 16
+      object Label22: TLabel[20]
+        Left = 870
+        Height = 18
         Top = 271
-        Width = 33
+        Width = 36
         Anchors = [akTop, akRight]
         Caption = 'Fax 2'
         ParentColor = False
       end
-      object Label23: TLabel[20]
+      object Label23: TLabel[21]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 328
-        Width = 46
+        Width = 51
         Caption = 'Email 1'
         ParentColor = False
       end
-      object Label25: TLabel[21]
+      object Label25: TLabel[22]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 384
-        Width = 46
+        Width = 51
         Caption = 'Email 2'
         ParentColor = False
       end
-      object Label24: TLabel[22]
+      object Label24: TLabel[23]
         Left = 509
-        Height = 16
+        Height = 18
         Top = 328
-        Width = 48
+        Width = 57
         Caption = 'Contato'
         ParentColor = False
       end
-      object Label26: TLabel[23]
+      object Label26: TLabel[24]
         Left = 509
-        Height = 16
+        Height = 18
         Top = 384
-        Width = 54
+        Width = 63
         Caption = 'Web Site'
         ParentColor = False
       end
-      object Label27: TLabel[24]
+      object Label27: TLabel[25]
         Left = 9
-        Height = 16
+        Height = 18
         Top = 439
-        Width = 24
+        Width = 28
         Caption = 'Obs'
         ParentColor = False
       end
-      inherited DBNavigator1: TDBNavigator[25]
-        Width = 128
-        ClientWidth = 128
-        DataSource = dm.dsFornecedores
-      end
       object DBEdit1: TDBEdit[26]
         Left = 9
-        Height = 25
+        Height = 28
         Top = 64
         Width = 73
         DataField = 'ID'
         DataSource = dm.dsFornecedores
         ReadOnly = True
+        CharCase = ecNormal
         Color = clForm
+        MaxLength = 0
         TabOrder = 1
         TabStop = False
       end
       object DBEdit2: TDBEdit[27]
         Left = 86
-        Height = 25
+        Height = 28
         Top = 64
         Width = 109
         DataField = 'DATA_CAD'
         DataSource = dm.dsFornecedores
         ReadOnly = True
+        CharCase = ecNormal
         Color = clForm
+        MaxLength = 0
         TabOrder = 2
         TabStop = False
       end
       object DBEdit3: TDBEdit[28]
         Left = 200
-        Height = 25
+        Height = 28
         Top = 64
         Width = 788
         DataField = 'NOME'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akLeft, akRight]
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 3
       end
       object DBEdit4: TDBEdit[29]
         Left = 9
-        Height = 25
+        Height = 28
         Top = 120
         Width = 979
         DataField = 'RAZAO'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akLeft, akRight]
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 4
       end
       object DBEdit5: TDBEdit[30]
         Left = 9
-        Height = 25
+        Height = 28
         Top = 176
         Width = 623
         DataField = 'ENDERECO'
         DataSource = dm.dsFornecedores
         ReadOnly = True
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 5
       end
       object DBEdit6: TDBEdit[31]
         Left = 637
-        Height = 25
+        Height = 28
         Top = 176
         Width = 351
         DataField = 'BAIRRO'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akLeft, akRight]
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 6
       end
       object DBEdit7: TDBEdit[32]
         Left = 9
-        Height = 25
+        Height = 28
         Top = 232
         Width = 665
         DataField = 'CIDADE'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akLeft, akRight]
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 7
       end
       object DBEdit9: TDBEdit[33]
         Left = 788
-        Height = 25
+        Height = 28
         Top = 232
         Width = 99
         DataField = 'CEP'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 9
         OnKeyPress = DBEdit9KeyPress
@@ -303,25 +315,27 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit10: TDBEdit[34]
         Left = 891
-        Height = 25
+        Height = 28
         Top = 232
         Width = 97
         DataField = 'CAIXA_POSTAL'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 10
         TabOrder = 10
       end
       object DBEdit11: TDBEdit[35]
         Left = 9
-        Height = 25
+        Height = 28
         Top = 288
         Width = 138
         DataField = 'CNPJ'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akLeft, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 11
         OnKeyPress = DBEdit11KeyPress
@@ -329,26 +343,28 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit12: TDBEdit[36]
         Left = 151
-        Height = 25
+        Height = 28
         Top = 288
         Width = 128
         DataField = 'IE'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 12
         OnKeyPress = DBEdit12KeyPress
       end
       object DBEdit13: TDBEdit[37]
         Left = 283
-        Height = 25
+        Height = 28
         Top = 288
         Width = 115
         DataField = 'FONE1'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 13
         OnKeyPress = DBEdit13KeyPress
@@ -356,13 +372,14 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit14: TDBEdit[38]
         Left = 401
-        Height = 25
+        Height = 28
         Top = 288
         Width = 115
         DataField = 'FONE2'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 14
         OnKeyPress = DBEdit13KeyPress
@@ -370,13 +387,14 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit15: TDBEdit[39]
         Left = 519
-        Height = 25
+        Height = 28
         Top = 288
         Width = 115
         DataField = 'CEL1'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 15
         OnKeyPress = DBEdit13KeyPress
@@ -384,13 +402,14 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit16: TDBEdit[40]
         Left = 637
-        Height = 25
+        Height = 28
         Top = 288
         Width = 115
         DataField = 'CEL2'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 16
         OnKeyPress = DBEdit13KeyPress
@@ -398,13 +417,14 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit17: TDBEdit[41]
         Left = 755
-        Height = 25
+        Height = 28
         Top = 288
         Width = 115
         DataField = 'FAX1'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 17
         OnKeyPress = DBEdit13KeyPress
@@ -412,13 +432,14 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit18: TDBEdit[42]
         Left = 873
-        Height = 25
+        Height = 28
         Top = 288
         Width = 115
         DataField = 'FAX2'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akRight]
+        CharCase = ecNormal
         MaxLength = 20
         TabOrder = 18
         OnKeyPress = DBEdit13KeyPress
@@ -432,9 +453,6 @@ inherited Cad_Fornecedores: TCad_Fornecedores
         Anchors = [akTop, akLeft, akRight]
         DataField = 'OBS'
         DataSource = dm.dsFornecedores
-        Lines.Strings = (
-          'DBMemo1'
-        )
         OnChange = DBMemo1Change
         OnEnter = DBMemo1Enter
         OnExit = DBMemo1Exit
@@ -442,53 +460,57 @@ inherited Cad_Fornecedores: TCad_Fornecedores
       end
       object DBEdit19: TDBEdit[44]
         Left = 9
-        Height = 25
+        Height = 28
         Top = 344
         Width = 495
         DataField = 'EMAIL1'
         DataSource = dm.dsFornecedores
         ReadOnly = True
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 19
       end
       object DBEdit20: TDBEdit[45]
         Left = 509
-        Height = 25
+        Height = 28
         Top = 344
         Width = 479
         DataField = 'CONTATO'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akLeft, akRight]
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 20
       end
       object DBEdit21: TDBEdit[46]
         Left = 9
-        Height = 25
+        Height = 28
         Top = 400
         Width = 495
         DataField = 'EMAIL2'
         DataSource = dm.dsFornecedores
         ReadOnly = True
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 21
       end
       object DBEdit22: TDBEdit[47]
         Left = 509
-        Height = 25
+        Height = 28
         Top = 400
         Width = 479
         DataField = 'SITE'
         DataSource = dm.dsFornecedores
         ReadOnly = True
         Anchors = [akTop, akLeft, akRight]
+        CharCase = ecNormal
         MaxLength = 255
         TabOrder = 22
       end
       object DBComboBox1: TDBComboBox[48]
         Left = 679
-        Height = 29
+        Height = 28
         Top = 232
         Width = 104
         Anchors = [akTop, akRight]
@@ -535,7 +557,15 @@ inherited Cad_Fornecedores: TCad_Fornecedores
         Top = 439
         Width = 152
         Anchors = [akTop, akRight]
+        AutoFill = True
         Caption = 'Fornecedor Ativo'
+        ChildSizing.LeftRightSpacing = 6
+        ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+        ChildSizing.EnlargeVertical = crsHomogenousChildResize
+        ChildSizing.ShrinkHorizontal = crsScaleChilds
+        ChildSizing.ShrinkVertical = crsScaleChilds
+        ChildSizing.Layout = cclLeftToRightThenTopToBottom
+        ChildSizing.ControlsPerLine = 2
         Columns = 2
         DataField = 'ATIVO'
         DataSource = dm.dsFornecedores
@@ -612,6 +642,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
             Alignment = taCenter
             PickList.Strings = (            )
             Title.Alignment = taCenter
+            Title.Caption = 'CEP'
             Width = 100
             FieldName = 'CEP'
           end        
@@ -627,6 +658,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
             Alignment = taCenter
             PickList.Strings = (            )
             Title.Alignment = taCenter
+            Title.Caption = 'CNPJ'
             Width = 150
             FieldName = 'CNPJ'
           end        
@@ -634,6 +666,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
             Alignment = taCenter
             PickList.Strings = (            )
             Title.Alignment = taCenter
+            Title.Caption = 'IE'
             Width = 150
             FieldName = 'IE'
           end        
@@ -752,18 +785,18 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     end
     object Label28: TLabel[3]
       Left = 807
-      Height = 16
+      Height = 18
       Top = 8
-      Width = 53
+      Width = 61
       Caption = 'Localizar'
       ParentColor = False
     end
     object chk1: TCheckBox[4]
       Left = 10
-      Height = 22
+      Height = 24
       Hint = 'Marque para usar este filtro'
       Top = 5
-      Width = 106
+      Width = 127
       Caption = 'Filtrar Período'
       ParentShowHint = False
       ShowHint = True
@@ -772,10 +805,10 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     end
     object chk2: TCheckBox[5]
       Left = 244
-      Height = 22
+      Height = 24
       Hint = 'Marque para usar este filtro'
       Top = 5
-      Width = 196
+      Width = 226
       Caption = 'Filtrar Campo com Descrição'
       ParentShowHint = False
       ShowHint = True
@@ -784,7 +817,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     end
     object dt1: TRxDateEdit[6]
       Left = 10
-      Height = 25
+      Height = 28
       Top = 26
       Width = 80
       ButtonWidth = 23
@@ -801,10 +834,12 @@ inherited Cad_Fornecedores: TCad_Fornecedores
         47D7FD7DD7777D7F0000DDFFFFFFFFFF47D7FDDDDDDDDD7F0000DDF88888888F
         47D7FFFFFFFFFF7F0000DD0000000000DDD777777777777D0000
       }
-      NumGlyphs = 2
+      MaxLength = 10
+      PasswordChar = #0
       PopupColor = clWindow
       TabOrder = 2
       TabStop = False
+      Text = '  /  /    '
       OnEnter = dt1Enter
       OnExit = dt1Exit
       OnKeyDown = RxDateEdit1KeyDown
@@ -813,7 +848,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     end
     object dt2: TRxDateEdit[7]
       Left = 119
-      Height = 25
+      Height = 28
       Top = 26
       Width = 80
       ButtonWidth = 23
@@ -830,10 +865,12 @@ inherited Cad_Fornecedores: TCad_Fornecedores
         47D7FD7DD7777D7F0000DDFFFFFFFFFF47D7FDDDDDDDDD7F0000DDF88888888F
         47D7FFFFFFFFFF7F0000DD0000000000DDD777777777777D0000
       }
-      NumGlyphs = 2
+      MaxLength = 10
+      PasswordChar = #0
       PopupColor = clWindow
       TabOrder = 3
       TabStop = False
+      Text = '  /  /    '
       OnEnter = dt1Enter
       OnExit = dt1Exit
       OnKeyPress = dt1KeyPress
@@ -841,7 +878,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     end
     object ComboBox1: TComboBox[8]
       Left = 244
-      Height = 29
+      Height = 28
       Top = 26
       Width = 112
       ItemHeight = 0
@@ -862,7 +899,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     end
     object ComboBox2: TComboBox[9]
       Left = 360
-      Height = 29
+      Height = 32
       Top = 26
       Width = 240
       ItemHeight = 0
@@ -895,7 +932,7 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     end
     object ComboBox3: TComboBox[12]
       Left = 807
-      Height = 29
+      Height = 28
       Top = 24
       Width = 170
       ItemHeight = 0
@@ -946,11 +983,6 @@ inherited Cad_Fornecedores: TCad_Fornecedores
     inherited btEditar: TBitBtn
       OnClick = btEditarClick
     end
-  end
-  inherited frReport1: TfrReport
-    ReportForm = {
-      18000000
-    }
   end
   object ACBrValidador1: TACBrValidador[7]
     IgnorarChar = './-'
