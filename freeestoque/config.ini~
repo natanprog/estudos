@@ -1,7 +1,0 @@
-[configs]
-servidor=localhost
-uso=Servidor
-banco=/home/jean/freeestoque/banco/
-fotos=/home/jean/freeestoque/fotos/
-backups=/home/jean/freeestoque/
-inicial=1
