@@ -1,0 +1,484 @@
+object F_Produtos: TF_Produtos
+  Left = 284
+  Height = 523
+  Top = 159
+  Width = 673
+  Caption = 'Cadastro de Produtos'
+  ClientHeight = 523
+  ClientWidth = 673
+  Color = clBtnFace
+  DesignTimePPI = 101
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  OnCloseQuery = FormCloseQuery
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  object Panel3: TPanel
+    Left = 0
+    Height = 80
+    Top = 0
+    Width = 673
+    Align = alTop
+    ClientHeight = 80
+    ClientWidth = 673
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 0
+    object Pn_Manutencao: TPanel
+      Left = 319
+      Height = 64
+      Top = 5
+      Width = 276
+      BevelInner = bvLowered
+      ClientHeight = 64
+      ClientWidth = 276
+      Color = 13882323
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+      object Bt_Incluir: TSpeedButton
+        Cursor = crHandPoint
+        Left = 6
+        Height = 23
+        Top = 4
+        Width = 134
+        Caption = '[Insert] Incluir Registro'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Arial Narrow'
+        OnClick = Bt_IncluirClick
+        ParentFont = False
+      end
+      object Bt_Alterar: TSpeedButton
+        Cursor = crHandPoint
+        Left = 145
+        Height = 23
+        Top = 4
+        Width = 119
+        Caption = '[Enter] Alterar Registro'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Arial Narrow'
+        OnClick = Bt_AlterarClick
+        ParentFont = False
+      end
+      object Bt_Excluir: TSpeedButton
+        Cursor = crHandPoint
+        Left = 7
+        Height = 23
+        Top = 32
+        Width = 133
+        Caption = '[Delete] Excluir'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Courier New'
+        Font.Style = [fsBold]
+        OnClick = Bt_ExcluirClick
+        ParentFont = False
+      end
+      object Bt_Retornar: TSpeedButton
+        Cursor = crHandPoint
+        Left = 146
+        Height = 23
+        Top = 32
+        Width = 119
+        Caption = '[Esc] Retornar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        OnClick = Bt_RetornarClick
+        ParentFont = False
+      end
+    end
+    object DBNavigator1: TDBNavigator
+      Left = 23
+      Height = 26
+      Top = 15
+      Width = 231
+      BevelOuter = bvNone
+      ChildSizing.EnlargeHorizontal = crsScaleChilds
+      ChildSizing.EnlargeVertical = crsScaleChilds
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 100
+      ClientHeight = 26
+      ClientWidth = 231
+      DataSource = F_Dm_Pedidos.Ds_Produtos
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Hints.Strings = (
+        'Primeiro Registro'
+        'Registro Anterior'
+        'Próximo Registro'
+        'Último Registro'
+        'Atualizar Dados'
+      )
+      Options = []
+      ParentFont = False
+      ParentShowHint = False
+      ShowHint = True
+      TabOrder = 2
+      VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast, nbRefresh]
+    end
+    object Pn_Confirma_Cancela: TPanel
+      Left = 9
+      Height = 66
+      Top = 6
+      Width = 262
+      BevelInner = bvRaised
+      BorderWidth = 2
+      BorderStyle = bsSingle
+      ClientHeight = 64
+      ClientWidth = 260
+      Color = 11468799
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 0
+      Visible = False
+      object Bt_Confirmar: TSpeedButton
+        Cursor = crHandPoint
+        Left = 9
+        Height = 23
+        Top = 26
+        Width = 104
+        Caption = '[Insert] Confirmar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -12
+        Font.Name = 'Arial Narrow'
+        OnClick = Bt_ConfirmarClick
+        ParentFont = False
+      end
+      object Bt_Cancelar: TSpeedButton
+        Cursor = crHandPoint
+        Left = 127
+        Height = 23
+        Top = 26
+        Width = 113
+        Caption = '[Esc] Cancelar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clMaroon
+        Font.Height = -12
+        Font.Name = 'Arial'
+        OnClick = Bt_CancelarClick
+        ParentFont = False
+      end
+      object Label8: TLabel
+        Left = 8
+        Height = 16
+        Top = 5
+        Width = 219
+        AutoSize = False
+        Caption = 'Confirme ou Cancele para Finalizar'
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clNavy
+        Font.Height = -13
+        Font.Name = 'Arial'
+        Font.Style = [fsItalic]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object Pn_Edicao: TPanel
+    Left = 0
+    Height = 443
+    Top = 80
+    Width = 673
+    Align = alClient
+    BorderWidth = 1
+    ClientHeight = 443
+    ClientWidth = 673
+    Enabled = False
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 15
+      Height = 15
+      Top = 6
+      Width = 74
+      Caption = 'Cód.Produto'
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 15
+      Height = 15
+      Top = 32
+      Width = 47
+      Caption = 'Produto'
+      FocusControl = Db_NOM_PRO
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      Left = 15
+      Height = 15
+      Top = 61
+      Width = 74
+      Caption = 'Preço Venda'
+      FocusControl = Db_PRECO_VENDA
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label4: TLabel
+      Left = 162
+      Height = 15
+      Top = 61
+      Width = 84
+      Caption = 'Preço Compra'
+      FocusControl = Db_PRECO_COMPRA
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 15
+      Height = 15
+      Top = 112
+      Width = 82
+      Caption = 'Data Inclusão'
+      FocusControl = Db_DATA_INCLUSAO
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 162
+      Height = 15
+      Top = 112
+      Width = 82
+      Caption = 'Qtde Estoque'
+      FocusControl = Db_QTDE_ESTOQUE
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object DbT_COD_PROD: TDBText
+      Left = 90
+      Height = 15
+      Top = 6
+      Width = 8
+      DataField = 'COD_PROD'
+      DataSource = F_Dm_Pedidos.Ds_Produtos
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Db_NOM_PRO: TDBEdit
+      Left = 65
+      Height = 25
+      Top = 26
+      Width = 162
+      DataField = 'NOM_PRO'
+      DataSource = F_Dm_Pedidos.Ds_Produtos
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      MaxLength = 50
+      ParentFont = False
+      TabOrder = 0
+      OnKeyPress = Db_NOM_PROKeyPress
+    end
+    object Db_PRECO_VENDA: TDBEdit
+      Left = 15
+      Height = 25
+      Top = 78
+      Width = 105
+      DataField = 'PRECO_VENDA'
+      DataSource = F_Dm_Pedidos.Ds_Produtos
+      Alignment = taRightJustify
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Db_PRECO_COMPRA: TDBEdit
+      Left = 162
+      Height = 25
+      Top = 78
+      Width = 118
+      DataField = 'PRECO_COMPRA'
+      DataSource = F_Dm_Pedidos.Ds_Produtos
+      Alignment = taRightJustify
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Db_DATA_INCLUSAO: TDBEdit
+      Left = 15
+      Height = 25
+      Top = 128
+      Width = 118
+      DataField = 'DATA_INCLUSAO'
+      DataSource = F_Dm_Pedidos.Ds_Produtos
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 3
+    end
+    object Db_QTDE_ESTOQUE: TDBEdit
+      Left = 162
+      Height = 25
+      Top = 128
+      Width = 118
+      DataField = 'QTDE_ESTOQUE'
+      DataSource = F_Dm_Pedidos.Ds_Produtos
+      Alignment = taRightJustify
+      CharCase = ecNormal
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      MaxLength = 0
+      ParentFont = False
+      TabOrder = 4
+    end
+    object Panel2: TPanel
+      Left = 330
+      Height = 391
+      Top = 15
+      Width = 329
+      Caption = 'Panel2'
+      ClientHeight = 391
+      ClientWidth = 329
+      Color = clAqua
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 5
+      object RichEdit2: TMemo
+        Left = 2
+        Height = 379
+        Top = 3
+        Width = 317
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial Narrow'
+        Lines.Strings = (
+          '   Técnica "Comum" para utilização de "Cadastro Tabelas"'
+          '================================================'
+          'Métodos utilizados para '
+          'INCLUIR registro => ZQuery.Insert'
+          'EXCLUIR registro => ZQuery.Delete'
+          'ALTERAR registro => ZQuery.Edit'
+          '................................................................................................'
+          'CONFIRMAR inclusão ou alteração => '
+          'ZQuery.ApplyUpdates ; // confirma atualizações feitas '
+          'ZConnection.Commit   ; // grava fisicamente atualizações'
+          '================================================'
+          'Estes métodos são os mais usados nos programas, porém o'
+          'programador "corre o risco" do '
+          'banco de dados iniciar uma transação ao clicar'
+          'em ALTERAR ou INCLUIR.'
+          '................................................................................................'
+          'Vantagens de Desvantagens :'
+          '................................................................................................'
+          '* Vantagem : é a facilidade de uso, velocidade de desenvolvimento'
+          ''
+          'Desvantagem : Em grandes redes, pode ocasionar '
+          'excesso de transações abertas'
+        )
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+    object Panel1: TPanel
+      Left = 9
+      Height = 235
+      Top = 171
+      Width = 318
+      Caption = 'Panel1'
+      ClientHeight = 235
+      ClientWidth = 318
+      Color = clAqua
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 6
+      object RichEdit1: TMemo
+        Left = 2
+        Height = 223
+        Top = 3
+        Width = 308
+        Font.CharSet = ANSI_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Arial Narrow'
+        Lines.Strings = (
+          '                          ** ATENÇÃO **'
+          ''
+          'a) A propriedade REQUESTLIVE( not.ReadOnly ), '
+          'das ZQUERYS, deve ser ajustada para TRUE para poder'
+          'ALTERAR ou INCLUIR ou EXCLUIR usando os métodos '
+          'ZQuery.Edit  ou   ZQuery.Insert  ou ZQUERY.Delete'
+          ''
+          'b) Nos campos definidos como INDICES PRIMÁRIOs'
+          ', se utilizarem Triggers para simular auto-incremento ,'
+          'devem ser alteradas as propriedades '
+          'REQUIRED=True para REQUIRED=False;'
+          'para poder enviar NULO e "buscar"  o valor definido '
+          'na Trigger, que "diz" para "puxar" valor do Generator ;'
+        )
+        ParentFont = False
+        ReadOnly = True
+        TabOrder = 0
+      end
+    end
+  end
+end

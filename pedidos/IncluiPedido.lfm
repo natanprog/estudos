@@ -1,0 +1,305 @@
+object F_IncluiPedido: TF_IncluiPedido
+  Left = 284
+  Height = 461
+  Top = 160
+  Width = 665
+  BorderStyle = bsDialog
+  Caption = 'Cadastro de Pedidos'
+  ClientHeight = 461
+  ClientWidth = 665
+  Color = clBtnFace
+  DesignTimePPI = 101
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  OnActivate = FormActivate
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnKeyPress = FormKeyPress
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  object Label1: TLabel
+    Left = 25
+    Height = 16
+    Top = 7
+    Width = 98
+    Caption = 'Data do Pedido'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Bt_AdicionarItem: TSpeedButton
+    Cursor = crHandPoint
+    Left = 430
+    Height = 23
+    Top = 12
+    Width = 220
+    Caption = '[+] Adicionar Item'
+    Font.Color = clNavy
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+      000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+      00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+      F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+      0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+      FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+      FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+      0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+      00333377737FFFFF773333303300000003333337337777777333
+    }
+    NumGlyphs = 2
+    OnClick = Bt_AdicionarItemClick
+    ParentFont = False
+  end
+  object Db_Funcionario: TDBText
+    Left = 119
+    Height = 15
+    Top = 64
+    Width = 92
+    DataField = 'Funcionário'
+    DataSource = F_Dm_Pedidos.Ds_Pedidos_Cli_Fun
+    Font.Color = clNavy
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Bt_ExcluirItem: TSpeedButton
+    Cursor = crHandPoint
+    Left = 430
+    Height = 23
+    Top = 41
+    Width = 220
+    Caption = '[Ctrl] + [Delete] Excluir Item'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000130B0000130B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+      333333333333333333FF33333333333330003333333333333777333333333333
+      300033FFFFFF3333377739999993333333333777777F3333333F399999933333
+      3300377777733333337733333333333333003333333333333377333333333333
+      3333333333333333333F333333333333330033333F33333333773333C3333333
+      330033337F3333333377333CC3333333333333F77FFFFFFF3FF33CCCCCCCCCC3
+      993337777777777F77F33CCCCCCCCCC399333777777777737733333CC3333333
+      333333377F33333333FF3333C333333330003333733333333777333333333333
+      3000333333333333377733333333333333333333333333333333
+    }
+    NumGlyphs = 2
+    OnClick = Bt_ExcluirItemClick
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 7
+    Height = 15
+    Top = 65
+    Width = 118
+    Caption = '[F5] Funcionário :'
+    Font.Color = clNavy
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 7
+    Height = 15
+    Top = 86
+    Width = 87
+    Caption = '[F8] Cliente :'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DbT_Cliente: TDBText
+    Left = 92
+    Height = 15
+    Top = 86
+    Width = 71
+    DataField = 'Cliente'
+    Font.Color = clMaroon
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Bt_Finaliza: TSpeedButton
+    Cursor = crHandPoint
+    Left = 430
+    Height = 23
+    Top = 70
+    Width = 220
+    Caption = '[Esc] Finaliza Pedido'
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    Glyph.Data = {
+      76010000424D7601000000000000760000002800000020000000100000000100
+      04000000000000010000120B0000120B00001000000000000000000000000000
+      800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+      FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333000000
+      000033333377777777773333330FFFFFFFF03FF3FF7FF33F3FF700300000FF0F
+      00F077F777773F737737E00BFBFB0FFFFFF07773333F7F3333F7E0BFBF000FFF
+      F0F077F3337773F3F737E0FBFBFBF0F00FF077F3333FF7F77F37E0BFBF00000B
+      0FF077F3337777737337E0FBFBFBFBF0FFF077F33FFFFFF73337E0BF0000000F
+      FFF077FF777777733FF7000BFB00B0FF00F07773FF77373377373330000B0FFF
+      FFF03337777373333FF7333330B0FFFF00003333373733FF777733330B0FF00F
+      0FF03333737F37737F373330B00FFFFF0F033337F77F33337F733309030FFFFF
+      00333377737FFFFF773333303300000003333337337777777333
+    }
+    NumGlyphs = 2
+    OnClick = Bt_FinalizaClick
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 177
+    Height = 16
+    Top = 7
+    Width = 89
+    Caption = 'Valor Já Pago'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -14
+    Font.Name = 'Arial'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Grd_Itens: TDBGrid
+    Left = 8
+    Height = 340
+    Top = 107
+    Width = 641
+    Color = clWindow
+    Columns = <    
+      item
+        MinSize = 11
+        MaxSize = 210
+        Title.Caption = 'NOM_PRODUTO'
+        Width = 297
+        FieldName = 'NOM_PRODUTO'
+      end    
+      item
+        MinSize = 11
+        MaxSize = 210
+        Title.Alignment = taCenter
+        Title.Caption = 'QTDE_ITEN'
+        Width = 90
+        FieldName = 'QTDE_ITEN'
+      end    
+      item
+        MinSize = 11
+        MaxSize = 210
+        Title.Alignment = taCenter
+        Title.Caption = 'VALOR_ITEN'
+        Width = 120
+        FieldName = 'VALOR_ITEN'
+      end    
+      item
+        MinSize = 11
+        MaxSize = 210
+        Title.Alignment = taCenter
+        Title.Caption = 'Subtotal_Calc'
+        Width = 93
+        FieldName = 'Subtotal_Calc'
+      end>
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    Options = [dgTitles, dgIndicator, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit]
+    ParentFont = False
+    TabOrder = 0
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+  end
+  object Panel1: TPanel
+    Left = 42
+    Height = 189
+    Top = 182
+    Width = 590
+    ClientHeight = 189
+    ClientWidth = 590
+    Color = 8454143
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+    object RichEdit2: TMemo
+      Left = 6
+      Height = 169
+      Top = 6
+      Width = 573
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Courier New'
+      Lines.Strings = (
+        'Ao entrar neste form, existe uma variável pública de nome '
+        '"Entrar_Incluindo", que pode ser ajustada para TRUE para  '
+        '"CLICAR" no botão adicionar Item ao abrir o fomulário (onshow) ;'
+        ''
+        'Assim, ao Clicar no botão de inclusão de itens, na tela principal'
+        'do programa, ajusta-se esta variável para TRUE.'
+        ''
+        'Então, ao abrir o formulário, automaticamente já entra na'
+        'inclusão de um ITEM'
+      )
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+  end
+  object DbEd_DATA_PEDIDO: TDBEdit
+    Left = 25
+    Height = 25
+    Top = 27
+    Width = 127
+    DataField = 'DATA_PEDIDO'
+    CharCase = ecNormal
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 2
+    OnKeyDown = DbEd_DATA_PEDIDOKeyDown
+    OnKeyPress = DbEd_DATA_PEDIDOKeyPress
+  end
+  object DbEd_VALOR_PAGO: TDBEdit
+    Left = 177
+    Height = 25
+    Top = 27
+    Width = 127
+    DataField = 'VALOR_PAGO'
+    CharCase = ecNormal
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    MaxLength = 0
+    ParentFont = False
+    TabOrder = 3
+    OnKeyPress = DbEd_VALOR_PAGOKeyPress
+  end
+end

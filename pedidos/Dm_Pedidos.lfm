@@ -1,0 +1,1080 @@
+object F_Dm_Pedidos: TF_Dm_Pedidos
+  OldCreateOrder = False
+  left = 164
+  top = 103
+  Height = 500
+  HorizontalOffset = 285
+  VerticalOffset = 161
+  Width = 608
+  PPI = 101
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    Properties.Strings = (
+      'codepage=WIN1252'
+      'AutoEncodeStrings=ON'
+    )
+    AutoCommit = False
+    TransactIsolationLevel = tiReadCommitted
+    SQLHourGlass = True
+    HostName = 'localhost'
+    Port = 3050
+    Database = '/home/natanprog/estudos/pedidos/PEDIDOS_COM_IR.FDB'
+    User = 'SYSDBA'
+    Password = 'Zero2040'
+    Protocol = 'firebird-3.0'
+    left = 64
+    top = 16
+  end
+  object Qry_Clientes: TZQuery
+    Connection = ZConnection
+    UpdateObject = Upd_Clientes
+    CachedUpdates = True
+    SQL.Strings = (
+      'Select * from cliente '
+      'order by nome'
+    )
+    ParamCheck = False
+    Params = <>
+    ShowRecordTypes = [usUnmodified]
+    Properties.Strings = (
+      ''
+    )
+    Options = []
+    left = 64
+    top = 80
+    object Qry_ClientesCOD_CLI: TIntegerField
+      DisplayLabel = 'Cód.Cliente'
+      FieldKind = fkData
+      FieldName = 'COD_CLI'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Qry_ClientesLOJA_CLI: TIntegerField
+      FieldKind = fkData
+      FieldName = 'LOJA_CLI'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Qry_ClientesNOME: TStringField
+      DisplayLabel = 'Nome'
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 45
+    end
+    object Qry_ClientesENDERECO: TStringField
+      DisplayLabel = 'Endereço'
+      FieldKind = fkData
+      FieldName = 'ENDERECO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 45
+    end
+    object Qry_ClientesBAIRRO: TStringField
+      DisplayLabel = 'Bairro'
+      FieldKind = fkData
+      FieldName = 'BAIRRO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 30
+    end
+    object Qry_ClientesCEP: TStringField
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 9
+    end
+  end
+  object Ds_Clientes: TDataSource
+    DataSet = Qry_Clientes
+    left = 64
+    top = 208
+  end
+  object ZQRY_Livre: TZQuery
+    Connection = ZConnection
+    CachedUpdates = True
+    Params = <>
+    ShowRecordTypes = [usUnmodified]
+    left = 240
+    top = 16
+  end
+  object Qry_Produtos: TZQuery
+    Connection = ZConnection
+    UpdateObject = Upd_Produtos
+    CachedUpdates = True
+    SQL.Strings = (
+      'Select * from Produtos '
+      'order by nom_Pro'
+    )
+    ParamCheck = False
+    Params = <>
+    ShowRecordTypes = [usUnmodified]
+    Properties.Strings = (
+      ''
+    )
+    Options = []
+    left = 240
+    top = 80
+    object Qry_ProdutosCOD_PROD: TIntegerField
+      DisplayLabel = 'Cód.Produto'
+      DisplayWidth = 9
+      FieldKind = fkData
+      FieldName = 'COD_PROD'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_ProdutosNOM_PRO: TStringField
+      DisplayLabel = 'Produto'
+      DisplayWidth = 25
+      FieldKind = fkData
+      FieldName = 'NOM_PRO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object Qry_ProdutosPRECO_VENDA: TFloatField
+      DisplayLabel = 'Preço Venda'
+      DisplayWidth = 16
+      FieldKind = fkData
+      FieldName = 'PRECO_VENDA'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object Qry_ProdutosPRECO_COMPRA: TFloatField
+      DisplayLabel = 'Preço Compra'
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'PRECO_COMPRA'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '0.00'
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+    end
+    object Qry_ProdutosDATA_INCLUSAO: TDateField
+      DisplayLabel = 'Data Inclusão'
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'DATA_INCLUSAO'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = 'dd/mmm/yyyy'
+    end
+    object Qry_ProdutosQTDE_ESTOQUE: TFloatField
+      DisplayLabel = 'Qtde Estoque'
+      DisplayWidth = 18
+      FieldKind = fkData
+      FieldName = 'QTDE_ESTOQUE'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '#.###'
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object Ds_Produtos: TDataSource
+    DataSet = Qry_Produtos
+    left = 240
+    top = 208
+  end
+  object Qry_Funcionarios: TZQuery
+    Connection = ZConnection
+    UpdateObject = Upd_Funcionarios
+    CachedUpdates = True
+    SQL.Strings = (
+      'Select * from funcionarios'
+      'order by nome'
+    )
+    ParamCheck = False
+    Params = <>
+    ShowRecordTypes = [usUnmodified]
+    Properties.Strings = (
+      ''
+    )
+    UpdateMode = umUpdateAll
+    Options = []
+    left = 64
+    top = 280
+    object Qry_FuncionariosCOD_FUN: TIntegerField
+      DisplayLabel = 'Cód.'
+      FieldKind = fkData
+      FieldName = 'COD_FUN'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_FuncionariosNOME: TStringField
+      DisplayLabel = 'Funcionário'
+      FieldKind = fkData
+      FieldName = 'NOME'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 40
+    end
+    object Qry_FuncionariosFONE: TStringField
+      DisplayLabel = 'Telefone'
+      FieldKind = fkData
+      FieldName = 'FONE'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 25
+    end
+    object Qry_FuncionariosCEP: TStringField
+      FieldKind = fkData
+      FieldName = 'CEP'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 9
+    end
+    object Qry_FuncionariosCPF: TStringField
+      FieldKind = fkData
+      FieldName = 'CPF'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Size = 14
+    end
+  end
+  object Ds_Funcionarios: TDataSource
+    DataSet = Qry_Funcionarios
+    left = 64
+    top = 416
+  end
+  object Qry_Pedidos_Cli_Fun: TZQuery
+    Connection = ZConnection
+    UpdateObject = Upd_Pedidos_Cli_Fun
+    SQL.Strings = (
+      'SELECT '
+      'PEDIDOS.COD_PEDIDO as "Cod_Pedido",'
+      'PEDIDOS.DATA_PEDIDO as "Data",'
+      'CLIENTE.NOME as "Cliente",'
+      'FUNCIONARIOS.NOME as "Funcionário",'
+      ''
+      'Sum(QTDE_ITEN*VALOR_ITEN ) as  "Total do Pedido",'
+      'PEDIDOS.VALOR_PAGO as "Valor já Pago"'
+      ''
+      'FROM ITEN_PEDIDO,CLIENTE,PEDIDOS,FUNCIONARIOS'
+      ''
+      'WHERE PEDIDOS.LOJA_CLI=CLIENTE.LOJA_CLI'
+      'AND PEDIDOS.COD_CLI=CLIENTE.COD_CLI'
+      'AND PEDIDOS.COD_FUN=FUNCIONARIOS.COD_FUN'
+      'AND ITEN_PEDIDO.COD_PED=PEDIDOS.COD_PEDIDO'
+      ''
+      ''
+      'GROUP BY '
+      'PEDIDOS.COD_PEDIDO,'
+      'PEDIDOS.DATA_PEDIDO,'
+      'CLIENTE.NOME,'
+      'FUNCIONARIOS.NOME,'
+      'PEDIDOS.VALOR_PAGO'
+      ''
+      ' '
+    )
+    Params = <>
+    ShowRecordTypes = [usUnmodified]
+    left = 240
+    top = 280
+    object Qry_Pedidos_Cli_FunCod_Pedido: TIntegerField
+      DisplayLabel = 'Cód.'
+      FieldKind = fkData
+      FieldName = 'Cod_Pedido'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_Pedidos_Cli_FunData: TDateField
+      FieldKind = fkData
+      FieldName = 'Data'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Qry_Pedidos_Cli_FunCliente: TStringField
+      FieldKind = fkData
+      FieldName = 'Cliente'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 45
+    end
+    object Qry_Pedidos_Cli_FunFuncionrio: TStringField
+      FieldKind = fkData
+      FieldName = 'FuncionÃ¡rio'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 40
+    end
+    object Qry_Pedidos_Cli_FunTotaldoPedido: TFloatField
+      FieldKind = fkData
+      FieldName = 'Total do Pedido'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = True
+      Required = False
+      DisplayFormat = '0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object Qry_Pedidos_Cli_FunValorjPago: TIntegerField
+      FieldKind = fkData
+      FieldName = 'Valor jÃ¡ Pago'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '0.00'
+    end
+  end
+  object Qry_Iten_Pedido: TZQuery
+    Connection = ZConnection
+    SortedFields = 'Cod_Ped'
+    OnCalcFields = Qry_Iten_PedidoCalcFields
+    UpdateObject = Upd_Iten_Pedido
+    SQL.Strings = (
+      'Select * from ITEN_PEDIDO'
+    )
+    Params = <>
+    ShowRecordTypes = [usUnmodified]
+    MasterFields = 'Cod_Pedido'
+    MasterSource = Ds_Pedidos_Cli_Fun
+    IndexFieldNames = 'Cod_Ped Asc'
+    left = 440
+    top = 80
+    object Qry_Iten_PedidoCOD_ITEM: TIntegerField
+      FieldKind = fkData
+      FieldName = 'COD_ITEM'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_Iten_PedidoCOD_PRO: TIntegerField
+      FieldKind = fkData
+      FieldName = 'COD_PRO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Qry_Iten_PedidoCOD_PED: TIntegerField
+      FieldKind = fkData
+      FieldName = 'COD_PED'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Qry_Iten_PedidoNOM_PRODUTO: TStringField
+      DisplayLabel = 'Itens pedidos'
+      FieldKind = fkData
+      FieldName = 'NOM_PRODUTO'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      Size = 50
+    end
+    object Qry_Iten_PedidoQTDE_ITEN: TFloatField
+      DisplayLabel = 'Qtde Pedida'
+      FieldKind = fkData
+      FieldName = 'QTDE_ITEN'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '#.###'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object Qry_Iten_PedidoVALOR_ITEN: TFloatField
+      DisplayLabel = 'Valor do Item pedido'
+      FieldKind = fkData
+      FieldName = 'VALOR_ITEN'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = '0.00'
+      MaxValue = 0
+      MinValue = 0
+    end
+    object Qry_Iten_PedidoSubtotal_Calc: TFloatField
+      Alignment = taCenter
+      DisplayLabel = 'Subtotal'
+      FieldKind = fkCalculated
+      FieldName = 'Subtotal_Calc'
+      Index = 6
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      Currency = True
+      MaxValue = 0
+      MinValue = 0
+    end
+  end
+  object Ds_Pedidos_Cli_Fun: TDataSource
+    DataSet = Qry_Pedidos_Cli_Fun
+    left = 240
+    top = 416
+  end
+  object Ds_Iten_Pedido: TDataSource
+    DataSet = Qry_Iten_Pedido
+    left = 440
+    top = 208
+  end
+  object Qry_Pedidos_TodosCampos: TZQuery
+    Connection = ZConnection
+    UpdateObject = Upd_Pedidos_TodosCampos
+    SQL.Strings = (
+      'Select * From Pedidos'
+    )
+    Params = <>
+    ShowRecordTypes = [usUnmodified]
+    left = 440
+    top = 280
+    object Qry_Pedidos_TodosCamposCOD_PEDIDO: TIntegerField
+      FieldKind = fkData
+      FieldName = 'COD_PEDIDO'
+      Index = 0
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+    end
+    object Qry_Pedidos_TodosCamposDATA_PEDIDO: TDateField
+      FieldKind = fkData
+      FieldName = 'DATA_PEDIDO'
+      Index = 1
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+      DisplayFormat = 'dd/mmm/yyyy'
+    end
+    object Qry_Pedidos_TodosCamposVALOR_PAGO: TIntegerField
+      FieldKind = fkData
+      FieldName = 'VALOR_PAGO'
+      Index = 2
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = False
+      DisplayFormat = '0.00'
+    end
+    object Qry_Pedidos_TodosCamposCOD_CLI: TIntegerField
+      FieldKind = fkData
+      FieldName = 'COD_CLI'
+      Index = 3
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Qry_Pedidos_TodosCamposLOJA_CLI: TIntegerField
+      FieldKind = fkData
+      FieldName = 'LOJA_CLI'
+      Index = 4
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+    object Qry_Pedidos_TodosCamposCOD_FUN: TIntegerField
+      FieldKind = fkData
+      FieldName = 'COD_FUN'
+      Index = 5
+      LookupCache = False
+      ProviderFlags = [pfInUpdate, pfInWhere]
+      ReadOnly = False
+      Required = True
+    end
+  end
+  object Ds_Pedidos_TodosCampos: TDataSource
+    DataSet = Qry_Pedidos_TodosCampos
+    left = 440
+    top = 416
+  end
+  object Upd_Funcionarios: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM funcionarios'
+      'WHERE'
+      '  ((funcionarios.COD_FUN IS NULL AND :OLD_COD_FUN IS NULL) OR (funcionarios.COD_FUN = :OLD_COD_FUN)) AND'
+      '  ((funcionarios.NOME IS NULL AND :OLD_NOME IS NULL) OR (funcionarios.NOME = :OLD_NOME)) AND'
+      '  ((funcionarios.FONE IS NULL AND :OLD_FONE IS NULL) OR (funcionarios.FONE = :OLD_FONE)) AND'
+      '  ((funcionarios.CEP IS NULL AND :OLD_CEP IS NULL) OR (funcionarios.CEP = :OLD_CEP)) AND'
+      '  ((funcionarios.CPF IS NULL AND :OLD_CPF IS NULL) OR (funcionarios.CPF = :OLD_CPF))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO funcionarios'
+      '  (COD_FUN, NOME, FONE, CEP, CPF)'
+      'VALUES'
+      '  (:COD_FUN, :NOME, :FONE, :CEP, :CPF)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE funcionarios SET'
+      '  COD_FUN = :COD_FUN,'
+      '  NOME = :NOME,'
+      '  FONE = :FONE,'
+      '  CEP = :CEP,'
+      '  CPF = :CPF'
+      'WHERE'
+      '  ((funcionarios.COD_FUN IS NULL AND :OLD_COD_FUN IS NULL) OR (funcionarios.COD_FUN = :OLD_COD_FUN)) AND'
+      '  ((funcionarios.NOME IS NULL AND :OLD_NOME IS NULL) OR (funcionarios.NOME = :OLD_NOME)) AND'
+      '  ((funcionarios.FONE IS NULL AND :OLD_FONE IS NULL) OR (funcionarios.FONE = :OLD_FONE)) AND'
+      '  ((funcionarios.CEP IS NULL AND :OLD_CEP IS NULL) OR (funcionarios.CEP = :OLD_CEP)) AND'
+      '  ((funcionarios.CPF IS NULL AND :OLD_CPF IS NULL) OR (funcionarios.CPF = :OLD_CPF))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 64
+    top = 352
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'COD_FUN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOME'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'FONE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CPF'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_FUN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_NOME'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_FONE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_CEP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_CPF'
+        ParamType = ptUnknown
+      end>
+  end
+  object Upd_Clientes: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM cliente'
+      'WHERE'
+      '  ((cliente.COD_CLI IS NULL AND :OLD_COD_CLI IS NULL) OR (cliente.COD_CLI = :OLD_COD_CLI)) AND'
+      '  ((cliente.LOJA_CLI IS NULL AND :OLD_LOJA_CLI IS NULL) OR (cliente.LOJA_CLI = :OLD_LOJA_CLI)) AND'
+      '  ((cliente.NOME IS NULL AND :OLD_NOME IS NULL) OR (cliente.NOME = :OLD_NOME)) AND'
+      '  ((cliente.ENDERECO IS NULL AND :OLD_ENDERECO IS NULL) OR (cliente.ENDERECO = :OLD_ENDERECO)) AND'
+      '  ((cliente.BAIRRO IS NULL AND :OLD_BAIRRO IS NULL) OR (cliente.BAIRRO = :OLD_BAIRRO)) AND'
+      '  ((cliente.CEP IS NULL AND :OLD_CEP IS NULL) OR (cliente.CEP = :OLD_CEP))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO cliente'
+      '  (COD_CLI, LOJA_CLI, NOME, ENDERECO, BAIRRO, CEP)'
+      'VALUES'
+      '  (:COD_CLI, :LOJA_CLI, :NOME, :ENDERECO, :BAIRRO, :CEP)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE cliente SET'
+      '  COD_CLI = :COD_CLI,'
+      '  LOJA_CLI = :LOJA_CLI,'
+      '  NOME = :NOME,'
+      '  ENDERECO = :ENDERECO,'
+      '  BAIRRO = :BAIRRO,'
+      '  CEP = :CEP'
+      'WHERE'
+      '  ((cliente.COD_CLI IS NULL AND :OLD_COD_CLI IS NULL) OR (cliente.COD_CLI = :OLD_COD_CLI)) AND'
+      '  ((cliente.LOJA_CLI IS NULL AND :OLD_LOJA_CLI IS NULL) OR (cliente.LOJA_CLI = :OLD_LOJA_CLI)) AND'
+      '  ((cliente.NOME IS NULL AND :OLD_NOME IS NULL) OR (cliente.NOME = :OLD_NOME)) AND'
+      '  ((cliente.ENDERECO IS NULL AND :OLD_ENDERECO IS NULL) OR (cliente.ENDERECO = :OLD_ENDERECO)) AND'
+      '  ((cliente.BAIRRO IS NULL AND :OLD_BAIRRO IS NULL) OR (cliente.BAIRRO = :OLD_BAIRRO)) AND'
+      '  ((cliente.CEP IS NULL AND :OLD_CEP IS NULL) OR (cliente.CEP = :OLD_CEP))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 64
+    top = 144
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'COD_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'LOJA_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOME'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'ENDERECO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'BAIRRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'CEP'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_LOJA_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_NOME'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_ENDERECO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_BAIRRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_CEP'
+        ParamType = ptUnknown
+      end>
+  end
+  object Upd_Produtos: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM Produtos'
+      'WHERE'
+      '  ((Produtos.COD_PROD IS NULL AND :OLD_COD_PROD IS NULL) OR (Produtos.COD_PROD = :OLD_COD_PROD)) AND'
+      '  ((Produtos.NOM_PRO IS NULL AND :OLD_NOM_PRO IS NULL) OR (Produtos.NOM_PRO = :OLD_NOM_PRO)) AND'
+      '  ((Produtos.PRECO_VENDA IS NULL AND :OLD_PRECO_VENDA IS NULL) OR (Produtos.PRECO_VENDA = :OLD_PRECO_VENDA)) AND'
+      '  ((Produtos.PRECO_COMPRA IS NULL AND :OLD_PRECO_COMPRA IS NULL) OR (Produtos.PRECO_COMPRA = :OLD_PRECO_COMPRA)) AND'
+      '  ((Produtos.DATA_INCLUSAO IS NULL AND :OLD_DATA_INCLUSAO IS NULL) OR (Produtos.DATA_INCLUSAO = :OLD_DATA_INCLUSAO)) AND'
+      '  ((Produtos.QTDE_ESTOQUE IS NULL AND :OLD_QTDE_ESTOQUE IS NULL) OR (Produtos.QTDE_ESTOQUE = :OLD_QTDE_ESTOQUE))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO Produtos'
+      '  (COD_PROD, NOM_PRO, PRECO_VENDA, PRECO_COMPRA, DATA_INCLUSAO, QTDE_ESTOQUE)'
+      'VALUES'
+      '  (:COD_PROD, :NOM_PRO, :PRECO_VENDA, :PRECO_COMPRA, :DATA_INCLUSAO, :QTDE_ESTOQUE)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE Produtos SET'
+      '  COD_PROD = :COD_PROD,'
+      '  NOM_PRO = :NOM_PRO,'
+      '  PRECO_VENDA = :PRECO_VENDA,'
+      '  PRECO_COMPRA = :PRECO_COMPRA,'
+      '  DATA_INCLUSAO = :DATA_INCLUSAO,'
+      '  QTDE_ESTOQUE = :QTDE_ESTOQUE'
+      'WHERE'
+      '  ((Produtos.COD_PROD IS NULL AND :OLD_COD_PROD IS NULL) OR (Produtos.COD_PROD = :OLD_COD_PROD)) AND'
+      '  ((Produtos.NOM_PRO IS NULL AND :OLD_NOM_PRO IS NULL) OR (Produtos.NOM_PRO = :OLD_NOM_PRO)) AND'
+      '  ((Produtos.PRECO_VENDA IS NULL AND :OLD_PRECO_VENDA IS NULL) OR (Produtos.PRECO_VENDA = :OLD_PRECO_VENDA)) AND'
+      '  ((Produtos.PRECO_COMPRA IS NULL AND :OLD_PRECO_COMPRA IS NULL) OR (Produtos.PRECO_COMPRA = :OLD_PRECO_COMPRA)) AND'
+      '  ((Produtos.DATA_INCLUSAO IS NULL AND :OLD_DATA_INCLUSAO IS NULL) OR (Produtos.DATA_INCLUSAO = :OLD_DATA_INCLUSAO)) AND'
+      '  ((Produtos.QTDE_ESTOQUE IS NULL AND :OLD_QTDE_ESTOQUE IS NULL) OR (Produtos.QTDE_ESTOQUE = :OLD_QTDE_ESTOQUE))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 240
+    top = 144
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'COD_PROD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOM_PRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PRECO_VENDA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'PRECO_COMPRA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATA_INCLUSAO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'QTDE_ESTOQUE'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_PROD'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_NOM_PRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_PRECO_VENDA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_PRECO_COMPRA'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_DATA_INCLUSAO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_QTDE_ESTOQUE'
+        ParamType = ptUnknown
+      end>
+  end
+  object Upd_Pedidos_Cli_Fun: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM ITEN_PEDIDO'
+      'WHERE'
+      '  ITEN_PEDIDO.COD_ITEM = :OLD_COD_ITEM'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO ITEN_PEDIDO'
+      '  (COD_ITEM)'
+      'VALUES'
+      '  (:COD_ITEM)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE ITEN_PEDIDO SET'
+      '  COD_ITEM = :COD_ITEM'
+      'WHERE'
+      '  ITEN_PEDIDO.COD_ITEM = :OLD_COD_ITEM'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 240
+    top = 352
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'COD_ITEM'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_ITEM'
+        ParamType = ptUnknown
+      end>
+  end
+  object Upd_Iten_Pedido: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM ITEN_PEDIDO'
+      'WHERE'
+      '  ((ITEN_PEDIDO.COD_ITEM IS NULL AND :OLD_COD_ITEM IS NULL) OR (ITEN_PEDIDO.COD_ITEM = :OLD_COD_ITEM)) AND'
+      '  ((ITEN_PEDIDO.COD_PRO IS NULL AND :OLD_COD_PRO IS NULL) OR (ITEN_PEDIDO.COD_PRO = :OLD_COD_PRO)) AND'
+      '  ((ITEN_PEDIDO.COD_PED IS NULL AND :OLD_COD_PED IS NULL) OR (ITEN_PEDIDO.COD_PED = :OLD_COD_PED)) AND'
+      '  ((ITEN_PEDIDO.NOM_PRODUTO IS NULL AND :OLD_NOM_PRODUTO IS NULL) OR (ITEN_PEDIDO.NOM_PRODUTO = :OLD_NOM_PRODUTO)) AND'
+      '  ((ITEN_PEDIDO.QTDE_ITEN IS NULL AND :OLD_QTDE_ITEN IS NULL) OR (ITEN_PEDIDO.QTDE_ITEN = :OLD_QTDE_ITEN)) AND'
+      '  ((ITEN_PEDIDO.VALOR_ITEN IS NULL AND :OLD_VALOR_ITEN IS NULL) OR (ITEN_PEDIDO.VALOR_ITEN = :OLD_VALOR_ITEN))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO ITEN_PEDIDO'
+      '  (COD_ITEM, COD_PRO, COD_PED, NOM_PRODUTO, QTDE_ITEN, VALOR_ITEN)'
+      'VALUES'
+      '  (:COD_ITEM, :COD_PRO, :COD_PED, :NOM_PRODUTO, :QTDE_ITEN, :VALOR_ITEN)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE ITEN_PEDIDO SET'
+      '  COD_ITEM = :COD_ITEM,'
+      '  COD_PRO = :COD_PRO,'
+      '  COD_PED = :COD_PED,'
+      '  NOM_PRODUTO = :NOM_PRODUTO,'
+      '  QTDE_ITEN = :QTDE_ITEN,'
+      '  VALOR_ITEN = :VALOR_ITEN'
+      'WHERE'
+      '  ((ITEN_PEDIDO.COD_ITEM IS NULL AND :OLD_COD_ITEM IS NULL) OR (ITEN_PEDIDO.COD_ITEM = :OLD_COD_ITEM)) AND'
+      '  ((ITEN_PEDIDO.COD_PRO IS NULL AND :OLD_COD_PRO IS NULL) OR (ITEN_PEDIDO.COD_PRO = :OLD_COD_PRO)) AND'
+      '  ((ITEN_PEDIDO.COD_PED IS NULL AND :OLD_COD_PED IS NULL) OR (ITEN_PEDIDO.COD_PED = :OLD_COD_PED)) AND'
+      '  ((ITEN_PEDIDO.NOM_PRODUTO IS NULL AND :OLD_NOM_PRODUTO IS NULL) OR (ITEN_PEDIDO.NOM_PRODUTO = :OLD_NOM_PRODUTO)) AND'
+      '  ((ITEN_PEDIDO.QTDE_ITEN IS NULL AND :OLD_QTDE_ITEN IS NULL) OR (ITEN_PEDIDO.QTDE_ITEN = :OLD_QTDE_ITEN)) AND'
+      '  ((ITEN_PEDIDO.VALOR_ITEN IS NULL AND :OLD_VALOR_ITEN IS NULL) OR (ITEN_PEDIDO.VALOR_ITEN = :OLD_VALOR_ITEN))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 440
+    top = 144
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'COD_ITEM'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'COD_PRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'COD_PED'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'NOM_PRODUTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'QTDE_ITEN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'VALOR_ITEN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_ITEM'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_PRO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_PED'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_NOM_PRODUTO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_QTDE_ITEN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_VALOR_ITEN'
+        ParamType = ptUnknown
+      end>
+  end
+  object Upd_Pedidos_TodosCampos: TZUpdateSQL
+    DeleteSQL.Strings = (
+      'DELETE FROM Pedidos'
+      'WHERE'
+      '  ((Pedidos.COD_PEDIDO IS NULL AND :OLD_COD_PEDIDO IS NULL) OR (Pedidos.COD_PEDIDO = :OLD_COD_PEDIDO)) AND'
+      '  ((Pedidos.DATA_PEDIDO IS NULL AND :OLD_DATA_PEDIDO IS NULL) OR (Pedidos.DATA_PEDIDO = :OLD_DATA_PEDIDO)) AND'
+      '  ((Pedidos.VALOR_PAGO IS NULL AND :OLD_VALOR_PAGO IS NULL) OR (Pedidos.VALOR_PAGO = :OLD_VALOR_PAGO)) AND'
+      '  ((Pedidos.COD_CLI IS NULL AND :OLD_COD_CLI IS NULL) OR (Pedidos.COD_CLI = :OLD_COD_CLI)) AND'
+      '  ((Pedidos.LOJA_CLI IS NULL AND :OLD_LOJA_CLI IS NULL) OR (Pedidos.LOJA_CLI = :OLD_LOJA_CLI)) AND'
+      '  ((Pedidos.COD_FUN IS NULL AND :OLD_COD_FUN IS NULL) OR (Pedidos.COD_FUN = :OLD_COD_FUN))'
+    )
+    InsertSQL.Strings = (
+      'INSERT INTO Pedidos'
+      '  (COD_PEDIDO, DATA_PEDIDO, VALOR_PAGO, COD_CLI, LOJA_CLI, COD_FUN)'
+      'VALUES'
+      '  (:COD_PEDIDO, :DATA_PEDIDO, :VALOR_PAGO, :COD_CLI, :LOJA_CLI, :COD_FUN)'
+    )
+    ModifySQL.Strings = (
+      'UPDATE Pedidos SET'
+      '  COD_PEDIDO = :COD_PEDIDO,'
+      '  DATA_PEDIDO = :DATA_PEDIDO,'
+      '  VALOR_PAGO = :VALOR_PAGO,'
+      '  COD_CLI = :COD_CLI,'
+      '  LOJA_CLI = :LOJA_CLI,'
+      '  COD_FUN = :COD_FUN'
+      'WHERE'
+      '  ((Pedidos.COD_PEDIDO IS NULL AND :OLD_COD_PEDIDO IS NULL) OR (Pedidos.COD_PEDIDO = :OLD_COD_PEDIDO)) AND'
+      '  ((Pedidos.DATA_PEDIDO IS NULL AND :OLD_DATA_PEDIDO IS NULL) OR (Pedidos.DATA_PEDIDO = :OLD_DATA_PEDIDO)) AND'
+      '  ((Pedidos.VALOR_PAGO IS NULL AND :OLD_VALOR_PAGO IS NULL) OR (Pedidos.VALOR_PAGO = :OLD_VALOR_PAGO)) AND'
+      '  ((Pedidos.COD_CLI IS NULL AND :OLD_COD_CLI IS NULL) OR (Pedidos.COD_CLI = :OLD_COD_CLI)) AND'
+      '  ((Pedidos.LOJA_CLI IS NULL AND :OLD_LOJA_CLI IS NULL) OR (Pedidos.LOJA_CLI = :OLD_LOJA_CLI)) AND'
+      '  ((Pedidos.COD_FUN IS NULL AND :OLD_COD_FUN IS NULL) OR (Pedidos.COD_FUN = :OLD_COD_FUN))'
+    )
+    UseSequenceFieldForRefreshSQL = False
+    left = 440
+    top = 352
+    ParamData = <    
+      item
+        DataType = ftUnknown
+        Name = 'COD_PEDIDO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'DATA_PEDIDO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'VALOR_PAGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'COD_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'LOJA_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'COD_FUN'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_PEDIDO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_DATA_PEDIDO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_VALOR_PAGO'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_LOJA_CLI'
+        ParamType = ptUnknown
+      end    
+      item
+        DataType = ftUnknown
+        Name = 'OLD_COD_FUN'
+        ParamType = ptUnknown
+      end>
+  end
+end

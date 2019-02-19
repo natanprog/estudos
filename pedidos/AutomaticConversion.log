@@ -1,0 +1,372 @@
+ Progress: Found all unit files
+Pedidos.lpr(1,17) Note: Added MODE Delphi syntax modifier after unit name.
+ : 
+ : *** Converting unit files belonging to project/package ***
+Principal.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Principal.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Principal.pas Note: Removed unit "jpeg" from uses section.
+Principal.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Principal.pas Note: Removed unit "ShellApi" from uses section.
+Principal.pas Note: Replaced unit "qrprntr" with "rprntr" in uses section.
+Principal.pas(1,16) Note: Added MODE Delphi syntax modifier after unit name.
+Principal.pas(131,3) Note: Replaced call ShellExecute(handle, 'Open', 'calc.exe', '', '', SW_SHOWNORMAL); with  OpenDocument('calc.exe'); { *Converted from ShellExecute* }
+Funcionarios.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Funcionarios.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Funcionarios.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+Funcionarios.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Funcionarios.pas(1,19) Note: Added MODE Delphi syntax modifier after unit name.
+Dm_Pedidos.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Dm_Pedidos.pas Note: Replaced unit "DBTables" with "sqldb" in uses section.
+Dm_Pedidos.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Pedidos.lpi Note: Added Package zcomponent as a dependency.
+Dm_Pedidos.pas(1,17) Note: Added MODE Delphi syntax modifier after unit name.
+Psq_Pro.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Psq_Pro.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Psq_Pro.pas(1,14) Note: Added MODE Delphi syntax modifier after unit name.
+Sobre.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Sobre.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Sobre.pas Note: Removed unit "jpeg" from uses section.
+Sobre.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Sobre.pas Note: Removed unit "shellApi" from uses section.
+Sobre.pas(1,12) Note: Added MODE Delphi syntax modifier after unit name.
+Sobre.pas(80,4) Note: Replaced call shellexecute(Handle,'open',Pchar('mailto:'+Lb_Mail.Caption),nil,nil,sw_shownormal); with  OpenDocument(Pchar('mailto:'+Lb_Mail.Caption)); { *Converted from ShellExecute* }
+Psq_Fun.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Psq_Fun.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Psq_Fun.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Psq_Fun.pas(1,14) Note: Added MODE Delphi syntax modifier after unit name.
+Clientes.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Clientes.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Clientes.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+Clientes.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Clientes.pas(1,15) Note: Added MODE Delphi syntax modifier after unit name.
+Produtos.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Produtos.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Produtos.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+Produtos.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Produtos.pas(1,15) Note: Added MODE Delphi syntax modifier after unit name.
+Psq_Cli.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Psq_Cli.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Psq_Cli.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Psq_Cli.pas(1,14) Note: Added MODE Delphi syntax modifier after unit name.
+Funcoes.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Funcoes.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Funcoes.pas(1,14) Note: Added MODE Delphi syntax modifier after unit name.
+IncluiPedido.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+IncluiPedido.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+IncluiPedido.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+IncluiPedido.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+IncluiPedido.pas(1,19) Note: Added MODE Delphi syntax modifier after unit name.
+Psq_Pedidos.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Psq_Pedidos.pas Note: Changed encoding from ISO-8859-1 to UTF-8
+Psq_Pedidos.pas Note: Replaced unit "Mask" with "MaskEdit" in uses section.
+Psq_Pedidos.pas Note: Replaced unit "Windows" with "LCLIntf, LCLType, LMessages" in uses section.
+Psq_Pedidos.pas(1,18) Note: Added MODE Delphi syntax modifier after unit name.
+ : 
+ : *** Fixing used units and Repairing form files ***
+Principal.pas Note: Replaced type "TRichEdit" with "TMemo".
+Principal.pas Note: Removed property "TextHeight".
+Principal.pas Note: Removed property "OldCreateOrder".
+Principal.pas Note: Changed Top coord of TImage from "0" to "0" inside TPanel.
+Principal.pas Note: Changed Left coord of TImage from "0" to "0" inside TPanel.
+Principal.pas Note: Changed Top coord of TLabel from "36" to "34" inside TPanel.
+Principal.pas Note: Changed Left coord of TLabel from "10" to "8" inside TPanel.
+Principal.pas Note: Changed Top coord of TLabel from "21" to "19" inside TPanel.
+Principal.pas Note: Changed Left coord of TLabel from "9" to "7" inside TPanel.
+Principal.pas Note: Changed Top coord of TLabel from "5" to "3" inside TPanel.
+Principal.pas Note: Changed Left coord of TLabel from "49" to "47" inside TPanel.
+Principal.pas Note: Changed Top coord of TPanel from "6" to "4" inside TPanel.
+Principal.pas Note: Changed Left coord of TPanel from "440" to "438" inside TPanel.
+Principal.pas Note: Changed Top coord of TMemo from "3" to "1" inside TPanel.
+Principal.pas Note: Changed Left coord of TMemo from "4" to "2" inside TPanel.
+Funcionarios.pas Note: Replaced type "TRichEdit" with "TMemo".
+Funcionarios.pas Note: Replaced type "TRichEdit" with "TMemo".
+Funcionarios.pas Note: Removed property "TextHeight".
+Funcionarios.pas Note: Removed property "OldCreateOrder".
+Funcionarios.pas Note: Changed Top coord of TMemo from "5" to "3" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TMemo from "4" to "2" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TPanel from "149" to "147" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TPanel from "11" to "9" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TMemo from "5" to "3" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TMemo from "4" to "2" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TPanel from "0" to "0" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TPanel from "320" to "318" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TDBEdit from "120" to "118" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TDBEdit from "128" to "126" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TDBEdit from "120" to "118" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TDBEdit from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TDBEdit from "80" to "78" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TDBEdit from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TDBEdit from "40" to "38" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TDBEdit from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TLabel from "104" to "102" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TLabel from "128" to "126" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TLabel from "104" to "102" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TLabel from "64" to "62" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TLabel from "24" to "22" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TLabel from "8" to "6" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TDBText from "8" to "6" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TDBText from "110" to "108" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TLabel from "7" to "5" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TLabel from "10" to "8" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TSpeedButton from "27" to "25" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TSpeedButton from "123" to "121" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TSpeedButton from "27" to "25" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TSpeedButton from "11" to "9" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TPanel from "6" to "4" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TPanel from "6" to "4" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TDBNavigator from "16" to "14" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TDBNavigator from "24" to "22" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TSpeedButton from "32" to "30" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TSpeedButton from "141" to "139" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TSpeedButton from "32" to "30" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TSpeedButton from "8" to "6" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TSpeedButton from "6" to "4" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TSpeedButton from "140" to "138" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TSpeedButton from "6" to "4" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TSpeedButton from "8" to "6" inside TPanel.
+Funcionarios.pas Note: Changed Top coord of TPanel from "7" to "5" inside TPanel.
+Funcionarios.pas Note: Changed Left coord of TPanel from "305" to "303" inside TPanel.
+Dm_Pedidos.pas Note: Removed property "RequestLive".
+Dm_Pedidos.pas Note: Removed property "Calculated".
+Dm_Pedidos.pas Note: Removed property "RequestLive".
+Dm_Pedidos.pas Note: Removed property "RequestLive".
+Dm_Pedidos.pas Note: Removed property "RequestLive".
+Dm_Pedidos.pas Note: Removed property "RequestLive".
+Dm_Pedidos.pas Note: Removed property "RequestLive".
+Dm_Pedidos.pas Note: Removed property "RequestLive".
+Psq_Pro.pas Note: Removed property "TextHeight".
+Psq_Pro.pas Note: Removed property "OldCreateOrder".
+Psq_Pro.pas Note: Changed Top coord of TLabel from "56" to "54" inside TPanel.
+Psq_Pro.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Pro.pas Note: Changed Top coord of TLabel from "40" to "38" inside TPanel.
+Psq_Pro.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Pro.pas Note: Changed Top coord of TLabel from "24" to "22" inside TPanel.
+Psq_Pro.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Pro.pas Note: Changed Top coord of TLabel from "8" to "6" inside TPanel.
+Psq_Pro.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "IsControl".
+Sobre.pas Note: Removed property "TextHeight".
+Sobre.pas Note: Removed property "OldCreateOrder".
+Sobre.pas Note: Changed Top coord of TPanel from "115" to "113" inside TPanel.
+Sobre.pas Note: Changed Left coord of TPanel from "271" to "269" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "205" to "203" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "135" to "133" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "207" to "205" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "14" to "12" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "328" to "326" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "30" to "28" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "311" to "309" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "45" to "43" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "295" to "293" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "53" to "51" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "161" to "159" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "346" to "344" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "161" to "159" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "216" to "214" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "161" to "159" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "135" to "133" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "162" to "160" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "14" to "12" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "139" to "137" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "135" to "133" inside TPanel.
+Sobre.pas Note: Changed Top coord of TImage from "95" to "93" inside TPanel.
+Sobre.pas Note: Changed Left coord of TImage from "124" to "122" inside TPanel.
+Sobre.pas Note: Changed Top coord of TImage from "4" to "2" inside TPanel.
+Sobre.pas Note: Changed Left coord of TImage from "187" to "185" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "270" to "268" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "135" to "133" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "273" to "271" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "14" to "12" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "248" to "246" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "135" to "133" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "183" to "181" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "135" to "133" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "251" to "249" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "14" to "12" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "226" to "224" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "135" to "133" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "229" to "227" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "14" to "12" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "184" to "182" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "14" to "12" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "140" to "138" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "14" to "12" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "118" to "116" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "189" to "187" inside TPanel.
+Sobre.pas Note: Changed Top coord of TLabel from "116" to "114" inside TPanel.
+Sobre.pas Note: Changed Left coord of TLabel from "53" to "51" inside TPanel.
+Psq_Fun.pas Note: Removed property "TextHeight".
+Psq_Fun.pas Note: Removed property "OldCreateOrder".
+Psq_Fun.pas Note: Changed Top coord of TLabel from "56" to "54" inside TPanel.
+Psq_Fun.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Fun.pas Note: Changed Top coord of TLabel from "40" to "38" inside TPanel.
+Psq_Fun.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Fun.pas Note: Changed Top coord of TLabel from "24" to "22" inside TPanel.
+Psq_Fun.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Fun.pas Note: Changed Top coord of TLabel from "8" to "6" inside TPanel.
+Psq_Fun.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Clientes.pas Note: Replaced type "TRichEdit" with "TMemo".
+Clientes.pas Note: Replaced type "TRichEdit" with "TMemo".
+Clientes.pas Note: Removed property "TextHeight".
+Clientes.pas Note: Removed property "OldCreateOrder".
+Clientes.pas Note: Changed Top coord of TMemo from "4" to "2" inside TPanel.
+Clientes.pas Note: Changed Left coord of TMemo from "5" to "3" inside TPanel.
+Clientes.pas Note: Changed Top coord of TMemo from "5" to "3" inside TPanel.
+Clientes.pas Note: Changed Left coord of TMemo from "4" to "2" inside TPanel.
+Clientes.pas Note: Changed Top coord of TPanel from "224" to "222" inside TPanel.
+Clientes.pas Note: Changed Left coord of TPanel from "3" to "1" inside TPanel.
+Clientes.pas Note: Changed Top coord of TMaskEdit from "177" to "175" inside TPanel.
+Clientes.pas Note: Changed Left coord of TMaskEdit from "44" to "42" inside TPanel.
+Clientes.pas Note: Changed Top coord of TEdit from "124" to "122" inside TPanel.
+Clientes.pas Note: Changed Left coord of TEdit from "46" to "44" inside TPanel.
+Clientes.pas Note: Changed Top coord of TEdit from "70" to "68" inside TPanel.
+Clientes.pas Note: Changed Left coord of TEdit from "63" to "61" inside TPanel.
+Clientes.pas Note: Changed Top coord of TEdit from "20" to "18" inside TPanel.
+Clientes.pas Note: Changed Left coord of TEdit from "45" to "43" inside TPanel.
+Clientes.pas Note: Changed Top coord of TDBEdit from "201" to "199" inside TPanel.
+Clientes.pas Note: Changed Left coord of TDBEdit from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TDBEdit from "145" to "143" inside TPanel.
+Clientes.pas Note: Changed Left coord of TDBEdit from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TDBEdit from "91" to "89" inside TPanel.
+Clientes.pas Note: Changed Left coord of TDBEdit from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TDBEdit from "41" to "39" inside TPanel.
+Clientes.pas Note: Changed Left coord of TDBEdit from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "190" to "188" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "124" to "122" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "174" to "172" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "124" to "122" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "4" to "2" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "10" to "8" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "4" to "2" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "144" to "142" inside TPanel.
+Clientes.pas Note: Changed Top coord of TDBText from "4" to "2" inside TPanel.
+Clientes.pas Note: Changed Left coord of TDBText from "152" to "150" inside TPanel.
+Clientes.pas Note: Changed Top coord of TDBText from "4" to "2" inside TPanel.
+Clientes.pas Note: Changed Left coord of TDBText from "78" to "76" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "185" to "183" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "129" to "127" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "75" to "73" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "25" to "23" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "12" to "10" inside TPanel.
+Clientes.pas Note: Changed Top coord of TLabel from "7" to "5" inside TPanel.
+Clientes.pas Note: Changed Left coord of TLabel from "10" to "8" inside TPanel.
+Clientes.pas Note: Changed Top coord of TSpeedButton from "27" to "25" inside TPanel.
+Clientes.pas Note: Changed Left coord of TSpeedButton from "123" to "121" inside TPanel.
+Clientes.pas Note: Changed Top coord of TSpeedButton from "27" to "25" inside TPanel.
+Clientes.pas Note: Changed Left coord of TSpeedButton from "11" to "9" inside TPanel.
+Clientes.pas Note: Changed Top coord of TPanel from "8" to "6" inside TPanel.
+Clientes.pas Note: Changed Left coord of TPanel from "11" to "9" inside TPanel.
+Clientes.pas Note: Changed Top coord of TDBNavigator from "16" to "14" inside TPanel.
+Clientes.pas Note: Changed Left coord of TDBNavigator from "24" to "22" inside TPanel.
+Clientes.pas Note: Changed Top coord of TSpeedButton from "32" to "30" inside TPanel.
+Clientes.pas Note: Changed Left coord of TSpeedButton from "141" to "139" inside TPanel.
+Clientes.pas Note: Changed Top coord of TSpeedButton from "32" to "30" inside TPanel.
+Clientes.pas Note: Changed Left coord of TSpeedButton from "9" to "7" inside TPanel.
+Clientes.pas Note: Changed Top coord of TSpeedButton from "6" to "4" inside TPanel.
+Clientes.pas Note: Changed Left coord of TSpeedButton from "140" to "138" inside TPanel.
+Clientes.pas Note: Changed Top coord of TSpeedButton from "6" to "4" inside TPanel.
+Clientes.pas Note: Changed Left coord of TSpeedButton from "8" to "6" inside TPanel.
+Clientes.pas Note: Changed Top coord of TPanel from "7" to "5" inside TPanel.
+Clientes.pas Note: Changed Left coord of TPanel from "313" to "311" inside TPanel.
+Produtos.pas Note: Replaced type "TRichEdit" with "TMemo".
+Produtos.pas Note: Replaced type "TRichEdit" with "TMemo".
+Produtos.pas Note: Removed property "TextHeight".
+Produtos.pas Note: Removed property "OldCreateOrder".
+Produtos.pas Note: Changed Top coord of TMemo from "5" to "3" inside TPanel.
+Produtos.pas Note: Changed Left coord of TMemo from "4" to "2" inside TPanel.
+Produtos.pas Note: Changed Top coord of TPanel from "165" to "163" inside TPanel.
+Produtos.pas Note: Changed Left coord of TPanel from "11" to "9" inside TPanel.
+Produtos.pas Note: Changed Top coord of TMemo from "5" to "3" inside TPanel.
+Produtos.pas Note: Changed Left coord of TMemo from "4" to "2" inside TPanel.
+Produtos.pas Note: Changed Top coord of TPanel from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Left coord of TPanel from "316" to "314" inside TPanel.
+Produtos.pas Note: Changed Top coord of TDBEdit from "124" to "122" inside TPanel.
+Produtos.pas Note: Changed Left coord of TDBEdit from "156" to "154" inside TPanel.
+Produtos.pas Note: Changed Top coord of TDBEdit from "124" to "122" inside TPanel.
+Produtos.pas Note: Changed Left coord of TDBEdit from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Top coord of TDBEdit from "76" to "74" inside TPanel.
+Produtos.pas Note: Changed Left coord of TDBEdit from "156" to "154" inside TPanel.
+Produtos.pas Note: Changed Top coord of TDBEdit from "76" to "74" inside TPanel.
+Produtos.pas Note: Changed Left coord of TDBEdit from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Top coord of TDBEdit from "27" to "25" inside TPanel.
+Produtos.pas Note: Changed Left coord of TDBEdit from "64" to "62" inside TPanel.
+Produtos.pas Note: Changed Top coord of TDBText from "8" to "6" inside TPanel.
+Produtos.pas Note: Changed Left coord of TDBText from "88" to "86" inside TPanel.
+Produtos.pas Note: Changed Top coord of TLabel from "108" to "106" inside TPanel.
+Produtos.pas Note: Changed Left coord of TLabel from "156" to "154" inside TPanel.
+Produtos.pas Note: Changed Top coord of TLabel from "108" to "106" inside TPanel.
+Produtos.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Top coord of TLabel from "60" to "58" inside TPanel.
+Produtos.pas Note: Changed Left coord of TLabel from "156" to "154" inside TPanel.
+Produtos.pas Note: Changed Top coord of TLabel from "60" to "58" inside TPanel.
+Produtos.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Top coord of TLabel from "32" to "30" inside TPanel.
+Produtos.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Top coord of TLabel from "8" to "6" inside TPanel.
+Produtos.pas Note: Changed Left coord of TLabel from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Top coord of TLabel from "7" to "5" inside TPanel.
+Produtos.pas Note: Changed Left coord of TLabel from "10" to "8" inside TPanel.
+Produtos.pas Note: Changed Top coord of TSpeedButton from "27" to "25" inside TPanel.
+Produtos.pas Note: Changed Left coord of TSpeedButton from "123" to "121" inside TPanel.
+Produtos.pas Note: Changed Top coord of TSpeedButton from "27" to "25" inside TPanel.
+Produtos.pas Note: Changed Left coord of TSpeedButton from "11" to "9" inside TPanel.
+Produtos.pas Note: Changed Top coord of TPanel from "8" to "6" inside TPanel.
+Produtos.pas Note: Changed Left coord of TPanel from "11" to "9" inside TPanel.
+Produtos.pas Note: Changed Top coord of TDBNavigator from "16" to "14" inside TPanel.
+Produtos.pas Note: Changed Left coord of TDBNavigator from "24" to "22" inside TPanel.
+Produtos.pas Note: Changed Top coord of TSpeedButton from "32" to "30" inside TPanel.
+Produtos.pas Note: Changed Left coord of TSpeedButton from "141" to "139" inside TPanel.
+Produtos.pas Note: Changed Top coord of TSpeedButton from "32" to "30" inside TPanel.
+Produtos.pas Note: Changed Left coord of TSpeedButton from "9" to "7" inside TPanel.
+Produtos.pas Note: Changed Top coord of TSpeedButton from "6" to "4" inside TPanel.
+Produtos.pas Note: Changed Left coord of TSpeedButton from "140" to "138" inside TPanel.
+Produtos.pas Note: Changed Top coord of TSpeedButton from "6" to "4" inside TPanel.
+Produtos.pas Note: Changed Left coord of TSpeedButton from "8" to "6" inside TPanel.
+Produtos.pas Note: Changed Top coord of TPanel from "7" to "5" inside TPanel.
+Produtos.pas Note: Changed Left coord of TPanel from "305" to "303" inside TPanel.
+Psq_Cli.pas Note: Removed property "TextHeight".
+Psq_Cli.pas Note: Removed property "OldCreateOrder".
+Psq_Cli.pas Note: Changed Top coord of TLabel from "56" to "54" inside TPanel.
+Psq_Cli.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Cli.pas Note: Changed Top coord of TLabel from "40" to "38" inside TPanel.
+Psq_Cli.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Cli.pas Note: Changed Top coord of TLabel from "24" to "22" inside TPanel.
+Psq_Cli.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+Psq_Cli.pas Note: Changed Top coord of TLabel from "8" to "6" inside TPanel.
+Psq_Cli.pas Note: Changed Left coord of TLabel from "24" to "22" inside TPanel.
+IncluiPedido.pas Note: Replaced type "TRichEdit" with "TMemo".
+IncluiPedido.pas Note: Removed property "TextHeight".
+IncluiPedido.pas Note: Removed property "OldCreateOrder".
+IncluiPedido.pas Note: Changed Top coord of TMemo from "8" to "6" inside TPanel.
+IncluiPedido.pas Note: Changed Left coord of TMemo from "8" to "6" inside TPanel.
+Psq_Pedidos.pas Note: Removed property "TextHeight".
+Psq_Pedidos.pas Note: Removed property "OldCreateOrder".
+ Progress: Conversion took: 00:00:07
+ : Conversion Ready.

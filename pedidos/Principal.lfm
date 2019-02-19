@@ -1,0 +1,475 @@
+object F_Principal: TF_Principal
+  Left = 284
+  Height = 441
+  Top = 161
+  Width = 665
+  Caption = 'Controle de Pedidos - V. "Educativa" - Zeos 6.1.5 + Firebird 1.5  - Ferreira & Souza Informática'
+  ClientHeight = 417
+  ClientWidth = 665
+  Color = clBtnFace
+  DesignTimePPI = 101
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'MS Sans Serif'
+  KeyPreview = True
+  Menu = MainMenu1
+  OnActivate = FormActivate
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnKeyDown = FormKeyDown
+  OnShow = FormShow
+  Position = poScreenCenter
+  LCLVersion = '2.0.0.4'
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 22
+    Top = 395
+    Width = 665
+    Color = 8454143
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'Arial'
+    Panels = <    
+      item
+        Alignment = taCenter
+        Width = 84
+      end    
+      item
+        Alignment = taCenter
+        Text = 'Cadastro de Clientes'
+        Width = 473
+      end    
+      item
+        Alignment = taCenter
+        Width = 368
+      end>
+    ParentColor = False
+    ParentFont = False
+    SimplePanel = False
+    UseSystemFont = False
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 59
+    Top = 0
+    Width = 665
+    ButtonHeight = 52
+    ButtonWidth = 25
+    Caption = 'ToolBar1'
+    Color = 8454143
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 1
+    object Bt_ConsultarPedidos: TSpeedButton
+      Cursor = crHandPoint
+      Left = 1
+      Height = 52
+      Top = 2
+      Width = 178
+      Caption = '[F10] Consultar Pedidos'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -13
+      Font.Name = 'Arial'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00550000000005
+        555555777777777FF5555500000000805555557777777777FF555550BBBBB008
+        05555557F5FFF7777FF55550B000B030805555F7F777F7F777F550000000B033
+        005557777777F7F5775550BBBBB00033055557F5FFF777F57F5550B000B08033
+        055557F77757F7F57F5550BBBBB08033055557F55557F7F57F5550BBBBB00033
+        055557FFFFF777F57F5550000000703305555777777757F57F555550FFF77033
+        05555557FFFFF7FF7F55550000000003055555777777777F7F55550777777700
+        05555575FF5555777F55555003B3B3B00555555775FF55577FF55555500B3B3B
+        005555555775FFFF77F555555570000000555555555777777755
+      }
+      Layout = blGlyphTop
+      NumGlyphs = 2
+      OnClick = Pedidos1Click
+      ParentFont = False
+    end
+    object Bt_Pedidos: TSpeedButton
+      Cursor = crHandPoint
+      Left = 179
+      Height = 52
+      Top = 2
+      Width = 191
+      Caption = '[F12] Abrir novos Pedidos'
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clNavy
+      Font.Height = -12
+      Font.Name = 'Arial'
+      Font.Style = [fsBold]
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00333333333333
+        3333333333FFFFF3333333333000003333333333F777773FF333333008877700
+        33333337733FFF773F33330887000777033333733F777FFF73F330880FAFAF07
+        703337F37733377FF7F33080F00000F07033373733777337F73F087F00A2200F
+        77037F3737333737FF7F080A0A2A220A07037F737F3333737F7F0F0F0AAAA20F
+        07037F737F3333737F7F0F0A0FAA2A0A08037F737FF33373737F0F7F00FFA00F
+        780373F737FFF737F3733080F00000F0803337F73377733737F330F80FAFAF08
+        8033373F773337733733330F8700078803333373FF77733F733333300FFF8800
+        3333333773FFFF77333333333000003333333333377777333333
+      }
+      Layout = blGlyphTop
+      NumGlyphs = 2
+      OnClick = Bt_PedidosClick
+      ParentFont = False
+    end
+    object Bt_Calculadora: TSpeedButton
+      Cursor = crHandPoint
+      Left = 370
+      Height = 52
+      Top = 2
+      Width = 152
+      Caption = '[F5] Calculadora'
+      Font.Color = clMaroon
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00337000000000
+        73333337777777773F333308888888880333337F3F3F3FFF7F33330808089998
+        0333337F737377737F333308888888880333337F3F3F3F3F7F33330808080808
+        0333337F737373737F333308888888880333337F3F3F3F3F7F33330808080808
+        0333337F737373737F333308888888880333337F3F3F3F3F7F33330808080808
+        0333337F737373737F333308888888880333337F3FFFFFFF7F33330800000008
+        0333337F7777777F7F333308000E0E080333337F7FFFFF7F7F33330800000008
+        0333337F777777737F333308888888880333337F333333337F33330888888888
+        03333373FFFFFFFF733333700000000073333337777777773333
+      }
+      Layout = blGlyphTop
+      NumGlyphs = 2
+      OnClick = Bt_CalculadoraClick
+      ParentFont = False
+    end
+    object Bt_Saida: TSpeedButton
+      Cursor = crHandPoint
+      Left = 522
+      Height = 52
+      Top = 2
+      Width = 143
+      Caption = '[Esc] Saída'
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      Glyph.Data = {
+        76010000424D7601000000000000760000002800000020000000100000000100
+        04000000000000010000120B0000120B00001000000000000000000000000000
+        800000800000008080008000000080008000808000007F7F7F00BFBFBF000000
+        FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF00330000000000
+        03333377777777777F333301BBBBBBBB033333773F3333337F3333011BBBBBBB
+        0333337F73F333337F33330111BBBBBB0333337F373F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F337F33337F333301110BBBBB0333337F337FF3337F33330111B0BBBB
+        0333337F337733337F333301110BBBBB0333337F337F33337F333301110BBBBB
+        0333337F3F7F33337F333301E10BBBBB0333337F7F7F33337F333301EE0BBBBB
+        0333337F777FFFFF7F3333000000000003333377777777777333
+      }
+      Layout = blGlyphTop
+      NumGlyphs = 2
+      OnClick = Bt_SaidaClick
+      ParentFont = False
+    end
+  end
+  object Panel2: TPanel
+    Left = 0
+    Height = 336
+    Top = 59
+    Width = 665
+    Align = alClient
+    ClientHeight = 336
+    ClientWidth = 665
+    Color = clAqua
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentColor = False
+    ParentFont = False
+    TabOrder = 2
+    object RichEdit2: TMemo
+      Left = 2
+      Height = 361
+      Top = 1
+      Width = 653
+      Font.CharSet = ANSI_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'Courier New'
+      Lines.Strings = (
+        '************************ SISTEMA de PEDIDOS *****************************'
+        'Criado por : Carlos Antônio Ferreira da Silva '
+        'email .....: carlosmuzambinho@yahoo.com.br'
+        'Profissão  : Analista de Sistemas & Professor de Informática'
+        'Data ......: 8/12/2005        Software...: Educativo, Totalmente Freeware '
+        'B.D........: Firebird 1.5.2   Componente.: Zeos DBO 6.1.5'
+        '//////////////////////////////////////////////////////////////////////////'
+        'ZEOS DBO * O componente de acesso e manipulação do Banco de Dados'
+        'chama-se ZEOS DATABASE OBJECTS, e é FREEWARE.'
+        ''
+        'Zeos - Acesso Nativo *  Seu acesso NATIVO '
+        '(sem precisar de dll de terceiros) fornece um rápido '
+        'acesso ao FIREBIRD, '
+        'necessitando apenas a própria biblioteca do FIREBIRD, a FBCLIENT.DLL ;'
+        ''
+        'DICAS * Cada tela de cadastro possui técnicas diferentes comentadas ;'
+        ''
+        'FIREBIRD * Banco de dados 100% Freeware '
+        '( ao contrário de muitos B.D. que somente são freeware em servidores web ),'
+        'Sua origem provém do código fonte do INTERBASE 6.0., liberado no ano 2000.'
+        'Portanto, já data mais de 21 anos de trabalho "em cima" do código deste '
+        'VERDADEIRO banco de dados CLIENTE SERVIDOR .'
+      )
+      ParentFont = False
+      ReadOnly = True
+      ScrollBars = ssVertical
+      TabOrder = 0
+    end
+    object Panel3: TPanel
+      Left = 461
+      Height = 60
+      Top = 4
+      Width = 186
+      ClientHeight = 60
+      ClientWidth = 186
+      Color = 8404992
+      Font.Color = clWindowText
+      Font.Height = -12
+      Font.Name = 'MS Sans Serif'
+      ParentColor = False
+      ParentFont = False
+      TabOrder = 1
+      object Label1: TLabel
+        Left = 49
+        Height = 15
+        Top = 3
+        Width = 101
+        Caption = 'Truque - NEWS'
+        Font.Color = clYellow
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label2: TLabel
+        Left = 7
+        Height = 14
+        Top = 20
+        Width = 168
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'Inclusão E Alteração de Clientes'
+        Font.Color = clYellow
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+      end
+      object Label3: TLabel
+        Left = 8
+        Height = 14
+        Top = 36
+        Width = 167
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'com B.D. desconectado'
+        Font.Color = clYellow
+        Font.Height = -12
+        Font.Name = 'MS Sans Serif'
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 548
+    Height = 94
+    Top = 173
+    Width = 98
+    BevelOuter = bvNone
+    ClientHeight = 94
+    ClientWidth = 98
+    Font.Color = clWindowText
+    Font.Height = -12
+    Font.Name = 'MS Sans Serif'
+    ParentFont = False
+    TabOrder = 3
+    object Img_FIREBIRD: TImage
+      Cursor = crHandPoint
+      Left = 0
+      Height = 94
+      Top = 0
+      Width = 98
+      Align = alClient
+      AutoSize = True
+      Center = True
+      OnClick = Sobre1Click
+      Picture.Data = {
+        0A544A706567496D61676514080000FFD8FFE000104A46494600010101006000
+        600000FFDB004300100B0C0E0C0A100E0D0E1211101318281A18161618312325
+        1D283A333D3C3933383740485C4E404457453738506D51575F626768673E4D71
+        797064785C656763FFDB0043011112121815182F1A1A2F634238426363636363
+        6363636363636363636363636363636363636363636363636363636363636363
+        63636363636363636363636363FFC00011080059005A03012200021101031101
+        FFC4001F0000010501010101010100000000000000000102030405060708090A
+        0BFFC400B5100002010303020403050504040000017D01020300041105122131
+        410613516107227114328191A1082342B1C11552D1F02433627282090A161718
+        191A25262728292A3435363738393A434445464748494A535455565758595A63
+        6465666768696A737475767778797A838485868788898A92939495969798999A
+        A2A3A4A5A6A7A8A9AAB2B3B4B5B6B7B8B9BAC2C3C4C5C6C7C8C9CAD2D3D4D5D6
+        D7D8D9DAE1E2E3E4E5E6E7E8E9EAF1F2F3F4F5F6F7F8F9FAFFC4001F01000301
+        01010101010101010000000000000102030405060708090A0BFFC400B5110002
+        0102040403040705040400010277000102031104052131061241510761711322
+        328108144291A1B1C109233352F0156272D10A162434E125F11718191A262728
+        292A35363738393A434445464748494A535455565758595A636465666768696A
+        737475767778797A82838485868788898A92939495969798999AA2A3A4A5A6A7
+        A8A9AAB2B3B4B5B6B7B8B9BAC2C3C4C5C6C7C8C9CAD2D3D4D5D6D7D8D9DAE2E3
+        E4E5E6E7E8E9EAF2F3F4F5F6F7F8F9FAFFDA000C03010002110311003F00EFE8
+        A2A39E64B788C921C28FD69376D580F2400493803BD517D4D19B65AC6D70DFDE
+        1C2FE7FE19A85525D4DF74D94801E23EC7EBEA7F4AD18A248976A2802B053954
+        F8345DCB694772A01A94BC9786007B052C47E24FF4A9D219D6DD91AE59A43D24
+        D806DFC3A558A2B550B6EEE4B65129A8C7CACD14A3D1E3C13F88348BA918DB6D
+        DC0D09FEF29DCBF9F5FD2AFD31E359176BA822A1C26B58BFBC135D454759103A
+        30653C820E41A7564CB04BA7C866B63F213F321E87EBE87DEAFDADCC77516F4C
+        8238653D54D14EAA93E57A31B8D95D6C4F451456C48958ECEDA95F055FF529F7
+        7E9EBF8D5BD5A7F26CC8070D21DA3FAFE94DD1A2D96A64C72E7F4AE4ACFDA4D5
+        25B6ECDA0B960E7F717914228551803A52D2D737AA4AF3DD489293E5A1C2C7DB
+        EA47735A56AD1A11BB44D3A6EA4AC8BD7BA8DCC774D1C1E4ED5C7DE52C4F19EC
+        45363D69D789EDB3EF1367F438FEB591B536EDD8BB7D31C52AED41850147A015
+        E53C6D5E6BA3B961636B33A28753B3988559D558FF000BFCA7F5AB48EB22EE43
+        9192322B998258776CBC895E23FC6320AFD477AE9208E38A1448401181F2E3D2
+        BD3C3D67555F438EAD3F66EC3D9432904641AC5977E9B7BBD7250F51FDE5FF00
+        11FE7AD6DD67EB31EEB5F33BA1FD0D4E2A0F979E3BA1517EF72BD99791D5D15D
+        4E558641F514EACCD127DF03C24F319C8FA1FF00EBD69D6F4E6AA41497522717
+        0938B30BC412FEFE28FB2A93F9FF00FAAB5ACD365A42BE882B03C4071A88FF00
+        AE63F99ADEB1904B650B8EE83F957351D6BCD9D35636A302C5569EC60B895647
+        5F987A77FAD58AC1D4B5C7DED0D91000E0CA467FEF9FF135D156508C7DFD8C69
+        427395A06A5D43671DBB19D638E303A9E315CBEFF4CD42EED2BEF95DA47FEF39
+        C9FF00EB51BABC8C4558D56B9558F5B0F879534F99DC9B7D743A1485EC369E88
+        C547D3AD7329B9DC2A8CB13800575DA75AFD92D1633F7BAB7D6B5C0C65CEDF43
+        1C772A825D4B555353C7F67CD9E816ADD63F886E8476EB6EA7E690E48F61FF00
+        D7AF4AB34A9B6CF3A8C5CA6922A6892EDD402E7EFA91FD7FA57475C9E8C73AAC
+        1F53FF00A09AEB2B9F04FF007563A31B1E5A9F239AF13A6CB9865ECCA47E5FFE
+        BAB9E1ABA12DA3404FCD11C8FA1FFEBD4BE20B5371A73328CBC4770F71DEB96D
+        3AFDAC6F1271CA8E180EEBDEA65FBAAFCDD19D34E1EDF0BCAB7475DAD5C9B6D3
+        64653866F901FAD71DB8574BAFC91DD688278583A6E56047E5FD6B94DF59E2EE
+        E68DB2E82F66DF5B936EA370A877D1BEB8F94F4794E9FC3964AC86EDF939C27B
+        7BD6FD7076BAA5E59AEDB79CAA139DA40233F8D4B2EBDA94AB837213FEB9A015
+        E8D2AD4E1048F22BE0AB54A8DF43A9D4B53834F8FE721A523E48C1E4FF0080F7
+        AE46E2E64B999A699B73B75F41EC3DAAA990B316662CCDC9663927F1A37D73D7
+        ACEAE9D0ECC360D51D5EACDAF0EA799A9AB76452DFD3FAD759587E18B631DA3D
+        C30E65385FA0ADCAEDC343969A3C9C6CD4AB3B74108C8C1E95C3EBBA7369F765
+        901F2243943E9ED5DCD41776B15E5BB4332EE46FD2AEAD3551589C2E21D09DFA
+        75388D32776F36CB79F2E752029E81FA83FA62A896C1ABDAA69373A4CE245CB4
+        41B29281D3EBE9556F82BB0BA887EEE6E48FEEB771FE7B570CA2ED67D0FA0A4E
+        0E5CD0DA5F9916EA375459A3359F29D7CA4DBA9375459A33472872936EABBA4D
+        8C9A8DDAC4B9083976F4151699A5DCEA52ED8976C60FCD21E83FC6BBAD3EC21D
+        3ED84308FF00798F5635BD2A1CCEEF63CEC6E2E3457247E2FC89E38D628D6341
+        85518029F4515E81F39B8514514C06BA2BA95750CA460823359527876C58C9B1
+        5A34907CD183F293D881D8FD2B5E8A9714F72E15250F85D8E22F3C237713936A
+        E9327604E1AA89F0EEAC0E3EC6DFF7D2FF008D7A2D1593A1167A10CD6BC559D9
+        9C0C1E15D4E5237A2443D59BFC2B6AC3C236D090F77219D87F08185AE928A6A8
+        C519D5CC711515AF6F41914490C623891511780AA30053E8A2B538370A28A298
+        1FFFD9
+      }
+      Stretch = True
+      Transparent = True
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 623
+    top = 67
+    object Cadastro1: TMenuItem
+      Caption = 'Cadastros'
+      Hint = 'Cadastros Gerais do Sistema'
+      ImageIndex = 1
+      object Clientes1: TMenuItem
+        Caption = 'Clientes'
+        Hint = 'Altera, Inclui, Exclui Clientes'
+        OnClick = Clientes1Click
+      end
+      object Funcionrios1: TMenuItem
+        Caption = 'Funcionários'
+        Hint = 'Altera, Inclui, Exclui Funcionários'
+        OnClick = Funcionrios1Click
+      end
+      object Pedidos1: TMenuItem
+        Caption = 'Pedidos'
+        Hint = 'Altera, Inclui, Exclui Pedidos'
+        OnClick = Pedidos1Click
+      end
+      object Produtos1: TMenuItem
+        Caption = 'Produtos'
+        Hint = 'Altera, Inclui, Exclui Produtos'
+        OnClick = Produtos1Click
+      end
+    end
+    object Relatrios1: TMenuItem
+      Caption = 'Relatórios'
+      GroupIndex = 1
+      object Clientes2: TMenuItem
+        Caption = 'Clientes'
+        Hint = 'Visualiza e Imprime o Relatório de Clientes'
+        OnClick = Clientes2Click
+      end
+      object Pedidos2: TMenuItem
+        Caption = 'Pedidos'
+        Hint = 'Visualiza e Imprime o Relatório de Pedidos'
+        object TodosSEMpreviewpersonalizado: TMenuItem
+          Caption = 'Todos'
+          Hint = 'Relatório SEM filtro'
+          OnClick = TodosSEMpreviewpersonalizadoClick
+        end
+        object FiltradosporData1: TMenuItem
+          Caption = 'Filtrados por Data'
+          Hint = 'Relatório Pedidos, Filtrado por Data'
+          OnClick = FiltradosporData1Click
+        end
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object VisualizaoPadro1: TMenuItem
+        Caption = 'Visualização Padrão'
+        Checked = True
+        RadioItem = True
+        OnClick = VisualizaoPadro1Click
+      end
+      object VisualizaoPersonalizada1: TMenuItem
+        Caption = 'Visualização Personalizada'
+        RadioItem = True
+        OnClick = VisualizaoPersonalizada1Click
+      end
+    end
+    object Sobre1: TMenuItem
+      Caption = '[F1] Sobre'
+      GroupIndex = 1
+      ShortCut = 112
+      OnClick = Sobre1Click
+    end
+    object EscSair1: TMenuItem
+      Caption = '[Esc] - Sair'
+      GroupIndex = 1
+      ShortCut = 27
+      OnClick = EscSair1Click
+    end
+  end
+  object Timer: TTimer
+    OnTimer = TimerTimer
+    left = 589
+    top = 67
+  end
+end
