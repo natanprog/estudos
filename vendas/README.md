@@ -10,6 +10,7 @@
 + [fpcupdeluxe](https://github.com/LongDirtyAnimAlf/fpcupdeluxe) Lazarus 2.0.0 Free Pascal 3.0.4
 + Microsoft [SQL Server 2017](https://docs.microsoft.com/pt-br/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-linux-2017) Express Edition
 + [Azure Data Studio](https://docs.microsoft.com/pt-br/sql/azure-data-studio/download?view=sql-server-linux-2017)  
++ [mssql-scripter](https://github.com/Microsoft/mssql-scripter)
 
 ---
 ### Componentes
