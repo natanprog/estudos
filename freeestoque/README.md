@@ -19,3 +19,5 @@
 | Zeos Library                   | `svn checkout https://svn.code.sf.net/p/zeoslib/code-0/branches/7.2-patches/ zeoslib`  |
 | RX Library                     | `svn checkout https://svn.code.sf.net/p/lazarus-ccr/svn/components/rx/trunk/ rxnew`    |
 | PowerPdf                       | `svn checkout https://svn.code.sf.net/p/lazarus-ccr/svn/components/powerpdf/ powerpdf` |
+| LazReport                      | vem com o Lazarus, mas precisa instalar                                                |
+| LazReportPDFExport             | vem com o Lazarus, mas precisa instalar                                                |
