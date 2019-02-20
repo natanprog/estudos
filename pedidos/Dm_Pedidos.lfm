@@ -9,8 +9,9 @@ object F_Dm_Pedidos: TF_Dm_Pedidos
   PPI = 101
   object ZConnection: TZConnection
     ControlsCodePage = cCP_UTF8
+    ClientCodepage = 'UTF8'
     Properties.Strings = (
-      'codepage=WIN1252'
+      'codepage=UTF8'
       'AutoEncodeStrings=ON'
     )
     AutoCommit = False
@@ -360,7 +361,7 @@ object F_Dm_Pedidos: TF_Dm_Pedidos
     end
     object Qry_Pedidos_Cli_FunFuncionrio: TStringField
       FieldKind = fkData
-      FieldName = 'FuncionÃ¡rio'
+      FieldName = 'Funcionário'
       Index = 3
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]
@@ -382,7 +383,7 @@ object F_Dm_Pedidos: TF_Dm_Pedidos
     end
     object Qry_Pedidos_Cli_FunValorjPago: TIntegerField
       FieldKind = fkData
-      FieldName = 'Valor jÃ¡ Pago'
+      FieldName = 'Valor já Pago'
       Index = 5
       LookupCache = False
       ProviderFlags = [pfInUpdate, pfInWhere]

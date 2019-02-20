@@ -220,6 +220,7 @@ object F_IncluiPedido: TF_IncluiPedido
         Width = 93
         FieldName = 'Subtotal_Calc'
       end>
+    DataSource = F_Dm_Pedidos.Ds_Iten_Pedido
     Font.Color = clWindowText
     Font.Height = -12
     Font.Name = 'MS Sans Serif'
