@@ -3,8 +3,16 @@
   <ProjectOptions>
     <Version Value="11"/>
     <General>
+      <SessionStorage Value="InProjectDir"/>
       <MainUnit Value="0"/>
+      <Title Value="freeestoque"/>
+      <Scaled Value="True"/>
+      <ResourceType Value="res"/>
       <UseXPManifest Value="True"/>
+      <XPManifest>
+        <DpiAware Value="True"/>
+      </XPManifest>
+      <Icon Value="0"/>
     </General>
     <VersionInfo>
       <Language Value=""/>
@@ -63,9 +71,6 @@
       <Unit0>
         <Filename Value="freeestoque.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="20"/>
-        <CursorPos X="71" Y="32"/>
-        <UsageCount Value="189"/>
       </Unit0>
       <Unit1>
         <Filename Value="modelo_cad.pas"/>
@@ -74,10 +79,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Modelo_Cad"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="105"/>
-        <CursorPos X="11" Y="122"/>
-        <UsageCount Value="189"/>
       </Unit1>
       <Unit2>
         <Filename Value="unitcad_clientes.pas"/>
@@ -85,10 +86,6 @@
         <ComponentName Value="Cad_Clientes"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="148"/>
-        <CursorPos X="21" Y="164"/>
-        <UsageCount Value="182"/>
       </Unit2>
       <Unit3>
         <Filename Value="unitdados.pas"/>
@@ -97,10 +94,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="DataModule"/>
         <UnitName Value="UnitDados"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="118"/>
-        <CursorPos X="82" Y="126"/>
-        <UsageCount Value="189"/>
       </Unit3>
       <Unit4>
         <Filename Value="unitprincipal.pas"/>
@@ -109,12 +102,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="UnitPrincipal"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="162"/>
-        <CursorPos X="33" Y="164"/>
-        <UsageCount Value="189"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="unit_modelo_form_rel.pas"/>
@@ -123,19 +110,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Modelo_Form_Rel"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="41"/>
-        <CursorPos X="91" Y="62"/>
-        <UsageCount Value="189"/>
       </Unit5>
       <Unit6>
         <Filename Value="unit_rotinas.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_rotinas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="23"/>
-        <CursorPos X="43" Y="40"/>
-        <UsageCount Value="189"/>
       </Unit6>
       <Unit7>
         <Filename Value="unit_empresa.pas"/>
@@ -144,10 +123,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Empresa"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="118"/>
-        <CursorPos X="31" Y="146"/>
-        <UsageCount Value="182"/>
       </Unit7>
       <Unit8>
         <Filename Value="unitcad_fornecedores.pas"/>
@@ -155,10 +130,6 @@
         <ComponentName Value="Cad_Fornecedores"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="24"/>
-        <CursorPos X="22" Y="41"/>
-        <UsageCount Value="143"/>
       </Unit8>
       <Unit9>
         <Filename Value="unit_config.pas"/>
@@ -167,10 +138,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Config"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="71"/>
-        <CursorPos X="117" Y="93"/>
-        <UsageCount Value="123"/>
       </Unit9>
       <Unit10>
         <Filename Value="unit_cad_mod_simples.pas"/>
@@ -179,9 +146,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Mod_Simples"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="32" Y="17"/>
-        <UsageCount Value="111"/>
       </Unit10>
       <Unit11>
         <Filename Value="unit_cad_grupos.pas"/>
@@ -190,10 +154,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Grupos"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="19" Y="33"/>
-        <UsageCount Value="110"/>
       </Unit11>
       <Unit12>
         <Filename Value="unit_cad_marcas.pas"/>
@@ -202,10 +162,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Marcas"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="26" Y="42"/>
-        <UsageCount Value="109"/>
       </Unit12>
       <Unit13>
         <Filename Value="unit_cad_modelos.pas"/>
@@ -214,10 +170,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Modelos"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="11"/>
-        <CursorPos X="27" Y="43"/>
-        <UsageCount Value="109"/>
       </Unit13>
       <Unit14>
         <Filename Value="unit_cad_unidades.pas"/>
@@ -226,9 +178,6 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Unidades"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="21" Y="12"/>
-        <UsageCount Value="108"/>
       </Unit14>
       <Unit15>
         <Filename Value="unit_cad_produtos.pas"/>
@@ -237,38 +186,19 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Cad_Produtos"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="93"/>
-        <CursorPos X="18" Y="110"/>
-        <UsageCount Value="105"/>
       </Unit15>
     </Units>
-    <JumpHistory Count="2" HistoryIndex="1">
-      <Position1>
-        <Filename Value="unitprincipal.pas"/>
-        <Caret Line="210" Column="33" TopLine="210"/>
-      </Position1>
-      <Position2>
-        <Filename Value="unitprincipal.pas"/>
-        <Caret Line="164" Column="33" TopLine="162"/>
-      </Position2>
-    </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
     <Version Value="11"/>
+    <Target>
+      <Filename Value="freeestoque"/>
+    </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
+      <UnitOutputDirectory Value="lib/$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
-    <Parsing>
-      <SyntaxOptions>
-        <UseAnsiStrings Value="False"/>
-      </SyntaxOptions>
-    </Parsing>
     <Linking>
-      <Debugging>
-        <GenerateDebugInfo Value="False"/>
-        <UseLineInfoUnit Value="False"/>
-      </Debugging>
       <Options>
         <Win32>
           <GraphicApplication Value="True"/>

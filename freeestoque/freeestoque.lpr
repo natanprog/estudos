@@ -45,7 +45,10 @@ uses
 
 {$IFDEF WINDOWS}{$R freeestoque.rc}{$ENDIF}
 
+{$R *.res}
+
 begin
+  Application.Scaled:=True;
   Application.Initialize;
   Application.CreateForm(Tdm, dm);
   Application.CreateForm(TFormPrincipal, FormPrincipal);
