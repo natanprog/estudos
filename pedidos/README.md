@@ -8,6 +8,7 @@
 
 + [Lubuntu](https://lubuntu.me/) 18.04.1 LTS
 + [fpcupdeluxe](https://github.com/LongDirtyAnimAlf/fpcupdeluxe) Lazarus 2.0.0 Free Pascal 3.0.4
++ [Firebird](https://firebirdsql.org/en/firebird-3-0) 3.0.4
 
 ---
 ### Componentes
