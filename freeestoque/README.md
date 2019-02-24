@@ -8,6 +8,7 @@
 
 + [Lubuntu](https://lubuntu.me/) 18.04.1 LTS
 + [fpcupdeluxe](https://github.com/LongDirtyAnimAlf/fpcupdeluxe) Lazarus 2.0.0 Free Pascal 3.0.4
++ [Firebird](https://firebirdsql.org/en/firebird-3-0) 3.0.4
 
 ---
 ### Componentes
@@ -19,5 +20,5 @@
 | Zeos Library                   | `svn checkout https://svn.code.sf.net/p/zeoslib/code-0/branches/7.2-patches/ zeoslib`  |
 | RX Library                     | `svn checkout https://svn.code.sf.net/p/lazarus-ccr/svn/components/rx/trunk/ rxnew`    |
 | PowerPdf                       | `svn checkout https://svn.code.sf.net/p/lazarus-ccr/svn/components/powerpdf/ powerpdf` |
-| LazReport                      | `vem com o Lazarus, mas precisa instalar`                                                |
-| LazReportPDFExport             | `vem com o Lazarus, mas precisa instalar`                                                |
+| LazReport                      | `vem com o Lazarus, mas precisa instalar`                                              |
+| LazReportPDFExport             | `vem com o Lazarus, mas precisa instalar`                                              |
