@@ -8,9 +8,10 @@
 
 + [Lubuntu](https://lubuntu.me/) 18.04.1 LTS
 + [fpcupdeluxe](https://github.com/LongDirtyAnimAlf/fpcupdeluxe) Lazarus 2.0.0 Free Pascal 3.0.4
-+ Microsoft [SQL Server 2017](https://docs.microsoft.com/pt-br/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-linux-2017) Express Edition
++ Microsoft [SQL Server](https://docs.microsoft.com/pt-br/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-linux-2017) 2017 Express Edition
 + [Azure Data Studio](https://docs.microsoft.com/pt-br/sql/azure-data-studio/download?view=sql-server-linux-2017)  
 + [mssql-scripter](https://github.com/Microsoft/mssql-scripter)
++ SQL Server [Native Client](https://docs.microsoft.com/pt-br/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-linux-2017)
 
 ---
 ### Componentes
