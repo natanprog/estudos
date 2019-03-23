@@ -1,0 +1,1 @@
+[Business &amp; avatar icons by Hopnguyen Mr](https://www.iconfinder.com/iconsets/business-avatar-1)
