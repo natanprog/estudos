@@ -72,6 +72,7 @@ object frmDbgrid: TfrmDbgrid
     DataSource = dsCustomer
     TabOrder = 0
     OnPrepareCanvas = DBGrid1PrepareCanvas
+    OnTitleClick = DBGrid1TitleClick
   end
   object imgPicture: TImage
     Left = 357

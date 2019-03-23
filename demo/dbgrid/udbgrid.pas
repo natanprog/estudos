@@ -21,6 +21,7 @@ type
     imgPicture: TImage;
     procedure DBGrid1PrepareCanvas(Sender: TObject; DataCol: integer;
       Column: TColumn; AState: TGridDrawState);
+    procedure DBGrid1TitleClick(Column: TColumn);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
   private
@@ -170,6 +171,18 @@ begin
   //DBGrid1.Canvas.Brush.Color := $00FFEF0F;
 end;
 
+procedure TfrmDbgrid.DBGrid1TitleClick(Column: TColumn);
+begin
+  // Ordernar DBGrid por Coluna
+  if bfCustomer.IndexFieldNames <> '' then
+    DBGrid1.Columns[bfCustomer.FieldByName(bfCustomer.IndexFieldNames).Index]
+      .Title.Color := DBGrid1.FixedColor;
+  if not ((Column.Field.DataType in [ftBlob, ftMemo]) or (Column.Field.FieldKind in
+    [fkLookup])) then
+  begin
+    bfCustomer.IndexFieldNames := Column.FieldName;
+    Column.Title.Color := $00FFEFDF;
+  end;
+end;
+
 end.
-
-
