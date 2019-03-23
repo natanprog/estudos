@@ -1,19 +1,20 @@
 object frmDbgrid: TfrmDbgrid
   Left = 347
-  Height = 596
+  Height = 241
   Top = 121
   Width = 731
   Caption = 'Segredos do DBGrid (Técnicas Avançadas)'
-  ClientHeight = 596
+  ClientHeight = 241
   ClientWidth = 731
   OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '2.0.0.4'
   object DBGrid1: TDBGrid
-    Left = 8
-    Height = 180
-    Top = 72
-    Width = 720
+    Left = 0
+    Height = 241
+    Top = 0
+    Width = 731
+    Align = alClient
     AlternateColor = 16772879
     Color = clWindow
     Columns = <    
@@ -43,7 +44,7 @@ object frmDbgrid: TfrmDbgrid
       end    
       item
         Title.Caption = 'BIRTHDAY'
-        Width = 74
+        Width = 87
         FieldName = 'BIRTHDAY'
       end    
       item
@@ -52,6 +53,7 @@ object frmDbgrid: TfrmDbgrid
         FieldName = 'BALANCE'
       end    
       item
+        ButtonStyle = cbsEllipsis
         Title.Caption = 'PICTURE'
         Width = 64
         FieldName = 'PICTURE'
@@ -62,6 +64,7 @@ object frmDbgrid: TfrmDbgrid
         FieldName = 'ENABLED'
       end    
       item
+        ButtonStyle = cbsEllipsis
         Title.Caption = 'NOTE'
         Width = 50
         FieldName = 'NOTE'
@@ -76,6 +79,8 @@ object frmDbgrid: TfrmDbgrid
       end>
     DataSource = dsCustomer
     TabOrder = 0
+    OnDrawColumnCell = DBGrid1DrawColumnCell
+    OnEditButtonClick = DBGrid1EditButtonClick
     OnPrepareCanvas = DBGrid1PrepareCanvas
     OnTitleClick = DBGrid1TitleClick
   end
@@ -205,6 +210,30 @@ object frmDbgrid: TfrmDbgrid
     }
     Visible = False
   end
+  object DateTimePicker1: TDateTimePicker
+    Left = 176
+    Height = 23
+    Top = 354
+    Width = 87
+    CenturyFrom = 1941
+    MaxDate = 2958465
+    MinDate = -53780
+    TabOrder = 1
+    TrailingSeparator = False
+    TextForNullDate = 'NULL'
+    LeadingZeros = True
+    Visible = False
+    Kind = dtkDate
+    TimeFormat = tf24
+    TimeDisplay = tdHMS
+    DateMode = dmComboBox
+    Date = 43547
+    Time = 0.658296898145636
+    UseDefaultSeparators = True
+    HideDateTimeParts = []
+    MonthNames = 'Long'
+    OnChange = DateTimePicker1Change
+  end
   object dsCustomer: TDataSource
     DataSet = bfCustomer
     left = 208
@@ -263,11 +292,6 @@ object frmDbgrid: TfrmDbgrid
       end>
     left = 96
     top = 456
-  end
-  object dsCompany: TDataSource
-    DataSet = bfCompany
-    left = 208
-    top = 538
   end
   object bfCompany: TBufDataset
     FileName = '/home/natanprog/estudos/demo/dbgrid/company.xml'

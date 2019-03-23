@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, BufDataset, Forms, Controls, Graphics, Dialogs,
-  DBGrids, ExtCtrls, Grids;
+  DBGrids, ExtCtrls, Grids, ExtDlgs, DBCtrls, DateTimePicker;
 
 type
 
@@ -15,10 +15,14 @@ type
   TfrmDbgrid = class(TForm)
     bfCustomer: TBufDataset;
     bfCompany: TBufDataset;
-    dsCompany: TDataSource;
+    DateTimePicker1: TDateTimePicker;
     dsCustomer: TDataSource;
     DBGrid1: TDBGrid;
     imgPicture: TImage;
+    procedure DateTimePicker1Change(Sender: TObject);
+    procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
+      DataCol: integer; Column: TColumn; State: TGridDrawState);
+    procedure DBGrid1EditButtonClick(Sender: TObject);
     procedure DBGrid1PrepareCanvas(Sender: TObject; DataCol: integer;
       Column: TColumn; AState: TGridDrawState);
     procedure DBGrid1TitleClick(Column: TColumn);
@@ -45,6 +49,7 @@ implementation
 
 { TfrmDbgrid }
 
+// Cria o arquivo company.xml com a tabela e dados
 procedure TfrmDbgrid.CriarCompany;
 begin
   bufdb := TBufDataset.Create(nil);
@@ -76,6 +81,7 @@ begin
   end;
 end;
 
+// Criar o arquivo customer.xml com a tabela e dados
 procedure TfrmDbgrid.CriarCustomer;
 begin
   bufdb := TBufDataset.Create(nil);
@@ -109,6 +115,7 @@ begin
   end;
 end;
 
+// Salva a PICTURE no campo Blob
 procedure TfrmDbgrid.SalvarPicture;
 begin
   if (imgPicture.Picture.Width > 0) then
@@ -123,6 +130,7 @@ begin
     bufdb.FieldByName('PICTURE').AsString := '';
 end;
 
+// Cria o Campo Lookup COMPANY_ID --> COMPANY_NAME
 procedure TfrmDbgrid.CriarLookup;
 var
   nome: string;
@@ -183,14 +191,99 @@ begin
   //DBGrid1.Canvas.Brush.Color := $00FFEF0F;
 end;
 
+procedure TfrmDbgrid.DBGrid1EditButtonClick(Sender: TObject);
+var
+  OD: TOpenPictureDialog;
+  Frm: TForm;
+  MM: TDBMemo;
+  ams: TMemoryStream;
+  apic: TPicture;
+begin
+  // Editar Campo PICTURE (Blob)
+  if DBGrid1.SelectedField = bfCustomer.FieldByName('PICTURE') then
+  begin
+    OD := TOpenPictureDialog.Create(nil);
+    OD.InitialDir := ExtractFilePath(Application.Location) + 'icons';
+    ams := TMemoryStream.Create;
+    apic := TPicture.Create;
+    try
+      if OD.Execute then
+        try
+          apic.LoadFromFile(OD.FileName);
+          apic.SaveToStream(ams);
+          ams.Position := 0;
+          bfCustomer.Edit;
+          TBlobField(bfCustomer.FieldByName('PICTURE')).LoadFromStream(ams);
+          bfCustomer.Post;
+        finally
+          apic.Free;
+          ams.Free;
+        end;
+    finally
+      OD.Free;
+    end;
+  end;
+  // Editar e Exibir Campo NOTE (Blob)
+  if DBGrid1.SelectedField = bfCustomer.FieldByName('NOTE') then
+  begin
+    Frm := TForm.Create(nil);
+    try
+      Frm.Width := 240;
+      Frm.Height := 120;
+      Frm.Top := Mouse.CursorPos.y;
+      frm.Left := Mouse.CursorPos.x;
+      Frm.BorderStyle := bsToolWindow;
+      Frm.Caption := 'Editing';
+      MM := TDBMemo.Create(nil);
+      try
+        MM.Parent := Frm;
+        MM.Align := alClient;
+        MM.DataSource := dsCustomer;
+        MM.DataField := 'NOTE';
+        Frm.ShowModal;
+        if bfCustomer.State in [dsEdit, dsInsert] then
+          bfCustomer.Post;
+      finally
+        MM.Free;
+      end;
+    finally
+      Frm.Free;
+    end;
+  end;
+end;
+
+procedure TfrmDbgrid.DateTimePicker1Change(Sender: TObject);
+begin
+  // Editar BIRTHDAY com o valor do DateTimerPicker
+  bfCustomer.Edit;
+  bfCustomer.FieldByName('BIRTHDAY').AsDateTime := DateTimePicker1.Date;
+end;
+
+procedure TfrmDbgrid.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
+  DataCol: integer; Column: TColumn; State: TGridDrawState);
+begin
+  // Exibir DateTimerPicker dentro da Célula com o valor de BIRTHDAY
+  DateTimePicker1.Visible := DBGrid1.SelectedField = bfCustomer.FieldByName('BIRTHDAY');
+  if DateTimePicker1.Visible then
+    if gdFocused in State then
+    begin
+      if not bfCustomer.FieldByName('BIRTHDAY').IsNull then
+        DateTimePicker1.Date := bfCustomer.FieldByName('BIRTHDAY').AsDateTime
+      else
+        DateTimePicker1.Date := Now;
+      DateTimePicker1.SetBounds(Rect.Left, Rect.Top,
+        Rect.Right - Rect.Left, Rect.Bottom - Rect.Top);
+    end;
+end;
+
 procedure TfrmDbgrid.DBGrid1TitleClick(Column: TColumn);
 begin
   // Ordernar DBGrid por Coluna
   if bfCustomer.IndexFieldNames <> '' then
     DBGrid1.Columns[bfCustomer.FieldByName(bfCustomer.IndexFieldNames).Index]
       .Title.Color := DBGrid1.FixedColor;
-  if not ((Column.Field.DataType in [ftBlob, ftMemo]) or (Column.Field.FieldKind in
-    [fkLookup])) then
+  if not ((Column.Field.DataType in [ftBlob, ftMemo]) or
+    (Column.Field.FieldKind in [fkLookup])) then
   begin
     bfCustomer.IndexFieldNames := Column.FieldName;
     Column.Title.Color := $00FFEFDF;
