@@ -28,12 +28,17 @@ object frmDbgrid: TfrmDbgrid
         FieldName = 'NAME'
       end    
       item
+        PickList.Strings = (
+          'MALE'
+          'FEMALE'
+        )
         Title.Caption = 'GENDER'
         FieldName = 'GENDER'
       end    
       item
         Title.Caption = 'COMPANY ID'
-        Width = 80
+        Width = 0
+        Visible = False
         FieldName = 'COMPANY_ID'
       end    
       item

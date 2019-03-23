@@ -57,6 +57,18 @@ begin
     bufdb.FieldByName('CCOMPANY_ID').Value := '1';
     bufdb.FieldByName('NAME').Value := 'Apple';
     bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CCOMPANY_ID').Value := '2';
+    bufdb.FieldByName('NAME').Value := 'Google';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CCOMPANY_ID').Value := '3';
+    bufdb.FieldByName('NAME').Value := 'Microsoft';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CCOMPANY_ID').Value := '4';
+    bufdb.FieldByName('NAME').Value := 'Facebook';
+    bufdb.Post;
     bufdb.SaveToFile('company.xml');
   finally
     bufdb.Close;
