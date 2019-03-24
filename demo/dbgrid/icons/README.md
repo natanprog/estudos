@@ -7,3 +7,5 @@
 [unchecked](https://icons8.com/icon/13966/unchecked-checkboxUnchecked)  
 [checked](https://icons8.com/icon/13902/checked-checkboxChecked)  
 [close](https://icons8.com/icon/13903/close-windowClose)  
+[female](https://icons8.com/icon/12140/female)  
+[male](https://icons8.com/icon/12351/male)  
