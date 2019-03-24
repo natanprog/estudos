@@ -45,6 +45,7 @@
         <Filename Value="udbgrid.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="frmDbgrid"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit1>
     </Units>

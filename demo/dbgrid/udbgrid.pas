@@ -18,8 +18,11 @@ type
     DateTimePicker1: TDateTimePicker;
     dsCustomer: TDataSource;
     DBGrid1: TDBGrid;
+    ImageList1: TImageList;
     imgPicture: TImage;
     procedure DateTimePicker1Change(Sender: TObject);
+    procedure DBGrid1CellClick(Column: TColumn);
+    procedure DBGrid1ColEnter(Sender: TObject);
     procedure DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
       DataCol: integer; Column: TColumn; State: TGridDrawState);
     procedure DBGrid1EditButtonClick(Sender: TObject);
@@ -189,6 +192,13 @@ begin
   //if not odd(bfCustomer.RecNo) then
   //if not (gdSelected in AState) then
   //DBGrid1.Canvas.Brush.Color := $00FFEF0F;
+  // Destacar campo de acordo com o valor
+  if Column.Field = bfCustomer.FieldByName('BALANCE') then
+    if bfCustomer.FieldByName('BALANCE').AsCurrency < 200 then
+    begin
+      DBGrid1.Canvas.Font.Style := DBGrid1.Canvas.Font.Style + [fsBold];
+      DBGrid1.Canvas.Font.Color := clRed;
+    end;
 end;
 
 procedure TfrmDbgrid.DBGrid1EditButtonClick(Sender: TObject);
@@ -259,6 +269,26 @@ begin
   bfCustomer.FieldByName('BIRTHDAY').AsDateTime := DateTimePicker1.Date;
 end;
 
+procedure TfrmDbgrid.DBGrid1CellClick(Column: TColumn);
+begin
+  //Código Desnecessário I
+  //if Column.Field = bfCustomer.FieldByName('ENABLED') then
+  //begin
+  //  bfCustomer.Edit;
+  //  bfCustomer.FieldByName('ENABLED').AsBoolean :=
+  //    not bfCustomer.FieldByName('ENABLED').AsBoolean;
+  //end;
+end;
+
+procedure TfrmDbgrid.DBGrid1ColEnter(Sender: TObject);
+begin
+  // Código Desnecessário II
+  //if DBGrid1.SelectedField = bfCustomer.FieldByName('ENABLED') then
+  //  DBGrid1.Options := DBGrid1.Options - [dgEditing]
+  //else
+  //  DBGrid1.Options := DBGrid1.Options + [dgEditing];
+end;
+
 procedure TfrmDbgrid.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
   DataCol: integer; Column: TColumn; State: TGridDrawState);
 begin
@@ -274,6 +304,18 @@ begin
       DateTimePicker1.SetBounds(Rect.Left, Rect.Top,
         Rect.Right - Rect.Left, Rect.Bottom - Rect.Top);
     end;
+  // Exibir Images no campo Boolean (True, False, Null)
+  if Column.Field = bfCustomer.FieldByName('ENABLED') then
+  begin
+    DBGrid1.Canvas.FillRect(Rect);
+    if bfCustomer.FieldByName('ENABLED').IsNull then
+      ImageList1.Draw(DBGrid1.Canvas, Rect.Left + 23, Rect.Top + 3, 1)
+    else
+    if bfCustomer.FieldByName('ENABLED').AsBoolean then
+      ImageList1.Draw(DBGrid1.Canvas, Rect.Left + 23, Rect.Top + 3, 2)
+    else
+      ImageList1.Draw(DBGrid1.Canvas, Rect.Left + 23, Rect.Top + 3, 0);
+  end;
 end;
 
 procedure TfrmDbgrid.DBGrid1TitleClick(Column: TColumn);
