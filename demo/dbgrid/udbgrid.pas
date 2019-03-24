@@ -111,6 +111,105 @@ begin
     bufdb.FieldByName('ENABLED').Value := '0';
     bufdb.FieldByName('NOTE').Value := 'Observação GUINTHER';
     bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '2';
+    bufdb.FieldByName('NAME').Value := 'RUDOLFO';
+    bufdb.FieldByName('GENDER').Value := 'M';
+    bufdb.FieldByName('COMPANY_ID').Value := '2';
+    bufdb.FieldByName('BIRTHDAY').Value := '28/02/1966';
+    bufdb.FieldByName('BALANCE').Value := '200,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').Value := '1';
+    bufdb.FieldByName('NOTE').Value := 'Observação RUDOLFO';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '3';
+    bufdb.FieldByName('NAME').Value := 'LUCIANO';
+    bufdb.FieldByName('GENDER').Value := 'M';
+    bufdb.FieldByName('COMPANY_ID').Value := '3';
+    bufdb.FieldByName('BIRTHDAY').Value := '03/07/1984';
+    bufdb.FieldByName('BALANCE').Value := '300,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').IsNull;
+    bufdb.FieldByName('NOTE').Value := 'Observação LUCIANO';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '4';
+    bufdb.FieldByName('NAME').Value := 'ANA';
+    bufdb.FieldByName('GENDER').Value := 'F';
+    bufdb.FieldByName('COMPANY_ID').Value := '4';
+    bufdb.FieldByName('BIRTHDAY').Value := '13/11/1991';
+    bufdb.FieldByName('BALANCE').Value := '120,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').Value := '0';
+    bufdb.FieldByName('NOTE').Value := 'Observação ANA';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '5';
+    bufdb.FieldByName('NAME').Value := 'PEDRO';
+    bufdb.FieldByName('GENDER').Value := 'M';
+    bufdb.FieldByName('COMPANY_ID').Value := '1';
+    bufdb.FieldByName('BIRTHDAY').Value := '07/02/1982';
+    bufdb.FieldByName('BALANCE').Value := '102,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').Value := '1';
+    bufdb.FieldByName('NOTE').Value := 'Observação PEDRO';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '6';
+    bufdb.FieldByName('NAME').Value := 'MARIA';
+    bufdb.FieldByName('GENDER').Value := 'F';
+    bufdb.FieldByName('COMPANY_ID').Value := '2';
+    bufdb.FieldByName('BIRTHDAY').Value := '15/05/1975';
+    bufdb.FieldByName('BALANCE').Value := '300,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').IsNull;
+    bufdb.FieldByName('NOTE').Value := 'Observação MARIA';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '7';
+    bufdb.FieldByName('NAME').Value := 'CORBIN';
+    bufdb.FieldByName('GENDER').Value := 'M';
+    bufdb.FieldByName('COMPANY_ID').Value := '3';
+    bufdb.FieldByName('BIRTHDAY').Value := '23/08/1988';
+    bufdb.FieldByName('BALANCE').Value := '250,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').Value := '0';
+    bufdb.FieldByName('NOTE').Value := 'Observação CORBIN';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '8';
+    bufdb.FieldByName('NAME').Value := 'FERNANDO';
+    bufdb.FieldByName('GENDER').Value := 'M';
+    bufdb.FieldByName('COMPANY_ID').Value := '3';
+    bufdb.FieldByName('BIRTHDAY').Value := '03/10/1970';
+    bufdb.FieldByName('BALANCE').Value := '350,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').Value := '1';
+    bufdb.FieldByName('NOTE').Value := 'Observação FERNANDO';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '9';
+    bufdb.FieldByName('NAME').Value := 'JOÃO';
+    bufdb.FieldByName('GENDER').Value := 'M';
+    bufdb.FieldByName('COMPANY_ID').Value := '1';
+    bufdb.FieldByName('BIRTHDAY').Value := '24/11/1989';
+    bufdb.FieldByName('BALANCE').Value := '50,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').IsNull;
+    bufdb.FieldByName('NOTE').Value := 'Observação JOÃO';
+    bufdb.Post;
+    bufdb.Append;
+    bufdb.FieldByName('CUSTOMER_ID').Value := '10';
+    bufdb.FieldByName('NAME').Value := 'BIA';
+    bufdb.FieldByName('GENDER').Value := 'F';
+    bufdb.FieldByName('COMPANY_ID').Value := '2';
+    bufdb.FieldByName('BIRTHDAY').Value := '11/06/1974';
+    bufdb.FieldByName('BALANCE').Value := '400,00';
+    SalvarPicture;
+    bufdb.FieldByName('ENABLED').Value := '1';
+    bufdb.FieldByName('NOTE').Value := 'Observação BIA';
+    bufdb.Post;
     bufdb.SaveToFile('customer.xml');
   finally
     bufdb.Close;
@@ -189,9 +288,9 @@ procedure TfrmDbgrid.DBGrid1PrepareCanvas(Sender: TObject; DataCol: integer;
   Column: TColumn; AState: TGridDrawState);
 begin
   // DBGrid Zebrado --- Propriedades Color e AlternateColor
-  //if not odd(bfCustomer.RecNo) then
-  //if not (gdSelected in AState) then
-  //DBGrid1.Canvas.Brush.Color := $00FFEF0F;
+  if not odd(bfCustomer.RecNo) then
+    if not (gdSelected in AState) then
+      DBGrid1.Canvas.Brush.Color := $00FFEF0F;
   // Destacar campo de acordo com o valor
   if Column.Field = bfCustomer.FieldByName('BALANCE') then
     if bfCustomer.FieldByName('BALANCE').AsCurrency < 200 then

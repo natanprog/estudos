@@ -2,10 +2,10 @@ object frmDbgrid: TfrmDbgrid
   Left = 347
   Height = 331
   Top = 121
-  Width = 731
+  Width = 748
   Caption = 'Segredos do DBGrid (Técnicas Avançadas)'
   ClientHeight = 331
-  ClientWidth = 731
+  ClientWidth = 748
   OnClose = FormClose
   OnCreate = FormCreate
   LCLVersion = '2.0.0.4'
@@ -13,9 +13,8 @@ object frmDbgrid: TfrmDbgrid
     Left = 0
     Height = 331
     Top = 0
-    Width = 731
+    Width = 748
     Align = alClient
-    AlternateColor = 16772879
     Color = clWindow
     Columns = <    
       item
@@ -66,7 +65,7 @@ object frmDbgrid: TfrmDbgrid
       item
         ButtonStyle = cbsEllipsis
         Title.Caption = 'NOTE'
-        Width = 50
+        Width = 140
         FieldName = 'NOTE'
       end    
       item
@@ -78,6 +77,7 @@ object frmDbgrid: TfrmDbgrid
         FieldName = 'COMPANY_NAME'
       end>
     DataSource = dsCustomer
+    Options = [dgEditing, dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgAlwaysShowSelection, dgConfirmDelete, dgCancelOnExit, dgDisableInsert]
     TabOrder = 0
     OnCellClick = DBGrid1CellClick
     OnColEnter = DBGrid1ColEnter
@@ -243,6 +243,7 @@ object frmDbgrid: TfrmDbgrid
   end
   object bfCustomer: TBufDataset
     FileName = '/home/natanprog/estudos/demo/dbgrid/customer.xml'
+    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'CUSTOMER_ID'
@@ -296,6 +297,7 @@ object frmDbgrid: TfrmDbgrid
   end
   object bfCompany: TBufDataset
     FileName = '/home/natanprog/estudos/demo/dbgrid/company.xml'
+    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'CCOMPANY_ID'
