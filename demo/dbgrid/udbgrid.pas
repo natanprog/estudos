@@ -291,6 +291,9 @@ end;
 
 procedure TfrmDbgrid.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
   DataCol: integer; Column: TColumn; State: TGridDrawState);
+var
+  unstream: TMemoryStream;
+  pic: TPicture;
 begin
   // Exibir DateTimerPicker dentro da Célula com o valor de BIRTHDAY
   DateTimePicker1.Visible := DBGrid1.SelectedField = bfCustomer.FieldByName('BIRTHDAY');
@@ -315,6 +318,36 @@ begin
       ImageList1.Draw(DBGrid1.Canvas, Rect.Left + 23, Rect.Top + 3, 2)
     else
       ImageList1.Draw(DBGrid1.Canvas, Rect.Left + 23, Rect.Top + 3, 0);
+  end;
+  // Exibir Images no Campo GENDER (Male, Female)
+  if Column.Field = bfCustomer.FieldByName('GENDER') then
+  begin
+    DBGrid1.Canvas.FillRect(Rect);
+    if bfCustomer.FieldByName('GENDER').AsString = 'M' then
+      ImageList1.Draw(DBGrid1.Canvas, Rect.Left, Rect.Top, 3)
+    else
+    if bfCustomer.FieldByName('GENDER').AsString = 'F' then
+      ImageList1.Draw(DBGrid1.Canvas, Rect.Left, Rect.Top, 4);
+  end;
+  // Exibir Images no Campo PICTURE
+  if Column.Field = bfCustomer.FieldByName('PICTURE') then
+  begin
+    DBGrid1.Canvas.FillRect(Rect);
+    if not bfCustomer.FieldByName('PICTURE').IsNull then
+    begin
+      try
+        unstream := TMemoryStream.Create;
+        pic := TPicture.Create;
+        unstream.Position := 0;
+        TBlobField(bfCustomer.FieldByName('PICTURE')).SaveToStream(unstream);
+        unstream.Position := 0;
+        pic.LoadFromStream(unstream);
+        DBGrid1.Canvas.StretchDraw(Rect, pic.Graphic);
+      finally
+        pic.Free;
+        unstream.Free;
+      end;
+    end;
   end;
 end;
 
