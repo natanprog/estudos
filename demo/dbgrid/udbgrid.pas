@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, DB, BufDataset, Forms, Controls, Graphics, Dialogs,
-  DBGrids, ExtCtrls, Grids, ExtDlgs, DBCtrls, DateTimePicker;
+  DBGrids, ExtCtrls, Grids, ExtDlgs, DBCtrls, DateTimePicker, LCLIntf, LCLType;
 
 type
 
@@ -294,6 +294,7 @@ procedure TfrmDbgrid.DBGrid1DrawColumnCell(Sender: TObject; const Rect: TRect;
 var
   unstream: TMemoryStream;
   pic: TPicture;
+  R: TRect;
 begin
   // Exibir DateTimerPicker dentro da Célula com o valor de BIRTHDAY
   DateTimePicker1.Visible := DBGrid1.SelectedField = bfCustomer.FieldByName('BIRTHDAY');
@@ -348,6 +349,17 @@ begin
         unstream.Free;
       end;
     end;
+  end;
+  // Exibir Campo NOTE (Blob)
+  R := Rect;
+  Dec(R.Bottom, 2);
+  if Column.Field = bfCustomer.FieldByName('NOTE') then
+  begin
+    DBGrid1.Canvas.FillRect(Rect);
+    DrawText(DBGrid1.Canvas.Handle,
+      PChar(bfCustomer.FieldByName('NOTE').AsString),
+      Length(bfCustomer.FieldByName('NOTE').AsString),
+      R, DT_WORDBREAK);
   end;
 end;
 
