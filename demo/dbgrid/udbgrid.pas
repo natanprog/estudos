@@ -107,6 +107,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '1';
     bufdb.FieldByName('BIRTHDAY').Value := '29/04/1978';
     bufdb.FieldByName('BALANCE').Value := '100,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarm1.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').Value := '0';
     bufdb.FieldByName('NOTE').Value := 'Observação GUINTHER';
@@ -118,6 +120,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '2';
     bufdb.FieldByName('BIRTHDAY').Value := '28/02/1966';
     bufdb.FieldByName('BALANCE').Value := '200,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarm2.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').Value := '1';
     bufdb.FieldByName('NOTE').Value := 'Observação RUDOLFO';
@@ -129,6 +133,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '3';
     bufdb.FieldByName('BIRTHDAY').Value := '03/07/1984';
     bufdb.FieldByName('BALANCE').Value := '300,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarm3.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').IsNull;
     bufdb.FieldByName('NOTE').Value := 'Observação LUCIANO';
@@ -140,6 +146,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '4';
     bufdb.FieldByName('BIRTHDAY').Value := '13/11/1991';
     bufdb.FieldByName('BALANCE').Value := '120,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarf1.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').Value := '0';
     bufdb.FieldByName('NOTE').Value := 'Observação ANA';
@@ -151,6 +159,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '1';
     bufdb.FieldByName('BIRTHDAY').Value := '07/02/1982';
     bufdb.FieldByName('BALANCE').Value := '102,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarm1.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').Value := '1';
     bufdb.FieldByName('NOTE').Value := 'Observação PEDRO';
@@ -162,6 +172,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '2';
     bufdb.FieldByName('BIRTHDAY').Value := '15/05/1975';
     bufdb.FieldByName('BALANCE').Value := '300,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarf2.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').IsNull;
     bufdb.FieldByName('NOTE').Value := 'Observação MARIA';
@@ -173,6 +185,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '3';
     bufdb.FieldByName('BIRTHDAY').Value := '23/08/1988';
     bufdb.FieldByName('BALANCE').Value := '250,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarm2.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').Value := '0';
     bufdb.FieldByName('NOTE').Value := 'Observação CORBIN';
@@ -184,6 +198,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '3';
     bufdb.FieldByName('BIRTHDAY').Value := '03/10/1970';
     bufdb.FieldByName('BALANCE').Value := '350,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarm3.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').Value := '1';
     bufdb.FieldByName('NOTE').Value := 'Observação FERNANDO';
@@ -195,6 +211,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '1';
     bufdb.FieldByName('BIRTHDAY').Value := '24/11/1989';
     bufdb.FieldByName('BALANCE').Value := '50,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarm1.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').IsNull;
     bufdb.FieldByName('NOTE').Value := 'Observação JOÃO';
@@ -206,6 +224,8 @@ begin
     bufdb.FieldByName('COMPANY_ID').Value := '2';
     bufdb.FieldByName('BIRTHDAY').Value := '11/06/1974';
     bufdb.FieldByName('BALANCE').Value := '400,00';
+    imgPicture.Picture.LoadFromFile(ExtractFilePath(Application.Location) +
+      'icons' + PathDelim + 'avatarf3.png');
     SalvarPicture;
     bufdb.FieldByName('ENABLED').Value := '1';
     bufdb.FieldByName('NOTE').Value := 'Observação BIA';

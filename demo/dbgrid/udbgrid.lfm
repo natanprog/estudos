@@ -243,7 +243,6 @@ object frmDbgrid: TfrmDbgrid
   end
   object bfCustomer: TBufDataset
     FileName = '/home/natanprog/estudos/demo/dbgrid/customer.xml'
-    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'CUSTOMER_ID'
@@ -297,7 +296,6 @@ object frmDbgrid: TfrmDbgrid
   end
   object bfCompany: TBufDataset
     FileName = '/home/natanprog/estudos/demo/dbgrid/company.xml'
-    IndexName = 'DEFAULT_ORDER'
     FieldDefs = <    
       item
         Name = 'CCOMPANY_ID'
