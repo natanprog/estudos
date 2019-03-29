@@ -1,18 +1,17 @@
 object frmPrincipal: TfrmPrincipal
   Left = 340
-  Height = 757
+  Height = 720
   Top = 126
-  Width = 1276
+  Width = 1213
   Caption = 'Menu Principal'
-  DesignTimePPI = 101
   Menu = mainPrincipal
   OnClose = FormClose
   OnCreate = FormCreate
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.0.0.4'
   WindowState = wsMaximized
   object mainPrincipal: TMainMenu
-    left = 1192
-    top = 32
+    left = 1133
+    top = 30
     object menuCadastro: TMenuItem
       Caption = 'CADASTRO'
       object menuCliente: TMenuItem

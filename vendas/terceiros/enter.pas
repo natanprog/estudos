@@ -5,89 +5,90 @@ unit Enter;
 interface
 
 uses
-  Messages,{ WinTypes, WinProcs, }sysutils, Classes, Graphics, Controls,
+  Messages,{ WinTypes, WinProcs, }SysUtils, Classes, Graphics, Controls,
   Forms, Dialogs, StdCtrls, LCLType, LCLIntf;
 
 //{$R Enter.res}
 
 type
 
-  TMessageEvent = procedure (var Msg: TMsg; var Handled: Boolean) of object;
+  TMessageEvent = procedure(var Msg: TMsg; var Handled: boolean) of object;
+
   TMREnter = class(TComponent)
   private
     { Private declarations }
-    FAbout            : string;
+    FAbout: string;
 
-    FEnterEnabled     : Boolean;
+    FEnterEnabled: boolean;
 
-    FFocusColor       : TColor;
-    FFocusEnabled     : Boolean;
+    FFocusColor: TColor;
+    FFocusEnabled: boolean;
 
-    FHintEnabled      : Boolean;
-    FHintColor        : TColor;
+    FHintEnabled: boolean;
+    FHintColor: TColor;
 
-    FAutoSkip         : Boolean;
-    FKeyBoardArrows   : Boolean;
-    FOnMessage        : TMessageEvent;
-    FOnMessageRescue  : TMessageEvent;
+    FAutoSkip: boolean;
+    FKeyBoardArrows: boolean;
+    FOnMessage: TMessageEvent;
+    FOnMessageRescue: TMessageEvent;
 
-    FOnIdle           : TIdleEvent;
-    FOnIdleRescue     : TIdleEvent;
+    FOnIdle: TIdleEvent;
+    FOnIdleRescue: TIdleEvent;
 
-    FOnHint           : TNotifyEvent;
-    FOnHintRescue     : TNotifyEvent;
+    FOnHint: TNotifyEvent;
+    FOnHintRescue: TNotifyEvent;
 
-    FOnHelp           : THelpEvent;
-    FOnHelpRescue     : THelpEvent;
+    FOnHelp: THelpEvent;
+    FOnHelpRescue: THelpEvent;
 
-    FClassList        : TStringList;
-    procedure SetClassList( AClassList: TStringList );
+    FClassList: TStringList;
+    procedure SetClassList(AClassList: TStringList);
   protected
     { Protected declarations }
-    procedure DoShowHint( Control: TWinControl );
-    procedure LocalOnMessage(var Msg: TMsg; var Handled: Boolean);
-    procedure LocalOnIdle(Sender: TObject; var Done: Boolean);
+    procedure DoShowHint(Control: TWinControl);
+    procedure LocalOnMessage(var Msg: TMsg; var Handled: boolean);
+    procedure LocalOnIdle(Sender: TObject; var Done: boolean);
     procedure LocalOnHint(Sender: TObject);
-    function  LocalOnHelp(Command: word; Data: Longint; var CallHelp: Boolean):Boolean;
+    function LocalOnHelp(Command: word; Data: longint; var CallHelp: boolean): boolean;
 
-    function CheckClassList( AClassName: string ): Boolean;
+    function CheckClassList(AClassName: string): boolean;
   public
     { Public declarations }
-    constructor Create(AOwner:TComponent); override;
-    destructor  Destroy; override;
+    constructor Create(AOwner: TComponent); override;
+    destructor Destroy; override;
   published
     { Published declarations }
-    property About  : string          read FAbout           write FAbout stored False;
-    property AutoSkip: Boolean        read FAutoSkip        write FAutoSkip;
-    property EnterEnabled: Boolean    read FEnterEnabled    write FEnterEnabled;
-    property ClassList: TStringList   read FClassList       write SetClassList;
-    property KeyBoardArrows : Boolean read FKeyBoardArrows  write FKeyBoardArrows;
-    property FocusColor : TColor      read FFocusColor      write FFocusColor;
-    property FocusEnabled : Boolean   read FFocusEnabled    write FFocusEnabled;
-    property HintColor : TColor       read FHintColor       write FHintColor;
-    property HintEnabled : Boolean    read FHintEnabled     write FHintEnabled;
+    property About: string read FAbout write FAbout stored False;
+    property AutoSkip: boolean read FAutoSkip write FAutoSkip;
+    property EnterEnabled: boolean read FEnterEnabled write FEnterEnabled;
+    property ClassList: TStringList read FClassList write SetClassList;
+    property KeyBoardArrows: boolean read FKeyBoardArrows write FKeyBoardArrows;
+    property FocusColor: TColor read FFocusColor write FFocusColor;
+    property FocusEnabled: boolean read FFocusEnabled write FFocusEnabled;
+    property HintColor: TColor read FHintColor write FHintColor;
+    property HintEnabled: boolean read FHintEnabled write FHintEnabled;
 
-    property OnMessage: TMessageEvent read FOnMessage       write FOnMessage;
-    property OnIdle:    TIdleEvent    read FOnIdle          write FOnIdle;
-    property OnHint:    TNotifyEvent  read FOnHint          write FOnHint;
-    property OnHelp:    THelpEvent    read FOnHelp          write FOnHelp;
+    property OnMessage: TMessageEvent read FOnMessage write FOnMessage;
+    property OnIdle: TIdleEvent read FOnIdle write FOnIdle;
+    property OnHint: TNotifyEvent read FOnHint write FOnHint;
+    property OnHelp: THelpEvent read FOnHelp write FOnHelp;
   end;
 
 implementation
 
 uses
   {ShellAPI,}
-  DbCtrls,
+  DBCtrls,
   typinfo,
-{  enterreg,}
+  {  enterreg,}
   //Grids,
   DBGrids;
 
-Var
-  FHintWindow       : THintWindow;
-  FFocusControl     : TWinControl;
-  FActiveControl    : TWinControl;
-  FFocusColorReturn : TColor;
+var
+  FHintWindow: THintWindow;
+  FFocusControl: TWinControl;
+  FActiveControl: TWinControl;
+  FFocusColorReturn: TColor;
 
 { GetHintWindow}
 
@@ -105,16 +106,16 @@ begin
 end;
 
 { Create }
-constructor TMREnter.Create(AOwner:TComponent);
+constructor TMREnter.Create(AOwner: TComponent);
 begin
   inherited Create(AOwner);
-  FAutoSkip       := True;
-  FFocusEnabled   := true;
-  FKeyBoardArrows := true;
-  FClassList      := TStringList.create;
-  FEnterEnabled   := true;
-  FFocusColor     := clYellow;
-  FHintColor      := Application.HintColor;
+  FAutoSkip := True;
+  FFocusEnabled := True;
+  FKeyBoardArrows := True;
+  FClassList := TStringList.Create;
+  FEnterEnabled := True;
+  FFocusColor := clYellow;
+  FHintColor := Application.HintColor;
   with FClassList do
   begin
     Add('TMaskEdit');
@@ -130,19 +131,19 @@ begin
     Add('TDBCheckDocEdit');  { Componente p/ edição de CGC do Roger       }
     Add('TMRDBExtEdit');     { Edit com busca incremental MR              }
     Add('TDBDateEdit');      { Componente p/ edição de datas do Sebastião }
-//    Add('TwwDBGrid');              { Suporte aos componentes do InfoPower }
+    //    Add('TwwDBGrid');              { Suporte aos componentes do InfoPower }
     Add('TwwDBEdit');              { Já que tem um monte de gente que usa }
     Add('TwwDBComboBox');          { achei por bem deixar todos disponí-  }
     Add('TwwDBSpinEdit');          { veis durante a criação do componen-  }
     Add('TwwDBComboDlg');          { te, assim como os outros ....        }
-    Add('TwwDBLookupCombo');       {                                      }
+    Add('TwwDBLookupCombo');
     Add('TwwDBLookupComboDlg');    { ideia do Dennis ...                  }
     Add('TwwIncrementalSearch');   { valeu ...                            }
     Add('TwwDBRitchEdit');         { 02/03/1999                           }
-    Add('TwwKeyCombo');            {                                      }
+    Add('TwwKeyCombo');
     Add('TwwDBDateTimePicker');
     Add('TRxDBLookupList');        { Suporte aos componentes do RxLib     }
-    Add('TRxDBGrid');              {                                      }
+    Add('TRxDBGrid');
     Add('TRxDBLookupCombo');       { Paulo H. Trentin                     }
     Add('TRxDBCalcEdit');          { www.rantac.com.br/users/phtrentin    }
     Add('TRxDBComboBox');
@@ -169,19 +170,19 @@ begin
 
   end;
 
-  if not( csDesigning in ComponentState ) then
+  if not (csDesigning in ComponentState) then
   begin
     //FOnMessageRescue      := Application.OnMessage;
     //Application.OnMessage := LocalOnMessage;
 
-    FOnIdleRescue         := Application.OnIdle;
-    Application.OnIdle    := @LocalOnIdle;
+    FOnIdleRescue := Application.OnIdle;
+    Application.OnIdle := @LocalOnIdle;
 
-    FOnHintRescue         := Application.OnHint;
-    Application.OnHint    := @LocalOnHint;
+    FOnHintRescue := Application.OnHint;
+    Application.OnHint := @LocalOnHint;
 
-    FOnHelpRescue         := Application.OnHelp;
-//    Application.OnHelp    := LocalOnHelp;
+    FOnHelpRescue := Application.OnHelp;
+    //    Application.OnHelp    := LocalOnHelp;
 
   end;
 
@@ -190,81 +191,82 @@ end;
 { Destroy }
 destructor TMREnter.Destroy;
 begin
-  FClassList.free;
+  FClassList.Free;
 
   //if Assigned( FOnMessageRescue ) then
-    //Application.OnMessage := FOnMessageRescue;
+  //Application.OnMessage := FOnMessageRescue;
 
-  if Assigned( FOnIdleRescue ) then
+  if Assigned(FOnIdleRescue) then
     Application.OnIdle := FOnIdleRescue;
 
-  if Assigned( FOnHintRescue ) then
+  if Assigned(FOnHintRescue) then
     Application.OnHint := FOnHintRescue;
 
-  if Assigned( FOnHelpRescue ) then
+  if Assigned(FOnHelpRescue) then
     Application.OnHelp := FOnHelpRescue;
 
   inherited Destroy;
 end;
 
-procedure TMREnter.SetClassList( AClassList: TStringList );
+procedure TMREnter.SetClassList(AClassList: TStringList);
 begin
-  FClassList.Assign( AClassList );
+  FClassList.Assign(AClassList);
 end;
 
-procedure TMREnter.LocalOnMessage(var Msg: TMsg; var Handled: Boolean);
+procedure TMREnter.LocalOnMessage(var Msg: TMsg; var Handled: boolean);
 var
- // pMaxLengthPropInfo,
+  // pMaxLengthPropInfo,
   pColorPropInfo: PPropInfo;
-//  pOnKeyDownPropInfo : PPropInfo;
-//  intMaxLength,
-//  intSelStart        : integer;
+  //  pOnKeyDownPropInfo : PPropInfo;
+  //  intMaxLength,
+  //  intSelStart        : integer;
 begin
-  Try
-    if ( FFocusEnabled ) then
+  try
+    if (FFocusEnabled) then
     begin
-      if ( FActiveControl <> Screen.ActiveControl ) then
+      if (FActiveControl <> Screen.ActiveControl) then
       begin
 
-        //
         // if the control was out then turn off the hint window
-        //
-        if ( FHintWindow <> nil ) then
+
+        if (FHintWindow <> nil) then
           FHintWindow.ReleaseHandle;
 
-        //
+
         // if focus control <> nil then the control was changed
-        //
+
         if FFocusControl <> nil then
         begin
-          pColorPropInfo := GetPropInfo( FFocusControl.ClassInfo, 'Color' );
-          if ( pColorPropInfo <> nil ) then
-            SetOrdProp( FFocusControl, 'Color', FFocusColorReturn );
+          pColorPropInfo := GetPropInfo(FFocusControl.ClassInfo, 'Color');
+          if (pColorPropInfo <> nil) then
+            SetOrdProp(FFocusControl, 'Color', FFocusColorReturn);
           FFocusControl := nil;
         end;
 
-        //
-        // The new control is geting
-        //
-        if ( Screen.ActiveControl is TCustomEdit ) then
-          FFocusControl := Screen.ActiveControl else FFocusControl := nil;
 
-        //
+        // The new control is geting
+
+        if (Screen.ActiveControl is TCustomEdit) then
+          FFocusControl := Screen.ActiveControl
+        else
+          FFocusControl := nil;
+
+
         // Set the Focus Color to new control
-        //
-        if ( FFocusControl <> nil ) then
+
+        if (FFocusControl <> nil) then
         begin
-          pColorPropInfo := GetPropInfo( FFocusControl.ClassInfo, 'Color' );
-          if ( pColorPropInfo <> nil ) then
+          pColorPropInfo := GetPropInfo(FFocusControl.ClassInfo, 'Color');
+          if (pColorPropInfo <> nil) then
           begin
-            FFocusColorReturn := GetOrdProp( FFocusControl, pColorPropInfo );
-            SetOrdProp( FFocusControl, 'Color', FFocusColor );
+            FFocusColorReturn := GetOrdProp(FFocusControl, pColorPropInfo);
+            SetOrdProp(FFocusControl, 'Color', FFocusColor);
           end;
         end;
 
-        //
+
         // Changed = ActiveControl
-        //
+
         if FActiveControl <> Screen.ActiveControl then
         begin
           FActiveControl := Screen.ActiveControl;
@@ -272,73 +274,81 @@ begin
         end;
       end;
     end;
-  Except
+  except
 
   end;
 
 
   if Screen <> nil then
-  if Screen.ActiveControl <> nil then
-  if ( Msg.message = WM_KeyDown ) and
-     ( Msg.wParam = VK_Return )  then
-    begin
-      if CheckClassList( Screen.ActiveControl.ClassName ) then
-        Msg.wParam := VK_TAB;
-    end;
-  if Assigned( FOnMessageRescue ) then FOnMessageRescue( Msg, Handled );
-  if Assigned( FOnMessage ) then FOnMessage( Msg, Handled );
+    if Screen.ActiveControl <> nil then
+      if (Msg.message = WM_KeyDown) and (Msg.wParam = VK_Return) then
+      begin
+        if CheckClassList(Screen.ActiveControl.ClassName) then
+          Msg.wParam := VK_TAB;
+      end;
+  if Assigned(FOnMessageRescue) then
+    FOnMessageRescue(Msg, Handled);
+  if Assigned(FOnMessage) then
+    FOnMessage(Msg, Handled);
 
 
-//  if Assigned( FOnMessageRescue ) then FOnMessageRescue( Msg, Handled );
-//  if Assigned( FOnMessage ) then FOnMessage( Msg, Handled );
+  //  if Assigned( FOnMessageRescue ) then FOnMessageRescue( Msg, Handled );
+  //  if Assigned( FOnMessage ) then FOnMessage( Msg, Handled );
 end;
 
-procedure TMREnter.LocalOnIdle(Sender: TObject; var Done: Boolean);
+procedure TMREnter.LocalOnIdle(Sender: TObject; var Done: boolean);
 begin
-  if Assigned( FOnIdleRescue ) then FOnIdleRescue( Sender, Done );
-  if Assigned( FOnIdle ) then FOnIdle( Sender, Done );
+  if Assigned(FOnIdleRescue) then
+    FOnIdleRescue(Sender, Done);
+  if Assigned(FOnIdle) then
+    FOnIdle(Sender, Done);
 end;
 
 procedure TMREnter.LocalOnHint(Sender: TObject);
 begin
-  if Assigned( FOnHintRescue ) then FOnHintRescue( Sender );
-  if Assigned( FOnHint ) then FOnHint( Sender );
+  if Assigned(FOnHintRescue) then
+    FOnHintRescue(Sender);
+  if Assigned(FOnHint) then
+    FOnHint(Sender);
 end;
 
-function  TMREnter.LocalOnHelp(Command: word; Data: Longint; var CallHelp: Boolean):Boolean;
+function TMREnter.LocalOnHelp(Command: word; Data: longint;
+  var CallHelp: boolean): boolean;
 begin
-  result := true;
+  Result := True;
   if not (csDestroying in Application.ComponentState) then
   begin
-    if Assigned( FOnHelpRescue ) then result:= FOnHelpRescue( Command, Data, CallHelp );
-    if Assigned( FOnHelp ) then result:= FOnHelp( Command, Data, CallHelp );
+    if Assigned(FOnHelpRescue) then
+      Result := FOnHelpRescue(Command, Data, CallHelp);
+    if Assigned(FOnHelp) then
+      Result := FOnHelp(Command, Data, CallHelp);
   end;
 end;
 
-function TMREnter.CheckClassList( AClassName: string ): Boolean;
+function TMREnter.CheckClassList(AClassName: string): boolean;
 var
-  intX : integer;
+  intX: integer;
 begin
-  result := false;
-  for intX := 0 to FClassList.Count-1 do
+  Result := False;
+  for intX := 0 to FClassList.Count - 1 do
   begin
-    result := AnsiCompareText( AClassName, FClassList.strings[intX] ) = 0;
-    if result then
-       Break;
+    Result := AnsiCompareText(AClassName, FClassList.strings[intX]) = 0;
+    if Result then
+      Break;
   end;
 end;
 
 
-procedure TMREnter.DoShowHint( Control : TWinControl );
+procedure TMREnter.DoShowHint(Control: TWinControl);
 var
-  lPoint : TPoint;
+  lPoint: TPoint;
   lHintRect: TRect;
   lHintWindow: THintWindow;
 
 begin
 
-  if (Control.Hint = '') or
-     not( HintEnabled ) then Exit;
+  if (Control.Hint = '') or not (HintEnabled) then
+    Exit;
 
   lHintWindow := HintWindow;
   lHintWindow.Color := FHintColor;
@@ -351,18 +361,19 @@ begin
   lPoint := Control.ClientToScreen(lPoint);
 
   { set hint window size & position }
-  lHintRect.Left   := lPoint.X;
-  lHintRect.Top    := lPoint.Y ;
-  lHintRect.Right  := lHintRect.Left +  lHintWindow.Canvas.TextWidth(Control.Hint)  + 6;
-  lHintRect.Bottom := lHintRect.Top  +  lHintWindow.Canvas.TextHeight(Control.Hint) + 2;
+  lHintRect.Left := lPoint.X;
+  lHintRect.Top := lPoint.Y;
+  lHintRect.Right := lHintRect.Left + lHintWindow.Canvas.TextWidth(Control.Hint) + 6;
+  lHintRect.Bottom := lHintRect.Top + lHintWindow.Canvas.TextHeight(Control.Hint) + 2;
 
   lHintWindow.Visible := True;
   lHintWindow.ActivateHint(lHintRect, Control.Hint);
 
 end;
+
 procedure Register;
 begin
-//  RegisterComponentEditor(TMREnter, TMREnterEditor);
+  //  RegisterComponentEditor(TMREnter, TMREnterEditor);
   RegisterComponents('Marcos', [TMREnter]);
 end;
 
@@ -379,7 +390,5 @@ initialization
 finalization
 
   FHintWindow := nil;
-
-
 
 end.

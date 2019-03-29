@@ -1,154 +1,171 @@
 object frmTelaHeranca: TfrmTelaHeranca
   Left = 340
-  Height = 758
+  Height = 720
   Top = 126
-  Width = 1276
+  Width = 1213
   BorderStyle = bsDialog
   Caption = 'INFORME AQUI O TÍTULO'
-  ClientHeight = 758
-  ClientWidth = 1276
-  DesignTimePPI = 101
+  ClientHeight = 720
+  ClientWidth = 1213
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poScreenCenter
-  LCLVersion = '1.8.4.0'
+  LCLVersion = '2.0.0.4'
   object pgcPrincipal: TPageControl
     Left = 0
-    Height = 684
+    Height = 650
     Top = 0
-    Width = 1276
+    Width = 1213
     ActivePage = tabListagem
     Align = alClient
+    ParentFont = False
     TabIndex = 0
     TabOrder = 0
     object tabListagem: TTabSheet
       Caption = 'Listagem'
-      ClientHeight = 652
-      ClientWidth = 1272
+      ClientHeight = 615
+      ClientWidth = 1207
+      ParentFont = False
       object pnlListagemTopo: TPanel
         Left = 0
-        Height = 80
+        Height = 76
         Top = 0
-        Width = 1272
+        Width = 1207
         Align = alTop
-        ClientHeight = 80
-        ClientWidth = 1272
+        ClientHeight = 76
+        ClientWidth = 1207
+        ParentFont = False
         TabOrder = 0
         object mskPesquisar: TMaskEdit
-          Left = 16
-          Height = 28
-          Top = 30
-          Width = 472
+          Left = 15
+          Height = 27
+          Top = 29
+          Width = 449
           CharCase = ecNormal
           MaxLength = 0
+          ParentFont = False
           TabOrder = 0
+          OnChange = mskPesquisarChange
           TextHint = 'Digite sua Pesquisa'
           SpaceChar = '_'
         end
         object btnPesquisar: TBitBtn
-          Left = 504
-          Height = 28
-          Top = 30
-          Width = 112
+          Left = 479
+          Height = 27
+          Top = 29
+          Width = 106
           Caption = '&PESQUISAR'
+          ParentFont = False
           TabOrder = 1
+          Visible = False
         end
         object lblIndice: TLabel
-          Left = 16
-          Height = 18
+          Left = 15
+          Height = 17
           Top = 8
-          Width = 111
+          Width = 90
           Caption = 'CampoPesquisa'
           ParentColor = False
+          ParentFont = False
         end
       end
       object grdListagem: TDBGrid
         Left = 0
-        Height = 572
-        Top = 80
-        Width = 1272
+        Height = 539
+        Top = 76
+        Width = 1207
         Align = alClient
         Color = clWindow
         Columns = <>
         DataSource = dtsListagem
+        Options = [dgTitles, dgIndicator, dgColumnResize, dgColumnMove, dgColLines, dgRowLines, dgTabs, dgRowSelect, dgAlwaysShowSelection, dgCancelOnExit]
+        ParentFont = False
         TabOrder = 1
         OnTitleClick = grdListagemTitleClick
       end
     end
     object tabManutencao: TTabSheet
       Caption = 'Manutenção'
+      ParentFont = False
     end
   end
   object pnlRodape: TPanel
     Left = 0
-    Height = 74
-    Top = 684
-    Width = 1276
+    Height = 70
+    Top = 650
+    Width = 1213
     Align = alBottom
-    ClientHeight = 74
-    ClientWidth = 1276
+    ClientHeight = 70
+    ClientWidth = 1213
+    ParentFont = False
     TabOrder = 1
     object btnNovo: TBitBtn
-      Left = 16
-      Height = 32
-      Top = 24
-      Width = 79
+      Left = 15
+      Height = 30
+      Top = 23
+      Width = 75
       Caption = '&NOVO'
       OnClick = btnNovoClick
+      ParentFont = False
       TabOrder = 0
     end
     object btnAlterar: TBitBtn
-      Left = 104
-      Height = 32
-      Top = 24
-      Width = 79
+      Left = 99
+      Height = 30
+      Top = 23
+      Width = 75
       Caption = '&ALTERAR'
       OnClick = btnAlterarClick
+      ParentFont = False
       TabOrder = 1
     end
     object btnCancelar: TBitBtn
-      Left = 192
-      Height = 32
-      Top = 24
-      Width = 104
+      Left = 182
+      Height = 30
+      Top = 23
+      Width = 99
       Caption = '&CANCELAR'
       OnClick = btnCancelarClick
+      ParentFont = False
       TabOrder = 2
     end
     object btnGravar: TBitBtn
-      Left = 312
-      Height = 32
-      Top = 24
-      Width = 79
+      Left = 297
+      Height = 30
+      Top = 23
+      Width = 75
       Caption = '&GRAVAR'
       OnClick = btnGravarClick
+      ParentFont = False
       TabOrder = 3
     end
     object btnApagar: TBitBtn
-      Left = 416
-      Height = 32
-      Top = 24
-      Width = 79
+      Left = 395
+      Height = 30
+      Top = 23
+      Width = 75
       Caption = 'APAGA&R'
       OnClick = btnApagarClick
+      ParentFont = False
       TabOrder = 4
     end
     object btnFechar: TBitBtn
-      Left = 1176
-      Height = 32
-      Top = 24
-      Width = 79
+      Left = 1118
+      Height = 30
+      Top = 23
+      Width = 75
       Anchors = [akTop, akRight]
       Caption = '&FECHAR'
       OnClick = btnFecharClick
+      ParentFont = False
       TabOrder = 5
     end
     object btnNavigator: TDBNavigator
-      Left = 528
-      Height = 32
-      Top = 24
-      Width = 304
+      Left = 502
+      Height = 30
+      Top = 23
+      Width = 289
       BevelOuter = bvNone
       ChildSizing.EnlargeHorizontal = crsScaleChilds
       ChildSizing.EnlargeVertical = crsScaleChilds
@@ -156,10 +173,11 @@ object frmTelaHeranca: TfrmTelaHeranca
       ChildSizing.ShrinkVertical = crsScaleChilds
       ChildSizing.Layout = cclLeftToRightThenTopToBottom
       ChildSizing.ControlsPerLine = 100
-      ClientHeight = 32
-      ClientWidth = 304
+      ClientHeight = 30
+      ClientWidth = 289
       DataSource = dtsListagem
       Options = []
+      ParentFont = False
       TabOrder = 6
       VisibleButtons = [nbFirst, nbPrior, nbNext, nbLast]
     end
@@ -167,12 +185,12 @@ object frmTelaHeranca: TfrmTelaHeranca
   object qryListagem: TZQuery
     Connection = dtmPrincipal.ConexaoDB
     Params = <>
-    left = 714
-    top = 46
+    left = 679
+    top = 44
   end
   object dtsListagem: TDataSource
     DataSet = qryListagem
-    left = 816
-    top = 46
+    left = 776
+    top = 44
   end
 end

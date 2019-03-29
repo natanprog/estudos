@@ -1,5 +1,6 @@
 inherited frmCadCategoria: TfrmCadCategoria
   Caption = 'Cadastro de Categorias'
+  OnCreate = FormCreate
   inherited pgcPrincipal: TPageControl
     inherited tabListagem: TTabSheet
       inherited grdListagem: TDBGrid

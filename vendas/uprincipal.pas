@@ -34,7 +34,7 @@ type
     procedure menuCategoriaClick(Sender: TObject);
     procedure menuFecharClick(Sender: TObject);
   private
-    TeclaEnter : TMREnter;
+    TeclaEnter: TMREnter;
   public
 
   end;
@@ -68,7 +68,8 @@ begin
   dtmPrincipal.ConexaoDB.Connected := True;
   }
   dtmPrincipal := TdtmPrincipal.Create(Self);
-  with dtmPrincipal.ConexaoDB do begin
+  with dtmPrincipal.ConexaoDB do
+  begin
     SQLHourGlass := True;
     Protocol := 'FreeTDS_MsSQL>=2005';
     LibraryLocation := '/usr/lib/x86_64-linux-gnu/libsybdb.so';
@@ -80,7 +81,8 @@ begin
     Connected := True;
   end;
   TeclaEnter := TMREnter.Create(Self);
-  with TeclaEnter do begin
+  with TeclaEnter do
+  begin
     FocusEnabled := True;
     FocusColor := clInfoBk;
   end;
@@ -100,4 +102,3 @@ begin
 end;
 
 end.
-
